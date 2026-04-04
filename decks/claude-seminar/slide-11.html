@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 28pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 1</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">개발자의 새로운 역할</h2>
+  </div>
+
+  <!-- 흐름도 + 비유 -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 32pt;">
+    <!-- 왼쪽: 흐름도 -->
+    <div style="display: flex; flex-direction: column; justify-content: center; gap: 0;">
+      <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; text-align: center;">
+        <p style="font-size: 13pt; font-weight: 500; color: #2d2a26;">코드를 잘 짜는 능력</p>
+      </div>
+      <div style="text-align: center; padding: 6pt 0;">
+        <p style="font-size: 16pt; color: #c45a3b;">↓</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; text-align: center;">
+        <p style="font-size: 13pt; font-weight: 500; color: #2d2a26;">문서를 잘 쓰는 능력</p>
+      </div>
+      <div style="text-align: center; padding: 6pt 0;">
+        <p style="font-size: 16pt; color: #c45a3b;">↓</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt 20pt; text-align: center;">
+        <p style="font-size: 13pt; font-weight: 600; color: #faf8f5;">컨텍스트를 설계하는 능력</p>
+      </div>
+    </div>
+
+    <!-- 오른쪽: 비유 -->
+    <div style="display: flex; flex-direction: column; justify-content: center; gap: 20pt;">
+      <div style="border-left: 3pt solid #c45a3b; padding-left: 16pt;">
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">건축가</p>
+        <p style="font-size: 11pt; color: #6b6560; line-height: 1.6;">직접 벽돌을 쌓지 않고 설계도를 그린다.<br>설계도가 정확해야 건물이 올라간다.</p>
+      </div>
+      <div style="border-left: 3pt solid #c45a3b; padding-left: 16pt;">
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">영화 감독</p>
+        <p style="font-size: 11pt; color: #6b6560; line-height: 1.6;">직접 연기하지 않고 배우에게 디렉션을 준다.<br>CLAUDE.md = 대본</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">09</p>
+  </div>
+</body>
+</html>
