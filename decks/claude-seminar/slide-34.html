@@ -16,41 +16,64 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">SDD — 스펙 주도 개발</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">방법론 비교</h2>
   </div>
 
-  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">코드가 아닌 <strong style="color: #2d2a26;">스펙이 소스 오브 트루스.</strong> Vibe Coding 이후 업계의 궤도 수정.</p>
-
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div>
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">워크플로우</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>[인간]</strong> 요구사항을 구조화된 스펙으로 작성</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>[AI]</strong> 스펙을 읽고 구현 계획 제안</p>
-        </div>
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>[인간]</strong> 계획 검토 및 승인</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>[AI]</strong> 스펙에 따라 코드 생성</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>[자동화]</strong> 스펙 준수 여부 검증</p>
-        </div>
-      </div>
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 5pt;">
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; padding: 0 12pt;">
+      <p style="font-size: 8pt; font-weight: 600; color: #6b6560;"></p>
+      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">Vibe</p>
+      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">PDD</p>
+      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">TDD+AI</p>
+      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">SDD</p>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt; font-family: monospace;">
-      <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 10pt; font-family: 'Pretendard', sans-serif;">스펙 예시</p>
-      <p style="font-size: 9pt; color: #87ceeb; line-height: 1.7;"># Feature: User Auth<br><br>## Requirements<br>- OAuth 2.0 via Google, GitHub<br>- JWT with 24-hour expiry<br>- Rate limit: 5 fails → 15min lock<br><br>## Constraints<br>- PostgreSQL database<br>- Response &lt; 200ms at p99<br><br>## Acceptance Criteria<br>- [x] Google OAuth sign-in<br>- [x] Invalid tokens → 401<br>- [x] Rate limit after 5 failures</p>
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">인간의 역할</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">묘사자</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">프롬프트<br>작성자</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">테스트<br>작성자</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">스펙<br>작성자</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">검증 방식</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">감각적</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">출력 비교</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">자동 테스트</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">스펙 검증</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">진입 장벽</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">매우 낮음</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">낮음</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간~높음</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">프로토타이핑</p>
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">매우 빠름</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">빠름</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">느림</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">프로덕션</p>
+      <p style="font-size: 9pt; color: #c45a3b; text-align: center;">낮음</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">유지보수</p>
+      <p style="font-size: 9pt; color: #c45a3b; text-align: center;">매우 낮음</p>
+      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
+      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
     </div>
   </div>
 
   <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
-    <p style="font-size: 9pt; color: #6b6560;">31</p>
+    <p style="font-size: 9pt; color: #6b6560;">34</p>
   </div>
 </body>
 </html>

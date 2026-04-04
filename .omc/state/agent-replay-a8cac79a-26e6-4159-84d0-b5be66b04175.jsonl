@@ -1,0 +1,7 @@
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"tdd"}
+{"t":0,"agent":"ae85d82","agent_type":"document-specialist","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ae85d82","agent_type":"document-specialist","event":"agent_stop","success":true,"duration_ms":129394}
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"tdd"}
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"tdd"}
+{"t":0,"agent":"ab582f0","agent_type":"document-specialist","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ab582f0","agent_type":"document-specialist","event":"agent_stop","success":true,"duration_ms":111662}

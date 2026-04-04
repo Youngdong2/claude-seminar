@@ -16,37 +16,46 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">ADD — 에이전트 주도 개발</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD + AI</h2>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 24pt; margin-bottom: 20pt;">
-    <p style="font-size: 12pt; color: #faf8f5; text-align: center;">"어떻게 구현할까?" → <span style="color: #c45a3b; font-weight: 600;">"에이전트가 올바르게 구현하도록 어떻게 안내할까?"</span></p>
-  </div>
+  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">인간이 테스트를 쓰고, AI가 테스트를 통과하는 코드를 구현한다.</p>
 
+  <!-- Red-Green 사이클 -->
   <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 20pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">에이전트가 하는 것</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <p style="font-size: 11pt; color: #2d2a26;">코드 검색, 읽기, 작성</p>
-        <p style="font-size: 11pt; color: #2d2a26;">셸 명령 실행, 테스트</p>
-        <p style="font-size: 11pt; color: #2d2a26;">패키지 설치, 의존성 관리</p>
-        <p style="font-size: 11pt; color: #2d2a26;">문서 생성</p>
+    <div style="display: flex; flex-direction: column; gap: 6pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">1. [인간]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">실패 테스트(Red) 작성</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">2. [AI]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">테스트를 통과하는 최소 코드(Green)</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">3. [인간]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">통과 코드를 감사</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">4. [AI]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">통과 상태 유지하며 리팩토링</p>
       </div>
     </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 20pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">인간이 소유하는 것</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <p style="font-size: 11pt; font-weight: 500; color: #2d2a26;">전략적 의사결정 (무엇을 만들지)</p>
-        <p style="font-size: 11pt; font-weight: 500; color: #2d2a26;">아키텍처 선택</p>
-        <p style="font-size: 11pt; font-weight: 500; color: #2d2a26;">보안 검증</p>
-        <p style="font-size: 11pt; font-weight: 500; color: #2d2a26;">최종 품질 검증</p>
+    <div style="display: flex; flex-direction: column; gap: 12pt;">
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 8pt; font-family: 'Pretendard', sans-serif;">TDD 지시 예시</p>
+        <p style="font-size: 8.5pt; color: #87ceeb; line-height: 1.6;">"장바구니 할인 계산을 TDD로 구현해줘.<br>먼저 테스트부터 작성해:<br>- 기본 합계: 10,000원 × 2개 = 20,000원<br>- 배송비: 5만원 미만 → 3,000원,<br>&nbsp;&nbsp;이상 → 무료<br>- 쿠폰: 'SUMMER10' → 10% 할인<br>테스트가 실패하는 걸 확인하고,<br>그 다음에 통과하는 코드를 작성해."</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>핵심</strong>: 인간이 테스트, AI가 구현 · 한 번에 하나 · 테스트 수정 금지</p>
+        <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">버그 <strong style="color: #c45a3b;">40~80%</strong> 감소 — 2025 DORA</p>
       </div>
     </div>
   </div>
 
   <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
-    <p style="font-size: 9pt; color: #6b6560;">29</p>
+    <p style="font-size: 9pt; color: #6b6560;">32</p>
   </div>
 </body>
 </html>

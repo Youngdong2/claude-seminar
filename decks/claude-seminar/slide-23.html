@@ -8,50 +8,55 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 40pt 48pt;
+      padding: 36pt 48pt 28pt;
       display: flex; flex-direction: column;
     }
   </style>
 </head>
 <body>
   <!-- 헤더 -->
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 28pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 22pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
     <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">모델 선택</h2>
   </div>
 
   <!-- 2컬럼 비교 -->
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 24pt;">
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 28pt; display: flex; flex-direction: column;">
-      <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; margin-bottom: 12pt;">빠르고 효율적</p>
-      <p style="font-size: 32pt; font-weight: 700; color: #2d2a26; margin-bottom: 16pt;">Sonnet</p>
-      <div style="display: flex; flex-direction: column; gap: 8pt;">
-        <p style="font-size: 11pt; color: #6b6560; line-height: 1.5;">대부분의 코딩 작업에 적합</p>
-        <p style="font-size: 11pt; color: #6b6560; line-height: 1.5;">빠른 응답 속도</p>
-        <p style="font-size: 11pt; color: #6b6560; line-height: 1.5;">일상적인 개발 워크플로우</p>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt; min-height: 0;">
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 22pt 24pt; display: flex; flex-direction: column;">
+      <p style="font-size: 11pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">빠르고 효율적</p>
+      <p style="font-size: 28pt; font-weight: 700; color: #2d2a26; margin-bottom: 12pt;">Sonnet</p>
+      <div style="display: flex; flex-direction: column; gap: 5pt;">
+        <p style="font-size: 10.5pt; color: #6b6560; line-height: 1.5;">대부분의 코딩 작업에 적합</p>
+        <p style="font-size: 10.5pt; color: #6b6560; line-height: 1.5;">빠른 응답 속도</p>
+        <p style="font-size: 10.5pt; color: #6b6560; line-height: 1.5;">일상적인 개발 워크플로우</p>
       </div>
-      <div style="margin-top: auto; padding-top: 16pt;">
-        <p style="font-size: 10pt; color: #6b6560; font-style: italic;">기본 모델</p>
+      <div style="margin-top: auto; padding-top: 10pt;">
+        <p style="font-size: 9.5pt; color: #6b6560; font-style: italic;">기본 모델</p>
       </div>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 28pt; display: flex; flex-direction: column;">
-      <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; margin-bottom: 12pt;">깊고 정교한</p>
-      <p style="font-size: 32pt; font-weight: 700; color: #faf8f5; margin-bottom: 16pt;">Opus</p>
-      <div style="display: flex; flex-direction: column; gap: 8pt;">
-        <p style="font-size: 11pt; color: #a09a94; line-height: 1.5;">복잡한 아키텍처 결정</p>
-        <p style="font-size: 11pt; color: #a09a94; line-height: 1.5;">깊은 분석이 필요한 경우</p>
-        <p style="font-size: 11pt; color: #a09a94; line-height: 1.5;">대규모 리팩토링</p>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 22pt 24pt; display: flex; flex-direction: column;">
+      <p style="font-size: 11pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">깊고 정교한</p>
+      <p style="font-size: 28pt; font-weight: 700; color: #faf8f5; margin-bottom: 12pt;">Opus</p>
+      <div style="display: flex; flex-direction: column; gap: 5pt;">
+        <p style="font-size: 10.5pt; color: #a09a94; line-height: 1.5;">복잡한 아키텍처 결정</p>
+        <p style="font-size: 10.5pt; color: #a09a94; line-height: 1.5;">깊은 분석이 필요한 경우</p>
+        <p style="font-size: 10.5pt; color: #a09a94; line-height: 1.5;">대규모 리팩토링</p>
       </div>
-      <div style="margin-top: auto; padding-top: 16pt;">
-        <p style="font-size: 10pt; color: #6b6560; font-style: italic;">/model 로 즉시 전환</p>
+      <div style="margin-top: auto; padding-top: 10pt;">
+        <p style="font-size: 9.5pt; color: #6b6560; font-style: italic;">/model 로 즉시 전환</p>
       </div>
     </div>
   </div>
 
+  <!-- 강조 메시지 -->
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 10pt 18pt; margin-top: 14pt;">
+    <p style="font-size: 11.5pt; font-weight: 600; color: #2d2a26; line-height: 1.4;">반드시 가장 좋은 모델을 선택하세요 — 모델 성능이 곧 결과물의 품질입니다.</p>
+  </div>
+
   <!-- 푸터 -->
-  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+  <div style="display: flex; justify-content: space-between; padding-top: 10pt;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
-    <p style="font-size: 9pt; color: #6b6560;">20</p>
+    <p style="font-size: 9pt; color: #6b6560;">23</p>
   </div>
 </body>
 </html>

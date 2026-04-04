@@ -113,14 +113,14 @@
   "hotPaths": [
     {
       "path": "decks/claude-seminar",
-      "accessCount": 12,
-      "lastAccessed": 1775290656096,
+      "accessCount": 27,
+      "lastAccessed": 1775302980283,
       "type": "directory"
     },
     {
       "path": "decks/claude-seminar/slide-10.html",
-      "accessCount": 11,
-      "lastAccessed": 1775290467784,
+      "accessCount": 12,
+      "lastAccessed": 1775301484813,
       "type": "file"
     },
     {
@@ -130,10 +130,22 @@
       "type": "file"
     },
     {
+      "path": "decks/claude-seminar/slide-01.html",
+      "accessCount": 10,
+      "lastAccessed": 1775307191378,
+      "type": "file"
+    },
+    {
       "path": "decks/claude-seminar/slide-02.html",
       "accessCount": 9,
       "lastAccessed": 1775279148427,
       "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 9,
+      "lastAccessed": 1775301487126,
+      "type": "directory"
     },
     {
       "path": "decks/claude-seminar/slide-09.html",
@@ -157,12 +169,6 @@
       "path": "decks/claude-seminar/slide-11.html",
       "accessCount": 6,
       "lastAccessed": 1775287555612,
-      "type": "file"
-    },
-    {
-      "path": "decks/claude-seminar/slide-01.html",
-      "accessCount": 6,
-      "lastAccessed": 1775290489941,
       "type": "file"
     },
     {
@@ -196,6 +202,12 @@
       "type": "file"
     },
     {
+      "path": "decks/claude-seminar/export-pdf.mjs",
+      "accessCount": 4,
+      "lastAccessed": 1775301997073,
+      "type": "file"
+    },
+    {
       "path": "screenshots/youtube_coderxdox_developer_extinction/slide_01.png",
       "accessCount": 3,
       "lastAccessed": 1775276784233,
@@ -214,22 +226,10 @@
       "type": "file"
     },
     {
-      "path": "decks/claude-seminar/export-pdf.mjs",
-      "accessCount": 3,
-      "lastAccessed": 1775278750384,
-      "type": "file"
-    },
-    {
       "path": "decks/claude-seminar/slide-12.html",
       "accessCount": 3,
       "lastAccessed": 1775287555582,
       "type": "file"
-    },
-    {
-      "path": "",
-      "accessCount": 3,
-      "lastAccessed": 1775288827268,
-      "type": "directory"
     },
     {
       "path": "screenshots/youtube_coderxdox_developer_extinction/slide_04.png",
@@ -283,6 +283,12 @@
       "path": "decks/claude-seminar/slide-14.html",
       "accessCount": 2,
       "lastAccessed": 1775288234629,
+      "type": "file"
+    },
+    {
+      "path": "blog/claude_official/blog_251030_introduction-to-agentic-coding.md",
+      "accessCount": 2,
+      "lastAccessed": 1775301479143,
       "type": "file"
     },
     {
@@ -361,12 +367,6 @@
       "path": "official/core/official_features_overview.md",
       "accessCount": 1,
       "lastAccessed": 1775279689414,
-      "type": "file"
-    },
-    {
-      "path": "blog/claude_official/blog_251030_introduction-to-agentic-coding.md",
-      "accessCount": 1,
-      "lastAccessed": 1775279699842,
       "type": "file"
     },
     {
