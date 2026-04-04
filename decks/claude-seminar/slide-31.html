@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">PDD — 프롬프트 주도 개발</h2>
+  </div>
+
+  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">프롬프트를 위시리스트가 아닌, <strong style="color: #2d2a26;">검증 가능한 명세(contract)</strong>로 취급한다.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
+    <div>
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">좋은 PDD 프롬프트</p>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #87ceeb; line-height: 1.6;">"사용자 인증 시스템을 구현하라.<br>- 입력: email(RFC 5322),<br>&nbsp;&nbsp;password(최소 8자, 대소문자+숫자+특수)<br>- 출력: JWT 토큰(24h 만료)<br>&nbsp;&nbsp;또는 에러 코드(401/429)<br>- 제약: 실패 5회 → 15분 잠금<br>&nbsp;&nbsp;응답 p99 &lt; 200ms"</p>
+      </div>
+    </div>
+    <div>
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">나쁜 PDD 프롬프트</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt; margin-bottom: 16pt;">
+        <p style="font-size: 12pt; color: #6b6560; text-decoration: line-through;">"로그인 기능 만들어줘"</p>
+      </div>
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">PDD 원칙</p>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <p style="font-size: 10pt; color: #2d2a26;">"완료"를 정의할 수 있을 때만 코드 작성</p>
+        <p style="font-size: 10pt; color: #2d2a26;">프롬프트가 측정 가능해질 때까지 반복</p>
+        <p style="font-size: 10pt; color: #2d2a26;">테스트는 심판이지 장식이 아니다</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">28</p>
+  </div>
+</body>
+</html>

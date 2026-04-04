@@ -112,6 +112,24 @@
   },
   "hotPaths": [
     {
+      "path": "decks/claude-seminar",
+      "accessCount": 12,
+      "lastAccessed": 1775290656096,
+      "type": "directory"
+    },
+    {
+      "path": "decks/claude-seminar/slide-10.html",
+      "accessCount": 11,
+      "lastAccessed": 1775290467784,
+      "type": "file"
+    },
+    {
+      "path": "sections/02_왜_Claude_Code인가/README.md",
+      "accessCount": 10,
+      "lastAccessed": 1775288635139,
+      "type": "file"
+    },
+    {
       "path": "decks/claude-seminar/slide-02.html",
       "accessCount": 9,
       "lastAccessed": 1775279148427,
@@ -136,27 +154,21 @@
       "type": "file"
     },
     {
+      "path": "decks/claude-seminar/slide-11.html",
+      "accessCount": 6,
+      "lastAccessed": 1775287555612,
+      "type": "file"
+    },
+    {
       "path": "decks/claude-seminar/slide-01.html",
-      "accessCount": 5,
-      "lastAccessed": 1775279147994,
+      "accessCount": 6,
+      "lastAccessed": 1775290489941,
       "type": "file"
     },
     {
       "path": "decks/claude-seminar/slide-04.html",
       "accessCount": 5,
       "lastAccessed": 1775279149329,
-      "type": "file"
-    },
-    {
-      "path": "decks/claude-seminar/slide-10.html",
-      "accessCount": 5,
-      "lastAccessed": 1775279636789,
-      "type": "file"
-    },
-    {
-      "path": "decks/claude-seminar/slide-11.html",
-      "accessCount": 5,
-      "lastAccessed": 1775279638874,
       "type": "file"
     },
     {
@@ -172,15 +184,15 @@
       "type": "file"
     },
     {
-      "path": "decks/claude-seminar",
-      "accessCount": 4,
-      "lastAccessed": 1775279618093,
-      "type": "directory"
-    },
-    {
       "path": "sections/01_코딩은_어디로_가고_있는가/README.md",
       "accessCount": 4,
       "lastAccessed": 1775279932115,
+      "type": "file"
+    },
+    {
+      "path": "decks/claude-seminar/slide-16.html",
+      "accessCount": 4,
+      "lastAccessed": 1775288700460,
       "type": "file"
     },
     {
@@ -208,10 +220,16 @@
       "type": "file"
     },
     {
-      "path": "sections/02_왜_Claude_Code인가/README.md",
+      "path": "decks/claude-seminar/slide-12.html",
       "accessCount": 3,
-      "lastAccessed": 1775280416362,
+      "lastAccessed": 1775287555582,
       "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 3,
+      "lastAccessed": 1775288827268,
+      "type": "directory"
     },
     {
       "path": "screenshots/youtube_coderxdox_developer_extinction/slide_04.png",
@@ -256,9 +274,15 @@
       "type": "file"
     },
     {
-      "path": "decks/claude-seminar/slide-12.html",
+      "path": "official/core/official_how_claude_code_works.md",
       "accessCount": 2,
-      "lastAccessed": 1775279640673,
+      "lastAccessed": 1775287562702,
+      "type": "file"
+    },
+    {
+      "path": "decks/claude-seminar/slide-14.html",
+      "accessCount": 2,
+      "lastAccessed": 1775288234629,
       "type": "file"
     },
     {
@@ -340,18 +364,6 @@
       "type": "file"
     },
     {
-      "path": "official/core/official_how_claude_code_works.md",
-      "accessCount": 1,
-      "lastAccessed": 1775279690145,
-      "type": "file"
-    },
-    {
-      "path": "",
-      "accessCount": 1,
-      "lastAccessed": 1775279695832,
-      "type": "directory"
-    },
-    {
       "path": "blog/claude_official/blog_251030_introduction-to-agentic-coding.md",
       "accessCount": 1,
       "lastAccessed": 1775279699842,
@@ -361,6 +373,42 @@
       "path": "blog/claude_official/blog_251201_key-benefits-agentic-coding.md",
       "accessCount": 1,
       "lastAccessed": 1775279700321,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1775286692720,
+      "type": "file"
+    },
+    {
+      "path": "decks/claude-seminar/slide-13.html",
+      "accessCount": 1,
+      "lastAccessed": 1775287555087,
+      "type": "file"
+    },
+    {
+      "path": "official/core/official_common_workflows.md",
+      "accessCount": 1,
+      "lastAccessed": 1775287562677,
+      "type": "file"
+    },
+    {
+      "path": "official/settings/official_permissions.md",
+      "accessCount": 1,
+      "lastAccessed": 1775287562734,
+      "type": "file"
+    },
+    {
+      "path": "decks/claude-seminar/slide-15.html",
+      "accessCount": 1,
+      "lastAccessed": 1775287620222,
+      "type": "file"
+    },
+    {
+      "path": "sections/03_Claude_Code_기본_사용법/README.md",
+      "accessCount": 1,
+      "lastAccessed": 1775287636618,
       "type": "file"
     }
   ],

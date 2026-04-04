@@ -131,6 +131,69 @@ Claude Code의 핵심 경쟁력. 기본 도구 위에 7개 확장 레이어를 �
 
 ---
 
+## 권한 모드와 안전장치
+
+### 도구별 승인
+
+| 도구 유형 | 예시 | 승인 필요 |
+|----------|------|----------|
+| 읽기 전용 | 파일 읽기, Grep, 검색 | 아니오 |
+| Bash 명령 | 셸 실행 | 예 |
+| 파일 수정 | Edit/Write 파일 | 예 |
+
+### 권한 모드 종류
+
+| 모드 | 설명 | 사용 시기 |
+|------|------|----------|
+| **default** | 각 도구 처음 사용 시 권한 요청 | 처음 사용자, 안전하게 시작 |
+| **acceptEdits** | 파일 편집 자동, 명령은 요청 | 일반적인 개발 작업 |
+| **plan** | 읽기 전용. 분석만 가능 | 코드베이스 탐색, 구현 전 계획 |
+| **auto** | 배경 안전 검사로 자동 승인 | 신뢰할 수 있는 환경에서 자율 작업 |
+| **bypassPermissions** | 모든 권한 프롬프트 건너뛰기 | 격리된 환경(컨테이너, VM)에서만 |
+
+- `Shift+Tab`으로 모드 순환 전환
+- `/permissions`로 세밀한 규칙 설정 가능 (Allow/Ask/Deny)
+- deny가 항상 최우선 (예: `Write(.env)` — .env 파일 수정 차단)
+
+### 안전 메커니즘
+- **체크포인트**: 모든 파일 편집은 되돌릴 수 있음. `Esc` 두 번으로 복원
+- **Plan Mode**: `Shift+Tab` 두 번으로 읽기 전용 분석 모드 진입. 코드 수정 없이 계획 수립
+
+---
+
+## 커뮤니티와 생태계
+
+Claude Code를 선택하는 또 다른 이유: 도구 주변의 생태계가 빠르게 성장하고 있다.
+
+### 공식 지원
+- **Anthropic 공식 블로그**: 지속적으로 가이드, 사례, 베스트 프랙티스 공개 (수집 자료만 25개+)
+- **Code with Claude 컨퍼런스**: 2026년 3월 개최. Anthropic이 Claude Code 생태계에 적극 투자하고 있다는 신호
+- **공식 문서**: 한국어 문서 포함, 워크플로우별 상세 가이드 제공
+
+### 플러그인/스킬 생태계
+- **Oh My Claude Code (OMC)**: 멀티 에이전트 오케스트레이션 플러그인. 커뮤니티 주도로 활발히 개발 중
+- **Compound Engineering Plugin**: Every.to에서 개발, GitHub 12,300+ 스타. 반복적 AI 네이티브 개발 워크플로우
+- **react-best-practices, supabase-postgres-best-practices, ui-skills**: 프레임워크별 베스트 프랙티스 스킬 패키지
+- **claude-mem, session-wrap**: 메모리 관리, 세션 래핑 등 유틸리티 플러그인
+- **Playwright MCP, GitHub MCP, Exa MCP, Sentry MCP, Slack MCP**: 다양한 외부 도구 연동 MCP 서버
+
+### 한국 커뮤니티
+- **정구봉 (Team Attention)**: 159개 CLAUDE.md, 100개+ Skills 운영. 한국어권에서 가장 활발한 Claude Code 파워유저. LinkedIn에서 지속적으로 실전 노하우 공유
+- **한국어 콘텐츠**: 유튜브(빌더조쉬, 실밸개발자, 까칠한AI 등), 블로그(요즘IT, hunslog 등), 교육 과정(모두의연구소 26기 등)에서 한국어 자료가 풍부
+- 다른 AI 코딩 도구 대비 한국어 자료 접근성이 높음
+
+### 교육 콘텐츠
+- **Maven**: Claude Code for Product Managers (371명+ 수강, $2,500), Go from PM to AI Builder ($2,995) 등 전문 과정 운영
+- **유튜브**: 한국어/영어 채널에서 튜토리얼, 사례 공유가 활발
+- **블로그/뉴스레터**: Builder.io, Product Talk(Teresa Torres), Lenny's Newsletter 등에서 지속적으로 실전 가이드 발행
+
+### 왜 생태계가 중요한가
+- 도구의 기능은 시간이 지나면 경쟁사도 따라잡음
+- 하지만 **커뮤니티가 만든 플러그인, 스킬, 노하우, 교육 자료**는 쉽게 복제되지 않음
+- 문제가 생겼을 때 검색하면 답이 나오는 환경 = 실무 도입의 핵심 조건
+
+---
+
 ## 전환 멘트 (다음 섹션으로)
 
 > "Claude Code가 어떤 도구인지 감을 잡으셨을 겁니다. 그럼 실제로 어떻게 시작하고 사용하는지 보겠습니다."
@@ -145,3 +208,7 @@ Claude Code의 핵심 경쟁력. 기본 도구 위에 7개 확장 레이어를 �
 | blog/claude_official/blog_251201_key-benefits-agentic-coding.md | 개발 타임라인 가속 (4~8개월→2주), 온보딩 단축, 복합 효과 |
 | official/core/official_how_claude_code_works.md | 에이전트 루프, 도구 범주 5가지, 세션 관리, 접근 가능 범위 |
 | official/core/official_features_overview.md | 확장 레이어 7개, Skill vs Subagent vs Team 비교 |
+| research/skills_and_plugins.md | 플러그인/스킬 생태계, MCP 서버 목록 |
+| linkedin/linkedin_goobong_jeong_context_engineering.md | 정구봉 159개 CLAUDE.md, 100+ Skills |
+| blog/claude_official/blog_260318_code-with-claude-conference.md | Code with Claude 컨퍼런스 |
+| blog/blog_hunslog_claude_code_power_user_tips.md | 한국어 커뮤니티 자료 모음 |

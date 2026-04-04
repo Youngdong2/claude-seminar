@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD + AI</h2>
+  </div>
+
+  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">인간이 테스트를 쓰고, AI가 테스트를 통과하는 코드를 구현한다.</p>
+
+  <!-- Red-Green 사이클 -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
+    <div style="display: flex; flex-direction: column; gap: 6pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">1. [인간]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">실패 테스트(Red) 작성</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">2. [AI]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">테스트를 통과하는 최소 코드(Green)</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">3. [인간]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">통과 코드를 감사</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">4. [AI]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">통과 상태 유지하며 리팩토링</p>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12pt;">
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">핵심 원칙</p>
+        <div style="display: flex; flex-direction: column; gap: 6pt;">
+          <p style="font-size: 10pt; color: #faf8f5;">테스트가 우리(cage)다</p>
+          <p style="font-size: 10pt; color: #faf8f5;">인간이 테스트, AI가 구현</p>
+          <p style="font-size: 10pt; color: #faf8f5;">한 번에 하나의 테스트</p>
+          <p style="font-size: 10pt; color: #faf8f5;">테스트를 수정하여 통과시키지 않는다</p>
+        </div>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
+        <p style="font-size: 24pt; font-weight: 700; color: #c45a3b;">40~80%</p>
+        <p style="font-size: 10pt; color: #6b6560; margin-top: 4pt;">버그 감소 — 2025 DORA 보고서</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">30</p>
+  </div>
+</body>
+</html>

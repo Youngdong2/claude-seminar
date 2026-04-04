@@ -7,15 +7,59 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">07</p>
-  <h1 style="font-size: 44pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">멀티 에이전트 활용</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <!-- 헤더 -->
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 28pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLI 기반 — IDE에 종속되지 않음</h2>
+  </div>
+
+  <p style="font-size: 13pt; color: #6b6560; margin-bottom: 24pt;">터미널이면 어디서든 실행. 스크립트화, 자동화, CI/CD 통합에 유리.</p>
+
+  <!-- 접근 경로 카드 그리드 -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div style="width: 28pt; height: 28pt; background: #2d2a26; border-radius: 4pt; display: flex; align-items: center; justify-content: center; margin-bottom: 8pt;"><img src="./assets/terminal.svg" style="width: 16pt; height: 16pt;"></div>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">터미널 CLI</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">핵심 인터페이스</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div style="width: 28pt; height: 28pt; background: #2d2a26; border-radius: 4pt; display: flex; align-items: center; justify-content: center; margin-bottom: 8pt;"><img src="./assets/vscode.svg" style="width: 16pt; height: 16pt;"></div>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">VS Code</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">확장 프로그램</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div style="width: 28pt; height: 28pt; background: #2d2a26; border-radius: 4pt; display: flex; align-items: center; justify-content: center; margin-bottom: 8pt;"><img src="./assets/jetbrains.svg" style="width: 16pt; height: 16pt;"></div>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">JetBrains</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">확장 프로그램</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div style="width: 28pt; height: 28pt; background: #2d2a26; border-radius: 4pt; display: flex; align-items: center; justify-content: center; margin-bottom: 8pt;"><img src="./assets/apple.svg" style="width: 16pt; height: 16pt;"></div>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">데스크톱 앱</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">Mac / Windows</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div style="width: 28pt; height: 28pt; background: #2d2a26; border-radius: 4pt; display: flex; align-items: center; justify-content: center; margin-bottom: 8pt;"><img src="./assets/globe.svg" style="width: 16pt; height: 16pt;"></div>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">웹</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">claude.ai/code</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div style="width: 28pt; height: 28pt; background: #2d2a26; border-radius: 4pt; display: flex; align-items: center; justify-content: center; margin-bottom: 8pt;"><img src="./assets/chrome.svg" style="width: 16pt; height: 16pt;"></div>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">Chrome 확장</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">브라우저 통합</p>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">15</p>
+  </div>
 </body>
 </html>

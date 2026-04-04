@@ -7,15 +7,64 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">10</p>
-  <h1 style="font-size: 40pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">AI 시대,<br>우리는 어떻게 해야 하나</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <!-- 헤더 -->
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 16pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">확장 레이어 구조</h2>
+  </div>
+
+  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 14pt;">처음에는 CLAUDE.md만으로 시작. 필요에 따라 하나씩 추가한다.</p>
+
+  <!-- 레이어 목록: 위→아래 = 기초→고급 -->
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 4pt;">
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #2d2a26; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #faf8f5;">CLAUDE.md</p>
+      <p style="font-size: 10pt; color: #a09a94;">모든 세션에서 로드되는 컨텍스트</p>
+      <p style="font-size: 9pt; color: #c45a3b; font-weight: 500;">여기서 시작</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Skills</p>
+      <p style="font-size: 10pt; color: #6b6560;">재사용 가능한 워크플로우</p>
+      <p style="font-size: 9pt; color: #6b6560;">반복 작업이 생길 때</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">MCP</p>
+      <p style="font-size: 10pt; color: #6b6560;">외부 서비스 연결 (100개+)</p>
+      <p style="font-size: 9pt; color: #6b6560;">Notion, GitHub, Slack 등</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Subagents</p>
+      <p style="font-size: 10pt; color: #6b6560;">격리된 컨텍스트, 요약 반환</p>
+      <p style="font-size: 9pt; color: #6b6560;">복잡한 조사/병렬 작업</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Agent Teams</p>
+      <p style="font-size: 10pt; color: #6b6560;">여러 독립 세션이 협업</p>
+      <p style="font-size: 9pt; color: #6b6560;">대규모 병렬 작업</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Hooks</p>
+      <p style="font-size: 10pt; color: #6b6560;">이벤트 기반 자동화 스크립트</p>
+      <p style="font-size: 9pt; color: #6b6560;">린트, 테스트 자동화</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Plugins</p>
+      <p style="font-size: 10pt; color: #6b6560;">기능 패키징 및 배포</p>
+      <p style="font-size: 9pt; color: #6b6560;">팀/커뮤니티 공유</p>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="display: flex; justify-content: space-between; padding-top: 10pt;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">18</p>
+  </div>
 </body>
 </html>

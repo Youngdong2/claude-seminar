@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 24pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">권한 모드와 안전장치</h2>
+  </div>
+
+  <!-- 2컬럼 -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
+    <!-- 왼쪽: 권한 모드 -->
+    <div style="display: flex; flex-direction: column; gap: 6pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 4pt;">권한 모드 — Shift+Tab으로 전환</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">default</p>
+        <p style="font-size: 9pt; color: #6b6560;">각 도구 처음 사용 시 권한 요청</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">acceptEdits</p>
+        <p style="font-size: 9pt; color: #6b6560;">파일 편집 자동, 명령은 요청</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">plan</p>
+        <p style="font-size: 9pt; color: #6b6560;">읽기 전용 — 분석만 가능</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 11pt; font-weight: 600; color: #faf8f5;">auto</p>
+        <p style="font-size: 9pt; color: #a09a94;">배경 안전 검사로 자동 승인</p>
+      </div>
+    </div>
+    <!-- 오른쪽: 안전장치 -->
+    <div style="display: flex; flex-direction: column; gap: 12pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 4pt;">안전장치</p>
+      <div style="border-left: 3pt solid #c45a3b; padding-left: 16pt;">
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">체크포인트</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">모든 파일 편집은 되돌릴 수 있음<br>Esc 두 번으로 복원</p>
+      </div>
+      <div style="border-left: 3pt solid #c45a3b; padding-left: 16pt;">
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">도구별 승인</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">읽기 전용 → 자동 허용<br>Bash/파일 수정 → 승인 필요</p>
+      </div>
+      <div style="border-left: 3pt solid #c45a3b; padding-left: 16pt;">
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">세밀한 규칙</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">/permissions로 Allow/Ask/Deny 설정<br>deny가 항상 최우선</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">21</p>
+  </div>
+</body>
+</html>
