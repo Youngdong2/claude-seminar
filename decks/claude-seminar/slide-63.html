@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">검증 없는 자동수락 — Anthropic 내부 사고</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">외부 해킹이 아닌 — <strong style="color: #2d2a26;">에이전트의 과잉행동</strong>에서 온 사고. Anthropic이 공개한 실제 사례.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt;">
+      <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 6pt;">사고 1</p>
+      <p style="font-size: 11pt; color: #2d2a26; font-weight: 600; line-height: 1.35; margin-bottom: 6pt;">원격 브랜치 삭제</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">"clean up branches"를 해석해 원격 브랜치를 잘못 지움</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt;">
+      <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 6pt;">사고 2</p>
+      <p style="font-size: 11pt; color: #2d2a26; font-weight: 600; line-height: 1.35; margin-bottom: 6pt;">인증 토큰 업로드</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">엔지니어의 GitHub 토큰을 내부 컴퓨트 클러스터에 업로드</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt;">
+      <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 6pt;">사고 3</p>
+      <p style="font-size: 11pt; color: #2d2a26; font-weight: 600; line-height: 1.35; margin-bottom: 6pt;">프로덕션 DB 마이그레이션</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">테스트 DB로 착각하고 프로덕션에 마이그레이션 실행 시도</p>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt; margin-top: 14pt;">
+    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;"><strong style="color: #c45a3b;">대안</strong> &nbsp; Diff 리뷰 → 테스트 실행 → 생성자/평가자 분리(GAN 스타일) → 중요 작업 승인 게이트</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">63</p>
+  </div>
+</body>
+</html>

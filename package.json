@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "puppeteer": "^24.40.0",
     "slides-grab": "^1.2.1"
   }
 }

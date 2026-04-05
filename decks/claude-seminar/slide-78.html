@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">5개 명령으로 돌리는 Agent Loop</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">섹션 4 Agent Loop의 다섯 단계 — 각각 <strong style="color: #2d2a26;">하나의 명령어</strong>로 매핑.</p>
+
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 8pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
+      <div style="width: 90pt; flex-shrink: 0;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">1. 이해</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/deep-dive</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">코드베이스 Trace → 소크라테스식 인터뷰 → <strong style="color: #2d2a26;">머릿속이 파일로</strong> 떨어진다</p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
+      <div style="width: 90pt; flex-shrink: 0;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">2. 계획</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/ralplan</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">architect 계획 → critic 별도 비평 → <strong style="color: #2d2a26;">합의된 것만 실행 허가</strong></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
+      <div style="width: 90pt; flex-shrink: 0;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">3. 실행</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/team</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">워커 4~5개 병렬 · Test Writer는 구현 코드 못 봄 · <strong style="color: #2d2a26;">역할 격리 기본</strong></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
+      <div style="width: 90pt; flex-shrink: 0;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">4. 검증</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/ultraqa</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">test → 원인 분석 → 수정 → 재실행 · <strong style="color: #2d2a26;">루프가 알아서 수렴</strong></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
+      <div style="width: 90pt; flex-shrink: 0;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">5. 학습</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/learner</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">재사용 가능한 패턴을 <strong style="color: #2d2a26;">새 스킬로 자동 저장</strong> — 쓸수록 똑똑해짐</p>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">78</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC — 원리를 명령어로</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;"><strong style="color: #2d2a26;">Oh My Claude Code</strong> — 한국 개발자 Yeachan Heo 제작, GitHub Trending 1위. 발표 4~6 섹션 원리의 거의 전부를 한 플러그인으로 패키징.</p>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; margin-bottom: 12pt;">
+    <p style="font-size: 10.5pt; color: #2d2a26; line-height: 1.4;"><em>"Don't learn Claude Code. Just use OMC."</em></p>
+  </div>
+
+  <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">원리 → OMC 구현 매핑</p>
+
+  <div style="flex: 1; background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+    <div style="display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 5pt 14pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">발표에서 다룬 원리</p>
+      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">OMC 구현</p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">멀티 에이전트 역할 분리</p>
+      <p style="font-size: 9pt; color: #6b6560;">29+ 사전 정의 에이전트 (architect·critic·tester …)</p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">모델 라우팅 · 비용 최적화</p>
+      <p style="font-size: 9pt; color: #6b6560;">Haiku/Sonnet/Opus 자동 선택 — 토큰 <strong style="color: #c45a3b;">30~50% 절감</strong></p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">Plan–Critic–Build</p>
+      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ralplan</code> — architect 계획, critic 별도 비평</p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">병렬 에이전트</p>
+      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultrawork</code>, <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultrapilot</code> — 최대 5 워커 동시</p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">검증 루프 · GAN 스타일</p>
+      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultraqa</code> — test → verify → fix 자동 순환</p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">모호성 제거 · 소크라테스 질문</p>
+      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/deep-interview</code> — 요구사항 인터뷰</p>
+
+      <p style="font-size: 9pt; color: #2d2a26;">Worktree 병렬 · 관찰 가능성</p>
+      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/project-session-manager</code> + HUD + Slack 알림</p>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">76</p>
+  </div>
+</body>
+</html>

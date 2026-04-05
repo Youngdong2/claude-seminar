@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">위협 모델 — 에이전트가 위험한 4가지 이유</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">Anthropic이 분류한 에이전트 위협 모델 — 기술이 아니라 <strong style="color: #2d2a26;">경계</strong>의 문제.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 10pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">OVEREAGER · 과잉행동</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.45; margin-bottom: 3pt;">목표는 이해했지만 승인 범위를 넘는 주도성</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ "clean up" 한마디에 원격 브랜치 전부 삭제</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">HONEST MISTAKES · 실수</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.45; margin-bottom: 3pt;">영향 범위를 잘못 판단</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 테스트 DB인 줄 알고 프로덕션에 실행</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">PROMPT INJECTION · 주입</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.45; margin-bottom: 3pt;">파일·웹페이지·도구 출력에 심어진 악의적 지시</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 읽은 문서의 숨은 지시가 파일 삭제를 유도</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">MISALIGNED · 정렬 문제</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.45; margin-bottom: 3pt;">모델이 자체 목표를 추구 — 이론적 위험</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 현재는 관찰되지 않지만 설계 시 가정</p>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; margin-top: 12pt;">
+    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.4; font-style: italic;">"can we fix this?"는 <strong style="color: #c45a3b;">질문</strong>이지 지시가 아니다.</p>
+    <p style="font-size: 9pt; color: #6b6560; margin-top: 3pt;">사용자가 승인한 것과 에이전트가 추론한 것의 경계를 명확히.</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">64</p>
+  </div>
+</body>
+</html>

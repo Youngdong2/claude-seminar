@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 10pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 6</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">진화의 스펙트럼</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">멀티 에이전트는 하나의 패턴이 아니라 <strong style="color: #2d2a26;">점점 복잡해지는 층위</strong>다.</p>
+
+  <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 18pt 24pt; display: flex; align-items: stretch;">
+    <svg viewBox="0 0 600 220" style="width: 100%; height: 100%;" preserveAspectRatio="xMidYMid meet">
+      <!-- Baseline -->
+      <line x1="20" y1="170" x2="580" y2="170" stroke="#6b6560" stroke-width="0.8" opacity="0.4"/>
+
+      <!-- 01 Single Agent -->
+      <rect x="35" y="130" width="72" height="40" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.2" rx="3"/>
+      <text x="71" y="150" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#c45a3b">01</text>
+      <text x="71" y="162" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">single</text>
+      <text x="71" y="188" text-anchor="middle" font-family="Pretendard" font-size="10" font-weight="700" fill="#2d2a26">Single</text>
+      <text x="71" y="201" text-anchor="middle" font-family="Pretendard" font-size="9" fill="#6b6560">한 컨텍스트</text>
+
+      <!-- 02 Sub-Agent -->
+      <rect x="130" y="105" width="72" height="65" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.2" rx="3"/>
+      <text x="166" y="128" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#c45a3b">02</text>
+      <text x="166" y="142" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">단방향</text>
+      <text x="166" y="156" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">격리</text>
+      <text x="166" y="188" text-anchor="middle" font-family="Pretendard" font-size="10" font-weight="700" fill="#2d2a26">Sub-Agent</text>
+      <text x="166" y="201" text-anchor="middle" font-family="Pretendard" font-size="9" fill="#6b6560">심부름</text>
+
+      <!-- 03 Orchestrator -->
+      <rect x="225" y="80" width="72" height="90" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.2" rx="3"/>
+      <text x="261" y="105" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#c45a3b">03</text>
+      <text x="261" y="120" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">1:N</text>
+      <text x="261" y="133" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">위임</text>
+      <text x="261" y="188" text-anchor="middle" font-family="Pretendard" font-size="10" font-weight="700" fill="#2d2a26">Orchestrator</text>
+      <text x="261" y="201" text-anchor="middle" font-family="Pretendard" font-size="9" fill="#6b6560">계획+실행</text>
+
+      <!-- 04 Parallel -->
+      <rect x="320" y="55" width="72" height="115" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.2" rx="3"/>
+      <text x="356" y="80" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#c45a3b">04</text>
+      <text x="356" y="95" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">공유</text>
+      <text x="356" y="108" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">상태</text>
+      <text x="356" y="188" text-anchor="middle" font-family="Pretendard" font-size="10" font-weight="700" fill="#2d2a26">Parallel</text>
+      <text x="356" y="201" text-anchor="middle" font-family="Pretendard" font-size="9" fill="#6b6560">평면 조직</text>
+
+      <!-- 05 GAN-Style -->
+      <rect x="415" y="30" width="72" height="140" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.2" rx="3"/>
+      <text x="451" y="55" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#c45a3b">05</text>
+      <text x="451" y="70" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">적대적</text>
+      <text x="451" y="83" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">루프</text>
+      <text x="451" y="188" text-anchor="middle" font-family="Pretendard" font-size="10" font-weight="700" fill="#2d2a26">GAN-Style</text>
+      <text x="451" y="201" text-anchor="middle" font-family="Pretendard" font-size="9" fill="#6b6560">생성↔평가</text>
+
+      <!-- 06 Agent Teams -->
+      <rect x="510" y="10" width="72" height="160" fill="#2d2a26" stroke="#2d2a26" rx="3"/>
+      <text x="546" y="36" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#c45a3b">06</text>
+      <text x="546" y="52" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#faf8f5">양방향</text>
+      <text x="546" y="65" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#faf8f5">대화</text>
+      <text x="546" y="188" text-anchor="middle" font-family="Pretendard" font-size="10" font-weight="700" fill="#2d2a26">Teams</text>
+      <text x="546" y="201" text-anchor="middle" font-family="Pretendard" font-size="9" fill="#6b6560">그래프 구조</text>
+
+      <!-- Axis label: rising arrow -->
+      <line x1="20" y1="200" x2="20" y2="15" stroke="#c45a3b" stroke-width="0.8" opacity="0.5"/>
+      <polygon points="20,5 16,15 24,15" fill="#c45a3b" opacity="0.5"/>
+      <text x="8" y="110" font-family="Pretendard" font-size="8" font-weight="600" fill="#c45a3b" transform="rotate(-90 8 110)">힘 · 조율 비용</text>
+    </svg>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">68</p>
+  </div>
+</body>
+</html>

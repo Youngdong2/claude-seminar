@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">증거부터 — 지금 보고 있는 이 장표</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">이 96장의 슬라이드 — 발표자 1인이 Claude와 함께 만들었다. 그리고 <strong style="color: #2d2a26;">이 작업에는 코드가 한 줄도 없다</strong>.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1.35fr 1fr; gap: 14pt;">
+    <!-- Pipeline diagram -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt; display: flex; flex-direction: column; justify-content: center;">
+      <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 10pt;">파이프라인 — 3층 + 1 Skill</p>
+      <div style="display: flex; flex-direction: column; gap: 6pt; font-family: 'SF Mono', Consolas, monospace;">
+        <p style="font-size: 8.5pt; color: #2d2a26;">research/ · official/ · blog/ · linkedin/ · youtube/</p>
+        <p style="font-size: 8pt; color: #6b6560; padding-left: 6pt;">↓ 원자료 수집</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;">sections/XX/README.md</p>
+        <p style="font-size: 8pt; color: #6b6560; padding-left: 6pt;">↓ 계획 · 서술</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;">decks/.../slide-XX.html</p>
+        <p style="font-size: 8pt; color: #6b6560; padding-left: 6pt;">↓ <strong style="color: #c45a3b;">slides-grab</strong> Skill</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;">claude-seminar.pdf</p>
+      </div>
+      <p style="font-size: 8pt; color: #6b6560; margin-top: 10pt; border-top: 1pt solid rgba(0,0,0,0.1); padding-top: 6pt;">+ <strong style="color: #2d2a26;">CLAUDE.md</strong> — 디자인 규칙·카피 원칙 박제 (하네스)</p>
+    </div>
+
+    <!-- Key claim -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">앞 섹션들에서 본 원리 그대로</p>
+        <p style="font-size: 8.5pt; color: #6b6560; margin-top: 3pt;">Spec-first · 하네스 · Skill 재사용</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">특별한 기술 없음</p>
+        <p style="font-size: 8.5pt; color: #6b6560; margin-top: 3pt;">마크다운 + HTML + 규칙 문서</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 11pt 14pt; flex: 1; display: flex; align-items: center;">
+        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">이 섹션의 진짜 질문 — <strong style="color: #c45a3b;">그럼 앞의 모든 섹션은 누구의 이야기였나</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">83</p>
+  </div>
+</body>
+</html>

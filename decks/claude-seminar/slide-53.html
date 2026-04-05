@@ -7,15 +7,59 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 32pt 48pt 56pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">11</p>
-  <h1 style="font-size: 44pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">마무리 & Q&A</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 12pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md는 살아있는 문서 — 현장 사례</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 12pt;">한 번 쓰고 끝나는 정적 문서가 아닌, <strong style="color: #2d2a26;">피드백으로 자라는 유기체</strong>처럼 운영.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
+    <!-- Boris Cherny -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">Boris Cherny</p>
+      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">Claude Code 창시자 · Anthropic</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">주 수 회 업데이트. <strong>Claude가 실수할 때마다 한 줄 추가.</strong> PR에서 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8pt;">@claude</code> 태그 → GitHub Action이 CLAUDE.md 자동 커밋.</p>
+    </div>
+
+    <!-- Kieran Klaassen -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">Kieran Klaassen</p>
+      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">Self-Improving Harness</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">"마음에 안 드네"/"좋은 지적이다" 한 마디가 곧 새 규칙. 백그라운드 잡 rate limit 버그 1회 → 규칙 1줄 → <strong>재발 0건.</strong></p>
+    </div>
+
+    <!-- 정구봉 -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">정구봉 (Team Attention)</p>
+      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">규모의 실천</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md 159개</strong> + 스킬 100개+ 동시 운영. "파일 하나는 짧게, 대신 파일을 많이."</p>
+    </div>
+
+    <!-- Hunslog -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">Hunslog</p>
+      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">한국 커뮤니티 · 미니멀</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">2.5k 토큰 이내, <strong>반복 실수만</strong> 기록. 몇 주에 한 번 Claude에게 CLAUDE.md 자체를 리뷰시키는 메타 운영.</p>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 11pt; color: #faf8f5; font-weight: 600; line-height: 1.4;"><em>"<span style="color: #c45a3b;">버그는 한 번 고치는 게 아니라, CLAUDE.md에 한 줄을 추가하면서 고치는 것</span>이다."</em></p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">53</p>
+  </div>
 </body>
 </html>
+</content>
+</invoke>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 10pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 6</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">설계 4대 원칙</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 16pt;">패턴이 무엇이든 공통으로 지켜야 하는 것 — <strong style="color: #2d2a26;">쪼갬의 네 축</strong>.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 34pt; height: 34pt; background: #c45a3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; font-weight: 700; color: #faf8f5;">01</span>
+      </div>
+      <div>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 3pt;">컨텍스트 격리</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">각 에이전트 = 자기 일에 필요한 것만 · 메인 = 결정과 요약만.</p>
+      </div>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 34pt; height: 34pt; background: #c45a3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; font-weight: 700; color: #faf8f5;">02</span>
+      </div>
+      <div>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 3pt;">역할 경계 명시</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">"무엇을 하고 무엇을 <strong>안</strong> 하는지" 명시 · 모호함 → 중복과 공백.</p>
+      </div>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 34pt; height: 34pt; background: #c45a3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; font-weight: 700; color: #faf8f5;">03</span>
+      </div>
+      <div>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 3pt;">사전 모호성 제거</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">실행 후 발견 → 이미 늦음. Ralphton 우승팀 — 개발 전 <strong>133회 Q&amp;A</strong>.</p>
+      </div>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 34pt; height: 34pt; background: #c45a3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; font-weight: 700; color: #faf8f5;">04</span>
+      </div>
+      <div>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 3pt;">검증 주체 분리</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">생성자 ≠ 검증자. Self-review → blind spot 잔존.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 20pt; margin-top: 14pt;">
+    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.4;">멀티 에이전트 = <span style="color: #c45a3b; font-weight: 700;">"더 많은 AI"가 아니라 "더 좁은 역할의 AI 여럿"</span></p>
+    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; font-style: italic;">컨텍스트를 쪼갠다 · 역할을 쪼갠다 · 검증을 쪼갠다 · 시간을 쪼갠다</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">73</p>
+  </div>
+</body>
+</html>

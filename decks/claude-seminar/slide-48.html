@@ -7,16 +7,49 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 32pt 48pt 56pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">06</p>
-  <h1 style="font-size: 44pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">이렇게 하면 망한다</h1>
-  <p style="font-size: 16pt; color: #6b6560; margin-top: 12pt;">한계와 실패 패턴</p>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Right Altitude — 지시문의 고도</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">CLAUDE.md나 프롬프트를 쓸 때 가장 흔한 실수는 <strong style="color: #2d2a26;">두 극단</strong>.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 낮음 · OVER-SPECIFIED</p>
+      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">모든 케이스를 if/else로 박기</p>
+      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 예외 상황에서 brittle</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 높음 · UNDER-SPECIFIED</p>
+      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">"잘 해줘", "깔끔하게"</p>
+      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 모델이 추측, 세션마다 결과 다름</p>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
+    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">올바른 고도 공식</p>
+    <p style="font-size: 13pt; font-weight: 600; color: #faf8f5;">원칙 1줄 &nbsp;+&nbsp; 이유(why) 1줄 &nbsp;+&nbsp; 예시 1~2개</p>
+    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt; line-height: 1.4;">이게 붙어야 새 상황에도 일반화 가능.</p>
+  </div>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 10pt 14pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>자가진단 2문항:</strong></p>
+    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">① 이 규칙이 내가 의도하지 않은 상황에서도 말이 되는가? → 되면 OK<br>② 이 규칙을 아무 세션에 붙여도 행동이 바뀌지 않는가? → 그러면 너무 높음</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">48</p>
+  </div>
 </body>
 </html>
+</content>
+</invoke>

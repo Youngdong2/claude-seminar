@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">재료 3 — slides-grab, Skill 경계로 박힌 분리</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">HTML → PDF 익스포트를 직접 짜지 않는다. 커뮤니티 Skill을 그대로, 그리고 의도적으로 <strong style="color: #2d2a26;">3단으로 분리</strong>.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 1 · PLAN</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-plan</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;"><code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">slide-outline.md</code> 생성</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55; margin-top: 3pt;">사용자 승인까지 반복</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 2 · DESIGN</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-design</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;">승인된 아웃라인 →</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;"><code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">slide-XX.html</code> 생성·수정</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 3 · EXPORT</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-export</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;">HTML → PDF 변환</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55; margin-top: 3pt;">산출물 검증</p>
+    </div>
+  </div>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; margin-bottom: 10pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>왜 3단인가</strong> — 단계 사이에 사용자 승인을 <strong style="color: #c45a3b;">물리적으로 강제</strong>. Plan에서 방향이 틀어지면 Design·Export 비용 전부 낭비.</p>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 11pt 18pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.5;">섹션 4의 <strong style="color: #c45a3b;">"계획과 실행의 분리"</strong>가 Skill 경계로 박제됨 — 규칙이 아니라 파일 구조가 강제.</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">86</p>
+  </div>
+</body>
+</html>

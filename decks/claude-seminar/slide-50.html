@@ -7,15 +7,70 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">08</p>
-  <h1 style="font-size: 40pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">실전 워크플로우 &<br>도구 세팅</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Claude Code의 4개 레이어</h2>
+  </div>
+
+  <p style="font-size: 10pt; color: #6b6560; margin-bottom: 16pt;">정구봉(Team Attention)이 제시한 에이전트 시대의 Context Engineering 레이어</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- CLAUDE.md -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 18pt 20pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 36pt; height: 36pt; background: #2d2a26; border-radius: 6pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; color: #faf8f5;">📋</span>
+      </div>
+      <div>
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26;">CLAUDE.md</p>
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 500; margin: 4pt 0;">시스템 성격 정의</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">프로젝트 규칙, 컨벤션,<br>아키텍처 지침</p>
+      </div>
+    </div>
+    <!-- Skills -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 18pt 20pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 36pt; height: 36pt; background: #2d2a26; border-radius: 6pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; color: #faf8f5;">⚡</span>
+      </div>
+      <div>
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26;">Skills</p>
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 500; margin: 4pt 0;">실행 로직 구조화</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">재사용 가능한 워크플로우,<br>슬래시 커맨드</p>
+      </div>
+    </div>
+    <!-- Hooks -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 18pt 20pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 36pt; height: 36pt; background: #2d2a26; border-radius: 6pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; color: #faf8f5;">🔗</span>
+      </div>
+      <div>
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26;">Hooks</p>
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 500; margin: 4pt 0;">이벤트 기반 자동화</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">결정론적 스크립트,<br>12+ 이벤트 타입</p>
+      </div>
+    </div>
+    <!-- MCP -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 18pt 20pt; display: flex; gap: 14pt; align-items: flex-start;">
+      <div style="width: 36pt; height: 36pt; background: #2d2a26; border-radius: 6pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: 16pt; color: #faf8f5;">🌐</span>
+      </div>
+      <div>
+        <p style="font-size: 13pt; font-weight: 600; color: #2d2a26;">MCP</p>
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 500; margin: 4pt 0;">외부 도구 연결</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">Notion, GitHub, Slack 등<br>10,000+ 활성 서버</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">50</p>
+  </div>
 </body>
 </html>

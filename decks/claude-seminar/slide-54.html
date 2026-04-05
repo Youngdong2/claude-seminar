@@ -8,22 +8,61 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div>
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10pt; margin-bottom: 32pt;">
-      <div style="width: 24pt; height: 24pt; background: #c45a3b; border-radius: 4pt; display: flex; align-items: center; justify-content: center;">
-        <img src="./assets/claude.svg" style="width: 14pt; height: 14pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Skills & Hooks</h2>
+  </div>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
+    <!-- Skills -->
+    <div style="display: flex; flex-direction: column; gap: 12pt;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">Skills — 워크플로우 패키징</p>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt; font-family: monospace;">
+        <p style="font-size: 8pt; color: #6b6560;">---</p>
+        <p style="font-size: 8pt; color: #faf8f5;">name: <span style="color: #c45a3b;">deploy</span></p>
+        <p style="font-size: 8pt; color: #faf8f5;">description: Production deploy</p>
+        <p style="font-size: 8pt; color: #6b6560;">---</p>
+        <p style="font-size: 8pt; color: #faf8f5; margin-top: 4pt;">1. pnpm test<br>2. pnpm lint<br>3. Create release tag<br>4. Push to main</p>
       </div>
-      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26;">Claude Code</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">점진적 공개 (Progressive Disclosure)</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세션 시작: 메타데이터만 로드 (수십 토큰)<br>관련 감지 시: 전체 지시문 로드</p>
+      </div>
     </div>
-    <h1 style="font-size: 48pt; font-weight: 600; color: #2d2a26; letter-spacing: -0.02em; line-height: 1.2;">감사합니다</h1>
-    <p style="font-size: 16pt; color: #6b6560; margin-top: 20pt;">질문이 있으시면 편하게 말씀해주세요</p>
-    <div style="width: 40pt; height: 3pt; background: #c45a3b; margin: 24pt auto 0; border-radius: 2pt;"></div>
+
+    <!-- Hooks -->
+    <div style="display: flex; flex-direction: column; gap: 12pt;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">Hooks — 이벤트 기반 자동화</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt;">
+        <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">LLM이 아닌 결정론적 스크립트</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.6;">12+ 이벤트 타입:<br>SessionStart, PreToolUse,<br>PostToolUse, Notification ...</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 9pt; color: #2d2a26;">파일 편집 후 → <strong>ESLint 자동 실행</strong></p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 9pt; color: #2d2a26;">커밋 전 → <strong>테스트 자동 실행</strong></p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 9pt; color: #2d2a26;">.env 편집 시도 → <strong>차단</strong></p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 9pt; color: #2d2a26;">작업 완료 → <strong>Slack/Telegram 알림</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">54</p>
   </div>
 </body>
 </html>

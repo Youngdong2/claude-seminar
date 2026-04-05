@@ -8,42 +8,52 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 40pt 48pt;
-      display: flex; flex-direction: column;
+      padding: 32pt 48pt 56pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 12pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">"모델이 사용하는 코드"를 만드는 것</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">컨텍스트의 4가지 실패 모드</h2>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 10pt; padding: 24pt 32pt; margin-bottom: 20pt;">
-    <p style="font-size: 13pt; color: #faf8f5; line-height: 1.6; font-style: italic;">"나는 모델을 사용하는 코드를 만드는 것이 아니었다.<br><span style="color: #c45a3b; font-weight: 600;">모델이 사용하는 코드</span>를 만들고 있었다."</p>
-    <p style="font-size: 9pt; color: #6b6560; margin-top: 10pt; text-align: right;">— Ari Mendelow, Ouroboros</p>
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 12pt;">"컨텍스트 윈도우가 크니까 많이 넣어도 OK" 상식 — 사실 아님. <span style="color: #6b6560; font-size: 9.5pt;">(※ 컨텍스트 윈도우 = 모델이 한 번에 읽을 수 있는 텍스트량. 요즘 모델은 대략 20만 토큰, 한국어 기준 약 15만 자)</span> Drew Breunig가 정리한 4가지 실패 모드.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">POISONING · 중독</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">환각이 한 번 들어오면 이후 계속 참조되며 오류 누적</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 존재하지 않는 함수를 반복 호출</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">DISTRACTION · 산만</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">히스토리에 과의존, 과거 행동을 반복</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 새 전략을 못 세우고 실패한 액션 재시도</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">CONFUSION · 혼동</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">무관한 정보까지 "고려해버린다"</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 툴 30개 이상이면 선택 실패 급증</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">CLASH · 충돌</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">모순된 정보가 있으면 추론이 무너진다</p>
+      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 초반 오답 1개로 평균 39% 성능 저하</p>
+    </div>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 16pt;">이 관점 전환이 설계 제약을 뒤집는다:</p>
-
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 18pt;">
-      <p style="font-size: 13pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">파일 구조</p>
-      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">모델이 탐색해야 하니까<br>구조가 중요하다</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 18pt;">
-      <p style="font-size: 13pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">네이밍</p>
-      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">모델이 이름으로<br>목적을 파악하니까</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 18pt;">
-      <p style="font-size: 13pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">문서화</p>
-      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">문서가 곧 모델의<br>자기인식이니까</p>
-    </div>
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 16pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;"><em>"컨텍스트를 잡동사니 서랍처럼 다루면, 그 잡동사니가 답변에 영향을 줍니다."</em> <span style="color: #6b6560; font-size: 9pt;">— Drew Breunig</span></p>
+    <p style="font-size: 9pt; color: #c45a3b; margin-top: 4pt;">핵심은 "뭘 넣을까"보다 "뭘 뺄까".</p>
   </div>
 
-  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
     <p style="font-size: 9pt; color: #6b6560;">46</p>
   </div>
 </body>
 </html>
+</content>
+</invoke>

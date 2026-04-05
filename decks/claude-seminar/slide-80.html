@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC도 해결하지 못하는 것</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">OMC는 마법이 아님. 섹션 5의 실패 패턴은 플러그인 레이어에서도 여전히 유효.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 5pt;">원리 모르면 블랙박스</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">결과가 이상할 때 <strong style="color: #2d2a26;">왜 이상한지</strong> 판단하려면 섹션 4~6의 원리 이해가 필수. OMC는 원리를 <strong>대체</strong>하지 않고 <strong>가속</strong>한다</p>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 5pt;">프로젝트 맥락은 여전히 사용자 몫</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">CLAUDE.md · 팀 규칙 · 이슈 트래커 · MCP 세팅은 OMC가 모름. "이 프로젝트의 맥락"은 직접 주입 필요</p>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 5pt;">컨텍스트 실패 모드는 그대로</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Poisoning · Distraction · Confusion · Clash는 플러그인 레이어에서도 발동. 긴 세션은 <strong style="color: #2d2a26;">주기적으로 끊기</strong></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 5pt;">플러그인 의존 리스크 · 비용</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">업데이트로 동작 변경 · 깨짐 가능. <strong style="color: #2d2a26;">"플러그인 없이도 돌아가는 최소 경로"</strong>를 알 것. 병렬 Opus는 싸지 않음</p>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.4;">플러그인 = 원리의 <strong style="color: #c45a3b;">가속기</strong>, <strong style="color: #c45a3b;">대체재</strong>가 아님.</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">80</p>
+  </div>
+</body>
+</html>

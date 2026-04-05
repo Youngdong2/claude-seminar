@@ -9,7 +9,7 @@
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
       padding: 40pt 48pt;
-      display: flex; flex-direction: column;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
@@ -21,24 +21,23 @@
   </div>
 
   <!-- 숫자 카드 -->
-  <div style="flex: 1; display: flex; gap: 16pt;">
-    <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 24pt; display: flex; flex-direction: column; justify-content: center;">
-      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1;">25%</p>
-      <p style="font-size: 11pt; color: #2d2a26; font-weight: 500; margin-top: 12pt;">YC 2025 겨울 배치 중<br>코드베이스의 <strong>95%를 AI로 생성</strong></p>
-      <p style="font-size: 9pt; color: #6b6560; margin-top: 8pt;">Y Combinator</p>
+  <div style="flex: 1; display: flex; gap: 16pt; align-items: center;">
+    <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 20pt 20pt;">
+      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">25%</p>
+      <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 500; margin-top: 12pt; line-height: 1.4;">YC 2025 겨울 배치 중<br>코드베이스의 <strong>95%를 AI로 생성</strong></p>
     </div>
-    <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 24pt; display: flex; flex-direction: column; justify-content: center;">
-      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1;">~3개월</p>
-      <p style="font-size: 11pt; color: #2d2a26; font-weight: 500; margin-top: 12pt;">Meta 엔지니어가 코드를<br><strong>직접 타이핑하지 않은 기간</strong></p>
+    <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 20pt 20pt;">
+      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">~3개월</p>
+      <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 500; margin-top: 12pt; line-height: 1.4;">Meta 엔지니어가 코드를<br><strong>직접 타이핑하지 않은 기간</strong></p>
     </div>
-    <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 24pt; display: flex; flex-direction: column; justify-content: center;">
-      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1;">100%</p>
-      <p style="font-size: 11pt; color: #2d2a26; font-weight: 500; margin-top: 12pt;">AI가 짠 코드가 사람의 터치 없이<br><strong>PR에 그대로 올라오는 일상</strong></p>
+    <div style="flex: 1; background: #f0ebe3; border-radius: 8pt; padding: 20pt 20pt;">
+      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">100%</p>
+      <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 500; margin-top: 12pt; line-height: 1.4;">AI가 짠 코드가 사람의 터치 없이<br><strong>PR에 그대로 올라오는 일상</strong></p>
     </div>
   </div>
 
   <!-- 푸터 -->
-  <div style="display: flex; justify-content: space-between; padding-top: 12pt;">
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
     <p style="font-size: 9pt; color: #6b6560;">09</p>
   </div>

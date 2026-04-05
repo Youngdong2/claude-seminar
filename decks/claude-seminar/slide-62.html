@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt; height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">실패 패턴 5가지</h2>
+  </div>
+
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">도구를 잘 쓰는 것만큼 중요한 건, <strong style="color: #2d2a26;">잘못 쓰는 패턴</strong>을 아는 것.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 10pt 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; opacity: 0.7;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #6b6560;">01</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">컨텍스트 과부하</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"많이 주면 잘하겠지" <span style="color: #c45a3b;">→ 섹션 4 참고</span></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">02</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">불명확한 요구사항</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"이거 좀 고쳐줘" → LLM은 학습 데이터 기반 <strong style="color: #2d2a26;">추측 구현</strong>. 맞아도 재현성 없음</p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">03</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">검증 없는 자동수락</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"AI가 만들었으니 맞겠지" — 가장 위험한 생각. 자기 작업 평가 시 <strong style="color: #2d2a26;">병리적 낙관주의자</strong></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">04</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">긴 세션 드리프트</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">시점 편향 · 오류 중첩 · Mode Collapse — 초반 규칙을 잊고 방향 상실</p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; grid-column: 1 / -1;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">05</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">권한 과다</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"바이패스가 편하니까" — 프롬프트 인젝션 · 토큰 유출 · 프로덕션 사고의 단일 경로</p>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">62</p>
+  </div>
+</body>
+</html>

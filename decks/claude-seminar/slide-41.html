@@ -8,67 +8,48 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 40pt 48pt;
-      display: flex; flex-direction: column;
+      padding: 32pt 48pt 56pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">하네스의 6대 구성 요소</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">여전히 살아있는 프롬프트 엔지니어링</h2>
   </div>
 
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt;">
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
-        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">1</span>
-        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">컨텍스트 엔지니어링</p>
-      </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">각 단계에서 모델이 보는 정보를 설계. 무엇을 유지·요약·버릴지 관리</p>
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">용어가 "컨텍스트 엔지니어링"으로 옮겨간 것뿐, 사라진 것이 아님. <strong style="color: #2d2a26;">가장 안쪽 층엔 여전히 프롬프트.</strong></p>
+
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 14pt;">
+    <p style="font-size: 12pt; color: #faf8f5; line-height: 1.5;"><em>"프롬프트 엔지니어링은 죽지 않았습니다. 흡수되었을 뿐입니다. 좋은 컨텍스트 엔지니어는 여전히 좋은 프롬프트 엔지니어입니다."</em></p>
+    <p style="font-size: 9pt; color: #6b6560; margin-top: 6pt; text-align: right;">— Phil Schmid, Hugging Face</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">프롬프트</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">한 번 말하는 법</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
-        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">2</span>
-        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">도구 오케스트레이션</p>
-      </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">어떤 도구가 가용한지, 실행이 어떻게 처리되는지 결정</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">컨텍스트</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">여러 프롬프트가<br>모이는 구조</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
-        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">3</span>
-        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">상태 및 메모리</p>
-      </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">수 분~수 시간 실행되는 에이전트의 내구성 있는 상태 관리</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
-        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">4</span>
-        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">검증 루프</p>
-      </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">출력 생성 후 행동 실행 전 발동. 스키마·의미적·정책 유효성</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
-        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">5</span>
-        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">오류 복구</p>
-      </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">실패 감지 → 재시도, 다른 접근법, 인간에게 폴백</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
-        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">6</span>
-        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">인간 개입 제어</p>
-      </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">핵심 의사결정에서 일시정지. DB 삭제? 결제? → 승인 요구</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">하네스</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">그 구조 주변의<br>실행 환경</p>
     </div>
   </div>
 
-  <p style="font-size: 9pt; color: #6b6560; text-align: right; margin-top: 8pt;">— Kai Renner, harness-engineering.ai</p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 10pt 14pt;">
+    <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 600; line-height: 1.4;">안쪽 엉성 → 바깥도 붕괴. 모호한 CLAUDE.md 한 줄 → 스킬·훅을 붙여도 결국 모호한 결과.</p>
+  </div>
 
-  <div style="display: flex; justify-content: space-between; padding-top: 8pt;">
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
     <p style="font-size: 9pt; color: #6b6560;">41</p>
   </div>
 </body>
 </html>
+</content>
+</invoke>
