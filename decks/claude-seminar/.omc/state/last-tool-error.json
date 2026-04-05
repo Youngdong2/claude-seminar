@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"rm -f slide-*.pdf && node export-pdf.mjs\",\"timeout\":180000,\"description\":\"Regenerate PDF\"}",
-  "error": "Exit code 1\n(eval):1: no matches found: slide-*.pdf",
-  "timestamp": "2026-04-04T12:58:09.113Z",
-  "retry_count": 1
-}

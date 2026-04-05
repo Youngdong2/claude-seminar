@@ -1,2 +1,6 @@
 node_modules/
 .claude/
+.omc/
+**/.omc/
+.DS_Store
+**/.DS_Store
