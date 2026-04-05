@@ -15,51 +15,40 @@
 </head>
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">5개 명령으로 돌리는 Agent Loop</h2>
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">재료 2 — CLAUDE.md, 취향의 박제</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">섹션 4 Agent Loop의 다섯 단계 — 각각 <strong style="color: #2d2a26;">하나의 명령어</strong>로 매핑.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">디자인 감각·카피 원칙이 <strong style="color: #2d2a26;">문서에 굳어짐</strong> · 새 슬라이드가 자동 추종 — Self-Improving Harness의 가장 원시적 형태.</p>
 
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 8pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">1. 이해</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/deep-dive</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">코드베이스 Trace → 소크라테스식 인터뷰 → <strong style="color: #2d2a26;">머릿속이 파일로</strong> 떨어진다</p>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
+    <!-- Excerpt -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 16pt; font-family: 'SF Mono', Consolas, monospace;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 6pt; font-family: 'Pretendard', sans-serif;">CLAUDE.md 발췌 — 카피 원칙</p>
+      <p style="font-size: 7.5pt; color: #2d2a26; line-height: 1.6;">1. 명사형·구 단위만 — "계획과 실행의 분리"</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6;">2. 금지: ~다 / ~이다 서술형</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6;">3. 금지: ~합니다 / ~입니다 공손체</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6;">4. 금지: ~하라 / ~해주세요 명령형</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6;">5. 금지: ~을까 / ~인가 수사 의문형</p>
+      <p style="font-size: 7pt; color: #6b6560; line-height: 1.6; margin-top: 4pt;"># 예외: 인용문·다크카드 슬로건·제목</p>
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-top: 10pt; font-family: 'Pretendard', sans-serif;">디자인 토큰 (6개)</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6; margin-top: 2pt;">bg #faf8f5 / card #f0ebe3</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6;">dark #2d2a26 / accent #c45a3b</p>
+      <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.6;">720pt × 405pt, 16:9</p>
     </div>
 
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">2. 계획</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/ralplan</p>
+    <!-- Self-improving loop -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 4pt;">초기에 없던 규칙</p>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.55;">초반: <code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">~합니다</code> 공손체 → 스캔 불가</p>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.55;">중반: <code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">~다</code> 서술형 → 여전히 읽어야</p>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.55;">결론: 명사형 통일 → <strong>CLAUDE.md 박제</strong></p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">architect 계획 → critic 별도 비평 → <strong style="color: #2d2a26;">합의된 것만 실행 허가</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">3. 실행</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/team</p>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">93장에 걸쳐 카피 톤이 일관된 이유 —</p>
+        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5; margin-top: 4pt;">사람의 93번 검토가 아닌, <strong style="color: #c45a3b;">규칙 박제의 결과</strong></p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">워커 4~5개 병렬 · Test Writer는 구현 코드 못 봄 · <strong style="color: #2d2a26;">역할 격리 기본</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">4. 검증</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/ultraqa</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">test → 원인 분석 → 수정 → 재실행 · <strong style="color: #2d2a26;">루프가 알아서 수렴</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">5. 학습</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/learner</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">재사용 가능한 패턴을 <strong style="color: #2d2a26;">새 스킬로 자동 저장</strong> — 쓸수록 똑똑해짐</p>
     </div>
   </div>
 

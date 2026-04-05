@@ -8,48 +8,64 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 40pt 48pt;
+      padding: 32pt 48pt 56pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">AI가 TDD를 치팅하는 3가지 방식</h2>
   </div>
 
-  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">인간 → 테스트 작성 · AI → 통과 코드 구현.</p>
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 12pt;"><em style="color: #2d2a26;">"AI는 스스로 TDD를 하지 않는다."</em> — Kent Beck. 프로세스 강제 장치 필요.</p>
 
-  <!-- Red-Green 사이클 -->
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div style="display: flex; flex-direction: column; gap: 6pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">1. [인간]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">실패 테스트(Red) 작성</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">2. [AI]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">테스트를 통과하는 최소 코드(Green)</p>
-      </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">3. [인간]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">통과 코드 리뷰</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">4. [AI]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">통과 상태 유지하며 리팩토링</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">관찰되는 3가지 치팅 패턴</p>
+      <div style="display: flex; flex-direction: column; gap: 5pt;">
+        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 10pt; color: #2d2a26;"><strong>1. 테스트 삭제/skip/xfail</strong></p>
+          <p style="font-size: 9pt; color: #6b6560;">구현이 막히면 테스트 자체를 비활성화</p>
+        </div>
+        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 10pt; color: #2d2a26;"><strong>2. 구현 먼저, 테스트 나중</strong></p>
+          <p style="font-size: 9pt; color: #6b6560;">자기 코드에 맞춘 약한 테스트를 작성</p>
+        </div>
+        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 10pt; color: #2d2a26;"><strong>3. assert 약화</strong></p>
+          <p style="font-size: 9pt; color: #6b6560;">값 검증을 타입 검증으로, Equal→True로 슬쩍</p>
+        </div>
       </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 12pt;">
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 8pt; font-family: 'Pretendard', sans-serif;">TDD 지시 예시</p>
-        <p style="font-size: 8.5pt; color: #87ceeb; line-height: 1.6;">"장바구니 할인 계산을 TDD로 구현해줘.<br>먼저 테스트부터 작성해:<br>- 기본 합계: 10,000원 × 2개 = 20,000원<br>- 배송비: 5만원 미만 → 3,000원,<br>&nbsp;&nbsp;이상 → 무료<br>- 쿠폰: 'SUMMER10' → 10% 할인<br>테스트가 실패하는 걸 확인하고,<br>그 다음에 통과하는 코드를 작성해."</p>
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">강제력의 스펙트럼</p>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
+        <div style="display: flex; flex-direction: column; gap: 6pt;">
+          <div style="display: flex; align-items: center; gap: 8pt;">
+            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">약</p>
+            <p style="font-size: 10pt; color: #a09a94;">프롬프트</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8pt;">
+            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">↓</p>
+            <p style="font-size: 10pt; color: #faf8f5;">문서 (CLAUDE.md)</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8pt;">
+            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">↓</p>
+            <p style="font-size: 10pt; color: #faf8f5;">슬래시 커맨드 / 스킬</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8pt;">
+            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">↓</p>
+            <p style="font-size: 10pt; color: #faf8f5;">에이전트 격리</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8pt;">
+            <p style="font-size: 9pt; color: #c45a3b; width: 20pt; font-weight: 700;">강</p>
+            <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">자동 차단 훅</p>
+          </div>
+        </div>
       </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>핵심</strong>: 인간이 테스트, AI가 구현 · 한 번에 하나 · 테스트 수정 금지</p>
-        <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">버그 <strong style="color: #c45a3b;">40~80%</strong> 감소 — 2025 DORA</p>
-      </div>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 8pt; line-height: 1.4;">개인 프로젝트 = 문서로 충분 · 조직 표준 = 훅 필요.</p>
     </div>
   </div>
 
@@ -59,3 +75,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>

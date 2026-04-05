@@ -14,66 +14,62 @@
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 10pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 6</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">5분 에이전트 철학</h2>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC의 3 레이어 — 실행 모드 · 에이전트 · 모델</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">긴 에이전트 하나보다 <strong style="color: #2d2a26;">짧은 에이전트 여럿</strong>. 가장 반직관적인 교훈.</p>
-
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 12pt;">
-    <!-- Comparison: long vs many short -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt;">
-      <svg viewBox="0 0 600 80" style="width: 100%; height: 70pt;">
-        <!-- Top: long single chain -->
-        <text x="8" y="18" font-family="Pretendard" font-size="10" font-weight="700" fill="#6b6560">Before</text>
-        <rect x="70" y="8" width="510" height="18" rx="3" fill="#6b6560" opacity="0.35"/>
-        <text x="325" y="21" text-anchor="middle" font-family="Pretendard" font-size="9" font-weight="600" fill="#2d2a26">2시간짜리 에이전트 하나 — 실패하면 2시간 날아감</text>
-
-        <!-- Bottom: many short -->
-        <text x="8" y="58" font-family="Pretendard" font-size="10" font-weight="700" fill="#c45a3b">After</text>
-        <g>
-          <rect x="70" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="117" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="164" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="211" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="258" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="305" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="352" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="399" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="446" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="493" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-          <rect x="540" y="48" width="40" height="18" rx="3" fill="#c45a3b" opacity="0.85"/>
-        </g>
-        <text x="90" y="78" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">5분</text>
-        <text x="560" y="78" text-anchor="middle" font-family="Pretendard" font-size="7" fill="#6b6560">5분</text>
-      </svg>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt;">
+    <!-- 실행 모드 -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">실행 모드</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.4; margin-bottom: 8pt;">같은 작업도 모드에 따라 다르게 동작</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/autopilot</code> — 완전 자율</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ultrapilot</code> — 5워커 병렬</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ralph</code> — 지속 루프 + 검증</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/team</code> — 구조화 파이프라인</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ultraqa</code> — QA 집중</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ecomode</code> — 비용 최적</p>
+      </div>
     </div>
 
-    <!-- Why shorter wins -->
-    <div style="flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10pt;">
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 12pt;">
-        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">실패 지점이 짧다</p>
-        <p style="font-size: 8pt; color: #2d2a26; line-height: 1.45;">5분 실패 = 5분 손해</p>
+    <!-- 에이전트 카탈로그 -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">에이전트 29+</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.4; margin-bottom: 8pt;">역할·권한·모델이 다른 전문가</p>
+      <div style="display: flex; flex-direction: column; gap: 3pt;">
+        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>분석</strong> · architect, analyst, tracer</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>실행</strong> · executor, designer, writer</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>탐색</strong> · explore, explore-high</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>검증</strong> · critic, code-reviewer,<br>security-reviewer, qa-tester</p>
+        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>특수</strong> · debugger, scientist, vision</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 12pt;">
-        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">컨텍스트 신선</p>
-        <p style="font-size: 8pt; color: #2d2a26; line-height: 1.45;">50k 넘기 전에 끝남</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 12pt;">
-        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">재시도 가능</p>
-        <p style="font-size: 8pt; color: #2d2a26; line-height: 1.45;">멱등성 설계 쉬움</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 12pt;">
-        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">관찰 가능</p>
-        <p style="font-size: 8pt; color: #2d2a26; line-height: 1.45;">입출력으로 판단</p>
+    </div>
+
+    <!-- 모델 라우팅 -->
+    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">모델 라우팅</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.4; margin-bottom: 8pt;">난이도에 맞춰 자동 선택</p>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <div style="border-left: 2pt solid #c45a3b; padding-left: 8pt;">
+          <p style="font-size: 9pt; color: #2d2a26; font-weight: 600;">Haiku</p>
+          <p style="font-size: 8pt; color: #6b6560;">탐색 · 단순 변경</p>
+        </div>
+        <div style="border-left: 2pt solid #c45a3b; padding-left: 8pt;">
+          <p style="font-size: 9pt; color: #2d2a26; font-weight: 600;">Sonnet</p>
+          <p style="font-size: 8pt; color: #6b6560;">표준 구현 · 리팩토링</p>
+        </div>
+        <div style="border-left: 2pt solid #c45a3b; padding-left: 8pt;">
+          <p style="font-size: 9pt; color: #2d2a26; font-weight: 600;">Opus</p>
+          <p style="font-size: 8pt; color: #6b6560;">아키텍처 · 비평</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 18pt; margin-top: 12pt;">
-    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.4; font-style: italic;">"5분짜리 에이전트 여럿을 합치면 — <span style="color: #c45a3b; font-weight: 700;">장시간 에이전트 없이 장시간 시스템</span>이 나온다."</p>
-    <p style="font-size: 8pt; color: #6b6560; margin-top: 3pt;">— Paul Fruitful (Claude Code 하네스 분석)</p>
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.4;">사용자는 <strong style="color: #c45a3b;">"어떤 작업인지"</strong>만 말한다 — 모드·에이전트·모델 선택은 OMC가 알아서.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

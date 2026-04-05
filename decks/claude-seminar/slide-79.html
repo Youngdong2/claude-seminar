@@ -15,42 +15,39 @@
 </head>
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">한 걸음 더 — 단일 모델 탈피</h2>
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">재료 3 — slides-grab, Skill 경계로 박힌 분리</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">섹션 6이 <strong style="color: #2d2a26;">여러 Claude</strong>였다면, 이건 <strong style="color: #2d2a26;">여러 종류의 AI</strong>. 모델마다 상이한 훈련 분포·blind spot.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">HTML → PDF 익스포트 직접 작성 없음. 커뮤니티 Skill을 그대로, 그리고 의도적으로 <strong style="color: #2d2a26;">3단으로 분리</strong>.</p>
 
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
-    <!-- /ask -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ask [provider]</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">특정 공급자에게 바로 질의 — Claude 답이 확신 안 설 때 다른 모델에 의견</p>
-      </div>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 8pt; color: #6b6560;"># 성능 조언을 Codex에게</p>
-        <p style="font-size: 8pt; color: #faf8f5;">/ask codex "이 함수 최적화"</p>
-        <p style="font-size: 8pt; color: #6b6560; margin-top: 4pt;"># 복잡도 분석을 Gemini에게</p>
-        <p style="font-size: 8pt; color: #faf8f5;">/ask gemini "시간 복잡도"</p>
-      </div>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 1 · PLAN</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-plan</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;"><code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">slide-outline.md</code> 생성</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55; margin-top: 3pt;">사용자 승인까지 반복</p>
     </div>
-
-    <!-- /ccg -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ccg — Claude · Codex · Gemini</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세 모델에 동시 송출 → 답을 모아 <strong style="color: #2d2a26;">합의·불일치·불확실</strong> 분리 표시</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; font-weight: 600; margin-bottom: 4pt;">특히 빛나는 순간</p>
-        <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.5;">· 아키텍처 결정 (되돌리기 어려움)<br>· 디버깅이 막혔을 때<br>· 머지 전 코드 리뷰 최종 확인</p>
-      </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 2 · DESIGN</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-design</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;">승인된 아웃라인 →</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;"><code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">slide-XX.html</code> 생성·수정</p>
+    </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 3 · EXPORT</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-export</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;">HTML → PDF 변환</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55; margin-top: 3pt;">산출물 검증</p>
     </div>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; margin-top: 12pt;">
-    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">주의</strong> — 비용 3배, 속도는 가장 느린 모델 기준, 합의가 증명은 아니다(같은 편향 공유 가능). <strong style="color: #c45a3b;">중요한 결정에만</strong>.</p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; margin-bottom: 10pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>왜 3단인가</strong> — 단계 사이에 사용자 승인을 <strong style="color: #c45a3b;">물리적으로 강제</strong>. Plan에서 방향이 틀어지면 Design·Export 비용 전부 낭비.</p>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 11pt 18pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.5;">섹션 4의 <strong style="color: #c45a3b;">"계획과 실행의 분리"</strong>가 Skill 경계로 박제됨 — 규칙이 아니라 파일 구조가 강제.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

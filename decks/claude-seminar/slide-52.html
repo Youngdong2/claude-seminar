@@ -14,46 +14,41 @@
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 12pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md 운영 원칙</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Skills & Hooks — 그게 뭔가</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 12pt;">공식 문서가 느낌표까지 붙여서 경고한 유일한 원칙 — <strong style="color: #2d2a26;">짧을수록 효과적.</strong></p>
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">하네스를 구성하는 두 실행 단위. <strong style="color: #2d2a26;">Skill = 부르면 실행되는 워크플로우</strong> · <strong style="color: #2d2a26;">Hook = 이벤트에 자동 실행되는 스크립트</strong>.</p>
 
-  <!-- 한 줄 삭제 테스트 (강조) -->
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">한 줄 삭제 테스트</p>
-    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.4; font-style: italic;">"각 줄에 대해 물어보세요 — 이 줄을 지우면 Claude가 실수할까? 아니라면 잘라내세요."</p>
-    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; text-align: right;">— Claude Code Best Practices</p>
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
-    <!-- 크기 가이드라인 -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">크기 가이드라인</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>~60줄</strong> · HumanLayer (엄격파)</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>2.5k 토큰</strong> · Boris Cherny 팀</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>200줄 이하</strong> · 공식 문서</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>500줄 이하</strong> · Marconato</p>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
+    <!-- Skills -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
+      <div>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">SKILL</p>
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">재사용 워크플로우 패키지</p>
       </div>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-top: 6pt; line-height: 1.4;">숫자보다 <strong>신호 대 잡음비</strong>. 같은 신호 → 짧을수록 우세.</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 반복되는 작업을 한 번에 호출하고 싶을 때</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — frontmatter(name · description) + markdown 본문</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">호출</strong> — <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/skillname</code> 또는 자연어 트리거</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/deploy</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/review-pr</code></p>
     </div>
 
-    <!-- 비대해지면 모듈화 -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">비대해지면 — 모듈화</p>
-      <div style="display: flex; flex-direction: column; gap: 5pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">@path/to/file</code> — 다른 파일을 import (최대 5홉)</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">.claude/rules/</code> — 경로별 규칙, 읽을 때만 트리거</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">/compact</code> 후에도 CLAUDE.md는 재로드</p>
+    <!-- Hooks -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
+      <div>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">HOOK</p>
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">이벤트 기반 자동 스크립트</p>
       </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 항상 적용해야 하는 규칙·검증·차단</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — 이벤트 타입(PreToolUse…) + 실행 커맨드</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">실행</strong> — LLM이 아닌 쉘 스크립트 — 반드시 실행</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: 파일 편집 후 <strong>ESLint</strong> · 커밋 전 <strong>테스트</strong> · .env 편집 <strong>차단</strong></p>
     </div>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 14pt; margin-top: 10pt;">
-    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;"><strong>자가진단 5문항:</strong> ① 한 줄 삭제 테스트 ② 린터로 잡을 규칙은 린터로 ③ /compact 생존 테스트 ④ 모순 테스트 ⑤ 되묻기 테스트</p>
+  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;">구분법 — <strong style="color: #c45a3b;">Skill = 내가 부를 때 실행</strong> · <strong style="color: #c45a3b;">Hook = 자동 실행</strong>.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -62,5 +57,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

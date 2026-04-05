@@ -8,72 +8,29 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 40pt 48pt;
-      display: flex; flex-direction: column; position: relative;
+      padding: 48pt 64pt;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">방법론 비교</h2>
-  </div>
+  <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 24pt;">결론</p>
 
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 5pt;">
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; padding: 0 12pt;">
-      <p style="font-size: 8pt; font-weight: 600; color: #6b6560;"></p>
-      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">Vibe</p>
-      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">PDD</p>
-      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">TDD</p>
-      <p style="font-size: 8pt; font-weight: 600; color: #2d2a26; text-align: center;">SDD</p>
+  <p style="font-size: 32pt; font-weight: 700; color: #2d2a26; margin-bottom: 28pt;">Spec + TDD</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 40pt 1fr; gap: 0; align-items: center; margin-bottom: 28pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 20pt;">
+      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">Spec</p>
+      <p style="font-size: 11pt; color: #6b6560;">"무엇을" 정의<br>의도 명확화</p>
     </div>
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">인간의 역할</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">묘사자</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">프롬프트<br>작성자</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">테스트<br>작성자</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">스펙<br>작성자</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">검증 방식</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">감각적</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">출력 비교</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">자동 테스트</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">스펙 검증</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">진입 장벽</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">매우 낮음</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">낮음</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간~높음</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">프로토타이핑</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">매우 빠름</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">빠름</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">느림</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">프로덕션</p>
-      <p style="font-size: 9pt; color: #c45a3b; text-align: center;">낮음</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 90pt 1fr 1fr 1fr 1fr; gap: 6pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26;">유지보수</p>
-      <p style="font-size: 9pt; color: #c45a3b; text-align: center;">매우 낮음</p>
-      <p style="font-size: 9pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
+    <p style="font-size: 20pt; color: #c45a3b; text-align: center;">+</p>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 20pt;">
+      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">TDD</p>
+      <p style="font-size: 11pt; color: #6b6560;">"정말 그렇게 됐는지" 검증<br>결과를 자동으로 확인</p>
     </div>
   </div>
 
-  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
-    <p style="font-size: 9pt; color: #6b6560;">36</p>
-  </div>
+  <p style="font-size: 13pt; color: #6b6560; line-height: 1.6;">스펙 없는 TDD — 나무는 보되 숲은 놓침<br>TDD 없는 스펙 — 검증 수단 부재</p>
 </body>
 </html>

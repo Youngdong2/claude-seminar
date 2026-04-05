@@ -8,41 +8,40 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">여전히 살아있는 프롬프트 엔지니어링</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">왜 프롬프트만으로는 부족한가</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">용어가 "컨텍스트 엔지니어링"으로 옮겨간 것뿐, 사라진 것이 아님. <strong style="color: #2d2a26;">가장 안쪽 층엔 여전히 프롬프트.</strong></p>
+  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 16pt;">좋은 프롬프트로도 잔존하는 문제. 에이전트가 여러 단계를 거치는 순간 — <strong style="color: #2d2a26;">숫자가 불리해짐.</strong></p>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 14pt;">
-    <p style="font-size: 12pt; color: #faf8f5; line-height: 1.5;"><em>"프롬프트 엔지니어링은 죽지 않았습니다. 흡수되었을 뿐입니다. 좋은 컨텍스트 엔지니어는 여전히 좋은 프롬프트 엔지니어입니다."</em></p>
-    <p style="font-size: 9pt; color: #6b6560; margin-top: 6pt; text-align: right;">— Phil Schmid, Hugging Face</p>
-  </div>
+  <!-- 신뢰성의 수학 -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
+    <div style="display: flex; flex-direction: column; gap: 12pt; justify-content: center;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">재현성 문제</p>
+        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;">같은 프롬프트에도 다른 결과.<br>AI는 <strong>비결정적</strong> 시스템.</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">복리로 쌓이는 실패</p>
+        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;">한 단계 5% 실패율이<br>20단계에선 치명적.</p>
+      </div>
+    </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">프롬프트</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">한 번 말하는 법</p>
+    <div style="background: #2d2a26; border-radius: 10pt; padding: 20pt; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <p style="font-size: 10pt; color: #6b6560; margin-bottom: 10pt;">숫자로 보면</p>
+      <p style="font-size: 13pt; color: #faf8f5; margin-bottom: 4pt;">각 단계 성공률 <span style="color: #c45a3b; font-weight: 700;">95%</span></p>
+      <p style="font-size: 13pt; color: #faf8f5; margin-bottom: 12pt;">20단계 체인이라면?</p>
+      <p style="font-size: 48pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">36%</p>
+      <p style="font-size: 10pt; color: #6b6560; margin-top: 2pt;">0.95²⁰ = 0.358</p>
+      <p style="font-size: 10pt; color: #faf8f5; margin-top: 12pt; line-height: 1.4;">"95% 동작" 에이전트 →<br>실제 작업의 2/3에서 실패.</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">컨텍스트</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">여러 프롬프트가<br>모이는 구조</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">하네스</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">그 구조 주변의<br>실행 환경</p>
-    </div>
-  </div>
-
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 10pt 14pt;">
-    <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 600; line-height: 1.4;">안쪽 엉성 → 바깥도 붕괴. 모호한 CLAUDE.md 한 줄 → 스킬·훅을 붙여도 결국 모호한 결과.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -51,5 +50,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

@@ -8,7 +8,7 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 40pt 48pt;
+      padding: 32pt 48pt 56pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
@@ -16,47 +16,75 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Plugins — 하네스를 포장해서 팀 자산으로</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Ralph Loop — 가장 단순한 하네스</h2>
   </div>
 
-  <p style="font-size: 10pt; color: #6b6560; margin-bottom: 14pt;">4개 레이어 위에 얹히는 배포 레이어 — 2025.10 공개 베타</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 10pt;">Ralph Loop — 단 하나의 <code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9.5pt;">PROMPT.md</code>를 무한 루프로 반복 실행하는 가장 원시적 에이전트 패턴. Geoffrey Huntley가 정식화. <span style="color: #6b6560;">(Ralph는 약자가 아니라 The Simpsons의 Ralph Wiggum에서 딴 이름 — "바보처럼 단순한" 루프)</span></p>
 
-  <div style="flex: 1; display: grid; grid-template-columns: 1.15fr 1fr; gap: 16pt;">
-    <!-- Left: what plugins bundle -->
-    <div style="display: flex; flex-direction: column; gap: 10pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">새 기능이 아니라 포장지</p>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.55;">이미 존재하는 <strong style="color: #2d2a26;">Skill · Subagent · Hook · MCP · LSP</strong>를 단일 단위로 번들링해 팀·커뮤니티에 배포하는 메커니즘</p>
+  <!-- Flow diagram -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 18pt; margin-bottom: 10pt;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8pt;">
+      <div style="background: #3a3530; border: 1pt solid #c45a3b; border-radius: 5pt; padding: 8pt 10pt; text-align: center; flex: 1;">
+        <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 2pt;">입력</p>
+        <p style="font-size: 10pt; color: #faf8f5; font-family: monospace;">PROMPT.md</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt; font-family: monospace;">
-        <p style="font-size: 8pt; color: #6b6560;">my-plugin/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── .claude-plugin/plugin.json</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── commands/ &nbsp;agents/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── skills/ &nbsp;&nbsp;&nbsp;hooks/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">└── .mcp.json</p>
+      <p style="font-size: 14pt; color: #c45a3b;">→</p>
+      <div style="background: #3a3530; border: 1pt solid #c45a3b; border-radius: 5pt; padding: 8pt 10pt; text-align: center; flex: 1;">
+        <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 2pt;">실행</p>
+        <p style="font-size: 10pt; color: #faf8f5;">Claude Code</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>standalone → plugin</strong> 전환은 파일 이동 + 매니페스트 1개 수준</p>
+      <p style="font-size: 14pt; color: #c45a3b;">→</p>
+      <div style="background: #3a3530; border: 1pt solid #c45a3b; border-radius: 5pt; padding: 8pt 10pt; text-align: center; flex: 1;">
+        <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 2pt;">결과</p>
+        <p style="font-size: 10pt; color: #faf8f5;">파일 수정·검증</p>
+      </div>
+      <p style="font-size: 14pt; color: #c45a3b;">↺</p>
+      <div style="background: #c45a3b; border-radius: 5pt; padding: 8pt 10pt; text-align: center; flex: 0.9;">
+        <p style="font-size: 8pt; color: #faf8f5; font-weight: 700; margin-bottom: 2pt;">무한 루프</p>
+        <p style="font-size: 9pt; color: #faf8f5;">while :; do ...</p>
       </div>
     </div>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8pt; margin-top: 8pt;">
+      <p style="font-size: 9pt; color: #a09a94;">실수 발견 시 →</p>
+      <div style="background: #3a3530; border-left: 2pt solid #c45a3b; border-radius: 4pt; padding: 4pt 10pt;">
+        <p style="font-size: 9pt; color: #faf8f5;">PROMPT.md에 규칙 한 줄 추가</p>
+      </div>
+      <p style="font-size: 9pt; color: #a09a94;">→ 다음 루프에서 자동 반영</p>
+    </div>
+  </div>
 
-    <!-- Right: flow + conclusion -->
-    <div style="display: flex; flex-direction: column; gap: 10pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">마켓플레이스로 공유</p>
-      <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 14pt; font-family: monospace;">
-        <p style="font-size: 8pt; color: #6b6560; margin-bottom: 4pt;"># 마켓플레이스 추가</p>
-        <p style="font-size: 8pt; color: #2d2a26;">/plugin marketplace add &lt;repo&gt;</p>
-        <p style="font-size: 8pt; color: #6b6560; margin-top: 6pt;"># 플러그인 설치</p>
-        <p style="font-size: 8pt; color: #2d2a26;">/plugin install name@marketplace</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 12pt;">
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">왜 동작하는가</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 9pt; color: #2d2a26;">PROMPT.md에 <strong>"가장 중요한 일 하나"</strong>만 적는다</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 9pt; color: #2d2a26;">실수하면 도구 탓 말고 <strong>규칙을 추가한다</strong></p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 9pt; color: #2d2a26;"><strong>단순성이 예측 가능성</strong>을 만든다</p>
+        </div>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.55;">개인 <code style="color: #c45a3b;">.claude/</code>에 쌓다가<br>동료에게 공유하고 싶어지는 순간 전환</p>
-      </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt; flex: 1; display: flex; align-items: center;">
-        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">개인이 쌓아올린 하네스를<br><strong style="color: #c45a3b;">조직 자산</strong>으로 전환하는 마지막 한 조각</p>
+    </div>
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">솔직한 한계</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 9pt; color: #6b6560;">Greenfield 전용. 레거시에 부적합</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 9pt; color: #6b6560;">검증(테스트/린트) 없으면 환각을 쌓음</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 4pt; padding: 8pt 12pt;">
+          <p style="font-size: 9pt; color: #6b6560;">튜닝하는 엔지니어는 여전히 필요</p>
+        </div>
       </div>
     </div>
   </div>
+
+  <p style="font-size: 10pt; color: #2d2a26; text-align: center;"><em>"놀이터에서 아이가 미끄럼틀 위에서 뛰어내려 다치면, '뛰지 말고 미끄러져 내려오세요' 표지판을 세웁니다."</em> <span style="color: #6b6560;">— Huntley</span></p>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
@@ -64,3 +92,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>

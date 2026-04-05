@@ -7,15 +7,51 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">07</p>
-  <h1 style="font-size: 40pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">실전 워크플로우 &<br>도구 세팅</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">한 걸음 더 — 단일 모델 탈피</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">섹션 6이 <strong style="color: #2d2a26;">여러 Claude</strong>였다면, 이건 <strong style="color: #2d2a26;">여러 종류의 AI</strong>. 모델마다 상이한 훈련 분포·blind spot.</p>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- /ask -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ask [provider]</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">특정 공급자에게 바로 질의 — Claude 답이 확신 안 설 때 다른 모델에 의견</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 7.5pt; color: #6b6560;"># 성능 조언을 Codex에게</p>
+        <p style="font-size: 7.5pt; color: #faf8f5; line-height: 1.5;">/ask codex "이 함수 너무 느려.<br>&nbsp;&nbsp;병목 찾아서 최적화해줘"</p>
+        <p style="font-size: 7.5pt; color: #6b6560; margin-top: 6pt;"># 복잡도 분석을 Gemini에게</p>
+        <p style="font-size: 7.5pt; color: #faf8f5; line-height: 1.5;">/ask gemini "이 알고리즘 시간복잡도<br>&nbsp;&nbsp;분석하고 더 빠른 대안 제안해줘"</p>
+      </div>
+    </div>
+
+    <!-- /ccg -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ccg — Claude · Codex · Gemini</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세 모델에 동시 송출 → 답을 모아 <strong style="color: #2d2a26;">합의·불일치·불확실</strong> 분리 표시</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; font-weight: 600; margin-bottom: 4pt;">특히 빛나는 순간</p>
+        <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.5;">· 아키텍처 결정 (되돌리기 어려움)<br>· 디버깅이 막혔을 때<br>· 머지 전 코드 리뷰 최종 확인</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">74</p>
+  </div>
 </body>
 </html>

@@ -16,36 +16,39 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">PDD — 프롬프트 주도 개발</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Test-Driven Development)</span> — 테스트 주도 개발</h2>
   </div>
 
-  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">프롬프트를 위시리스트가 아닌, <strong style="color: #2d2a26;">검증 가능한 명세(contract)</strong>로 취급.</p>
+  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 16pt;">인간 → 테스트 작성 · AI → 통과 코드 구현.</p>
 
+  <!-- Red-Green 사이클 -->
   <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div>
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">좋은 PDD 프롬프트</p>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 14pt; font-family: monospace; margin-bottom: 12pt;">
-        <p style="font-size: 9pt; color: #87ceeb; line-height: 1.6;">"장바구니 할인 계산 함수를 구현해줘.<br>- 입력: items[{price, quantity}],<br>&nbsp;&nbsp;coupon_code(optional)<br>- 규칙: 5만원 이상 → 무료배송,<br>&nbsp;&nbsp;미만 → 배송비 3,000원<br>- 출력: { subtotal, discount,<br>&nbsp;&nbsp;shipping_fee, total }<br>- 검증: 'SUMMER10' → 10% 할인"</p>
+    <div style="display: flex; flex-direction: column; gap: 6pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">1. [인간]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">실패 테스트(Red) 작성</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; text-decoration: line-through;">"할인 기능 만들어줘" ← 나쁜 예</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">2. [AI]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">테스트를 통과하는 최소 코드(Green)</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">3. [인간]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">통과 코드 리뷰</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">4. [AI]</p>
+        <p style="font-size: 11pt; color: #2d2a26;">통과 상태 유지하며 리팩토링</p>
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 12pt;">
-      <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">장점</p>
-        <div style="display: flex; flex-direction: column; gap: 4pt;">
-          <p style="font-size: 10pt; color: #6b6560;">자연어로 접근성 높음</p>
-          <p style="font-size: 10pt; color: #6b6560;">비개발자도 참여 가능</p>
-          <p style="font-size: 10pt; color: #6b6560;">프롬프트 자체가 문서 역할</p>
-        </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 8pt; font-family: 'Pretendard', sans-serif;">TDD 지시 예시</p>
+        <p style="font-size: 8.5pt; color: #87ceeb; line-height: 1.6;">"장바구니 할인 계산을 TDD로 구현해줘.<br>먼저 테스트부터 작성해:<br>- 기본 합계: 10,000원 × 2개 = 20,000원<br>- 배송비: 5만원 미만 → 3,000원,<br>&nbsp;&nbsp;이상 → 무료<br>- 쿠폰: 'SUMMER10' → 10% 할인<br>테스트가 실패하는 걸 확인하고,<br>그 다음에 통과하는 코드를 작성해."</p>
       </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">한계</p>
-        <div style="display: flex; flex-direction: column; gap: 4pt;">
-          <p style="font-size: 10pt; color: #6b6560;">좋은 프롬프트 작성 능력 필요</p>
-          <p style="font-size: 10pt; color: #6b6560;">복잡한 시스템에서 충분한 명세 어려움</p>
-        </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>핵심</strong>: 인간이 테스트, AI가 구현 · 한 번에 하나 · 테스트 수정 금지</p>
+        <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">버그 <strong style="color: #c45a3b;">40~80%</strong> 감소 — 2025 DORA</p>
       </div>
     </div>
   </div>
