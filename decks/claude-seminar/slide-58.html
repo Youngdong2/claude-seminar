@@ -15,47 +15,51 @@
 </head>
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Harness Builder — 새로운 역할</h2>
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">실패 패턴 5가지</h2>
   </div>
 
-  <div style="display: flex; flex-direction: column; gap: 12pt;">
-    <!-- 3 역할 비교 -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt;">
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt; text-align: center;">
-        <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">Builder</p>
-        <p style="font-size: 10pt; color: #6b6560;">기능을 구현하고<br>코드를 작성</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">도구를 잘 쓰는 것만큼 중요한 건, <strong style="color: #2d2a26;">잘못 쓰는 패턴</strong>을 아는 것.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; opacity: 0.7;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #6b6560;">58</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">컨텍스트 과부하</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt; text-align: center;">
-        <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">Reviewer</p>
-        <p style="font-size: 10pt; color: #6b6560;">코드의 품질, 정확성,<br>보안을 검토</p>
-      </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt; text-align: center;">
-        <p style="font-size: 14pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">Harness Builder</p>
-        <p style="font-size: 10pt; color: #6b6560;">에이전트가 일하는<br>환경 자체를 설계</p>
-      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"많이 주면 잘하겠지" — 섹션 4의 Rot · Distraction · Confusion</p>
     </div>
 
-    <!-- OpenAI 사례 -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 16pt 20pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">OpenAI Codex 팀 — 5개월간 수동 코드 0줄로 100만 줄 프로덕트</p>
-      <p style="font-size: 10pt; color: #6b6560; line-height: 1.6;"><em>"우리 팀의 주된 업무는 에이전트가 유용한 일을 할 수 있도록 <strong style="color: #2d2a26;">환경을 만드는 것</strong>이 되었다."</em></p>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">02</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">불명확한 요구사항</p>
+      </div>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"이거 좀 고쳐줘" → LLM은 학습 데이터 기반 <strong style="color: #2d2a26;">추측 구현</strong>. 맞아도 재현성 없음</p>
     </div>
 
-    <!-- 핵심 업무 -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt;">
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong style="color: #c45a3b;">1</strong> 리포지토리 지식 체계 설계</p>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">03</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">검증 없는 자동수락</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong style="color: #c45a3b;">2</strong> 결정론적 제약 구현 (린터, 테스트)</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"AI가 만들었으니 맞겠지" — 가장 위험한 생각. 자기 작업 평가 시 <strong style="color: #2d2a26;">병리적 낙관주의자</strong></p>
+    </div>
+
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">04</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">긴 세션 드리프트</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong style="color: #c45a3b;">3</strong> 에이전트 가독성 최적화</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">시점 편향 · 오류 중첩 · Mode Collapse — 초반 규칙을 잊고 방향 상실</p>
+    </div>
+
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; grid-column: 1 / -1;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">05</p>
+        <p style="font-size: 11pt; font-weight: 700; color: #faf8f5;">권한 과다</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong style="color: #c45a3b;">4</strong> 취향과 원칙의 인코딩</p>
-      </div>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.45;">"바이패스가 편하니까" — 프롬프트 인젝션 · 토큰 유출 · 프로덕션 사고의 단일 경로</p>
     </div>
   </div>
 

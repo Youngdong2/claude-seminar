@@ -9,48 +9,28 @@
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
       padding: 40pt 48pt;
-      display: flex; flex-direction: column; position: relative;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">SDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Spec-Driven Development)</span> — 스펙 주도 개발</h2>
-  </div>
+  <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 24pt;">결론</p>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">코드가 아닌 <strong style="color: #2d2a26;">스펙이 단일 진실 원천(Source of Truth).</strong> Vibe Coding 이후 업계의 궤도 수정.</p>
+  <p style="font-size: 32pt; font-weight: 700; color: #2d2a26; margin-bottom: 28pt;">Spec + TDD</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">워크플로우</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 6pt 12pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><strong>[인간]</strong> 요구사항을 구조화된 스펙으로 작성</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 6pt 12pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><strong>[AI]</strong> 스펙을 읽고 구현 계획 제안</p>
-        </div>
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 6pt 12pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><strong>[인간]</strong> 계획 검토 및 승인</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 6pt 12pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><strong>[AI]</strong> 스펙에 따라 코드 생성</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 6pt 12pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><strong>[자동화]</strong> 스펙 준수 여부 검증</p>
-        </div>
-      </div>
+  <div style="display: grid; grid-template-columns: 1fr 40pt 1fr; gap: 0; align-items: center; margin-bottom: 28pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 20pt;">
+      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">Spec</p>
+      <p style="font-size: 11pt; color: #6b6560;">"무엇을" 정의<br>의도 명확화</p>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt; font-family: monospace;">
-      <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 6pt; font-family: 'Pretendard', sans-serif;">스펙 예시</p>
-      <p style="font-size: 8pt; color: #87ceeb; line-height: 1.5;"># 기능: 장바구니 할인 계산<br><br>## 요구사항<br>- 상품 목록(price, quantity) 합계 계산<br>- 쿠폰 코드 적용 시 할인율 차감<br>- 5만원 이상 무료배송, 미만 3,000원<br><br>## 제약조건<br>- 쿠폰 1회만 적용 가능<br>- 할인 후 금액 음수 불가<br><br>## 완료 기준<br>- [ ] 정상 합계 계산<br>- [ ] 유효 쿠폰 할인 반영<br>- [ ] 만료 쿠폰 → COUPON_EXPIRED<br>- [ ] 5만원 이상 → 무료배송</p>
+    <p style="font-size: 20pt; color: #c45a3b; text-align: center;">+</p>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 20pt;">
+      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">TDD</p>
+      <p style="font-size: 11pt; color: #6b6560;">"정말 그렇게 됐는지" 검증<br>결과를 자동으로 확인</p>
     </div>
   </div>
 
-  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
-    <p style="font-size: 9pt; color: #6b6560;">34</p>
-  </div>
+  <p style="font-size: 13pt; color: #6b6560; line-height: 1.6;">스펙 없는 TDD — 나무는 보되 숲은 놓침<br>TDD 없는 스펙 — 검증 수단 부재</p>
 </body>
 </html>

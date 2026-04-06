@@ -16,44 +16,35 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md는 살아있는 문서 — 현장 사례</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Plan–Critic–Build — 계획과 실행의 분리</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">한 번 쓰고 끝나는 정적 문서가 아닌, <strong style="color: #2d2a26;">피드백으로 자라는 유기체</strong>처럼 운영.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">에이전트가 가장 많이 실패하는 지점: <strong style="color: #2d2a26;">계획 없이 바로 코드 작성</strong>. 해결책은 단순 — 계획 단계를 쓰기 권한 없는 모드로 분리.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
-    <!-- Boris Cherny -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">Boris Cherny</p>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">Claude Code 창시자 · Anthropic</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">주 수 회 업데이트. <strong>Claude가 실수할 때마다 한 줄 추가.</strong> PR에서 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8pt;">@claude</code> 태그 → GitHub Action이 CLAUDE.md 자동 커밋.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.05em; margin-bottom: 6pt;">1. PLAN</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">읽기만 · 쓰기 금지</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">파일 읽기·검색·질문만. 결과: 편집 가능한 계획 문서.</p>
     </div>
-
-    <!-- Kieran Klaassen -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">Kieran Klaassen</p>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">Self-Improving Harness</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">"마음에 안 드네"/"좋은 지적이다" 한 마디가 곧 새 규칙. 백그라운드 잡 rate limit 버그 1회 → 규칙 1줄 → <strong>재발 0건.</strong></p>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.05em; margin-bottom: 6pt;">2. CRITIC</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">다른 눈으로 본다</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">리뷰 전용 에이전트. 작성자의 blind spot을 드러내기.</p>
     </div>
-
-    <!-- 정구봉 -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">정구봉 (Team Attention)</p>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">규모의 실천</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md 159개</strong> + 스킬 100개+ 동시 운영. "파일 하나는 짧게, 대신 파일을 많이."</p>
-    </div>
-
-    <!-- Hunslog -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">Hunslog</p>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 6pt;">한국 커뮤니티 · 미니멀</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">2.5k 토큰 이내, <strong>반복 실수만</strong> 기록. 몇 주에 한 번 Claude에게 CLAUDE.md 자체를 리뷰시키는 메타 운영.</p>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.05em; margin-bottom: 6pt;">3. BUILD</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #faf8f5; margin-bottom: 6pt;">승인 후 실행</p>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">승인된 계획 링크만 컨텍스트로. 쓰기 권한 개방.</p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
-    <p style="font-size: 11pt; color: #faf8f5; font-weight: 600; line-height: 1.4;"><em>"<span style="color: #c45a3b;">버그는 한 번 고치는 게 아니라, CLAUDE.md에 한 줄을 추가하면서 고치는 것</span>이다."</em></p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; margin-bottom: 10pt;">
+    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.5;"><strong>핵심: Planner와 Critic을 같은 컨텍스트에 두지 않기.</strong> 자기 계획 → 자기 비평 시 blind spot 잔존.</p>
+    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; line-height: 1.5;">Claude Code의 Plan Mode(<code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">Shift+Tab Shift+Tab</code>) — 1단계를 구조적으로 강제.</p>
   </div>
+
+  <p style="font-size: 9.5pt; color: #6b6560; text-align: right; line-height: 1.4;"><em>"계획과 실행을 분리하는 것이 제가 AI 코딩에서 하는 가장 중요한 행위이다."</em> — Armin Ronacher</p>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>

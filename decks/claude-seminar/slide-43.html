@@ -16,53 +16,34 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Agent = Model + Harness</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">컨텍스트의 4가지 실패 모드</h2>
   </div>
 
-  <!-- 수식 시각화 -->
-  <div style="display: flex; align-items: center; justify-content: center; gap: 14pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 24pt; text-align: center; flex: 1;">
-      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 2pt;">AGENT</p>
-      <p style="font-size: 18pt; font-weight: 700; color: #2d2a26;">에이전트</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">"많이 넣어도 OK" — 사실 아님. Drew Breunig가 정리한 4가지 실패 모드.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">POISONING · 중독</p>
+      <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">환각 1회 → 이후 오류 누적</p>
+      <p style="font-size: 9pt; color: #a09a94; margin-top: 3pt;">초반 오답 1개로 평균 39% 성능 저하</p>
     </div>
-    <p style="font-size: 24pt; font-weight: 300; color: #c45a3b;">=</p>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 24pt; text-align: center; flex: 1;">
-      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 2pt;">MODEL</p>
-      <p style="font-size: 18pt; font-weight: 700; color: #2d2a26;">텍스트 생성</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">DISTRACTION · 산만</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">히스토리 과의존, 실패한 액션 재시도</p>
     </div>
-    <p style="font-size: 24pt; font-weight: 300; color: #c45a3b;">+</p>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 24pt; text-align: center; flex: 1;">
-      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 2pt;">HARNESS</p>
-      <p style="font-size: 18pt; font-weight: 700; color: #c45a3b;">나머지 전부</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">CONFUSION · 혼동</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">무관한 정보 과잉 → 툴 30개+에서 급증</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">CLASH · 충돌</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">모순된 정보 → 추론 붕괴</p>
     </div>
   </div>
 
-  <p style="font-size: 10pt; color: #6b6560; text-align: center; margin-bottom: 10pt;"><em>"모델이 아닌 것은 전부 하네스입니다."</em> &nbsp;— LangChain, Vivek Trivedy</p>
-
-  <!-- 마구 비유 -->
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 18pt; margin-bottom: 10pt;">
-    <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">비유 · 마구(馬具, horse tack)</p>
-    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.45;">고삐 · 안장 · 재갈처럼, 강력하지만 예측 불가능한 말(= LLM)을 <strong>올바른 방향으로 이끄는 장비 전체</strong>가 하네스.</p>
-  </div>
-
-  <!-- 하네스가 결정하는 4가지 (2x2 그리드) -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 2pt;">무엇을 보는지</p>
-      <p style="font-size: 8.5pt; color: #6b6560;">컨텍스트</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 2pt;">할 수 있는지</p>
-      <p style="font-size: 8.5pt; color: #6b6560;">도구 · 권한</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 2pt;">언제 멈추는지</p>
-      <p style="font-size: 8.5pt; color: #6b6560;">제약</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 2pt;">잘못됐을 때</p>
-      <p style="font-size: 8.5pt; color: #6b6560;">복구</p>
-    </div>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 16pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;"><em>"컨텍스트를 잡동사니 서랍처럼 다루면, 그 잡동사니가 답변에 영향을 줍니다."</em> <span style="color: #6b6560; font-size: 9pt;">— Drew Breunig</span></p>
+    <p style="font-size: 9pt; color: #c45a3b; margin-top: 4pt;">핵심은 "뭘 넣을까"보다 "뭘 뺄까".</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -71,3 +52,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>

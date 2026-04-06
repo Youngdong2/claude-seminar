@@ -7,90 +7,16 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #faf8f5;
-      padding: 40pt 48pt;
-      display: flex; flex-direction: column; position: relative;
+      background: #2d2a26;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 0 64pt;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Ralph Loop — 가장 단순한 하네스</h2>
-  </div>
-
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 10pt;">Ralph Loop — 단 하나의 <code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9.5pt;">PROMPT.md</code>를 무한 루프로 반복 실행하는 가장 원시적 에이전트 패턴. Geoffrey Huntley가 정식화. <span style="color: #6b6560;">(Ralph는 약자가 아니라 The Simpsons의 Ralph Wiggum에서 딴 이름 — "바보처럼 단순한" 루프)</span></p>
-
-  <!-- Flow diagram -->
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 18pt; margin-bottom: 10pt;">
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8pt;">
-      <div style="background: #3a3530; border: 1pt solid #c45a3b; border-radius: 6pt; padding: 8pt 10pt; text-align: center; flex: 1;">
-        <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 2pt;">입력</p>
-        <p style="font-size: 10pt; color: #faf8f5; font-family: monospace;">PROMPT.md</p>
-      </div>
-      <p style="font-size: 14pt; color: #c45a3b;">→</p>
-      <div style="background: #3a3530; border: 1pt solid #c45a3b; border-radius: 6pt; padding: 8pt 10pt; text-align: center; flex: 1;">
-        <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 2pt;">실행</p>
-        <p style="font-size: 10pt; color: #faf8f5;">Claude Code</p>
-      </div>
-      <p style="font-size: 14pt; color: #c45a3b;">→</p>
-      <div style="background: #3a3530; border: 1pt solid #c45a3b; border-radius: 6pt; padding: 8pt 10pt; text-align: center; flex: 1;">
-        <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 2pt;">결과</p>
-        <p style="font-size: 10pt; color: #faf8f5;">파일 수정·검증</p>
-      </div>
-      <p style="font-size: 14pt; color: #c45a3b;">↺</p>
-      <div style="background: #c45a3b; border-radius: 6pt; padding: 8pt 10pt; text-align: center; flex: 0.9;">
-        <p style="font-size: 8pt; color: #faf8f5; font-weight: 700; margin-bottom: 2pt;">무한 루프</p>
-        <p style="font-size: 9pt; color: #faf8f5;">while :; do ...</p>
-      </div>
-    </div>
-    <div style="display: flex; align-items: center; justify-content: center; gap: 8pt; margin-top: 8pt;">
-      <p style="font-size: 9pt; color: #a09a94;">실수 발견 시 →</p>
-      <div style="background: #3a3530; border-left: 2pt solid #c45a3b; border-radius: 4pt; padding: 4pt 10pt;">
-        <p style="font-size: 9pt; color: #faf8f5;">PROMPT.md에 규칙 한 줄 추가</p>
-      </div>
-      <p style="font-size: 9pt; color: #a09a94;">→ 다음 루프에서 자동 반영</p>
-    </div>
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 12pt;">
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">왜 동작하는가</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 9pt; color: #2d2a26;">PROMPT.md에 <strong>"가장 중요한 일 하나"</strong>만</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 9pt; color: #2d2a26;">실수 → 도구 탓이 아닌 <strong>규칙 추가</strong></p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 9pt; color: #2d2a26;"><strong>단순성 = 예측 가능성</strong></p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">솔직한 한계</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 9pt; color: #6b6560;">Greenfield 전용. 레거시에 부적합</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 9pt; color: #6b6560;">검증(테스트/린트) 없으면 환각을 쌓음</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 9pt; color: #6b6560;">튜닝하는 엔지니어는 여전히 필요</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size: 10pt; color: #2d2a26; text-align: center;"><em>"놀이터에서 아이가 미끄럼틀 위에서 뛰어내려 다치면, '뛰지 말고 미끄러져 내려오세요' 표지판을 세웁니다."</em> <span style="color: #6b6560;">— Huntley</span></p>
-
-  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
-    <p style="font-size: 9pt; color: #6b6560;">56</p>
-  </div>
+  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">05</p>
+  <h1 style="font-size: 44pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">이렇게 하면 망한다</h1>
+  <p style="font-size: 16pt; color: #6b6560; margin-top: 12pt;">한계와 실패 패턴</p>
+  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
 </body>
 </html>
-</content>
-</invoke>

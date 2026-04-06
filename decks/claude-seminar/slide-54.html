@@ -16,57 +16,35 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Plugins — 하네스를 포장해서 팀 자산으로</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">암묵지를 파일로 뽑아내라</h2>
   </div>
 
-  <p style="font-size: 10pt; color: #6b6560; margin-bottom: 14pt;">4개 레이어 위에 얹히는 배포 레이어 — 2025.10 공개 베타</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">"뭘 보여줘야 하지?" — 답은 이미 <strong style="color: #2d2a26;">머릿속</strong>에.<br>리뷰할 때 말하던 것, 버그 겪고 반사적으로 체크하던 것 → 파일로 추출.</p>
 
-  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 16pt;">
-    <!-- Left: what plugins bundle -->
+  <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; margin-bottom: 12pt;">
     <div style="display: flex; flex-direction: column; gap: 10pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">새 기능이 아니라 포장지</p>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.55;">이미 존재하는 <strong style="color: #2d2a26;">Skill · Subagent · Hook · MCP · LSP</strong>를 단일 단위로 번들링해 팀·커뮤니티에 배포하는 메커니즘</p>
+      <div style="display: flex; gap: 10pt; align-items: baseline;">
+        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">①</span>
+        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>결정의 "이유"를 쓴다</strong> — 결과만 → 금방 낡음. 이유까지 → 일반화 가능</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt; font-family: monospace;">
-        <p style="font-size: 8pt; color: #6b6560;">my-plugin/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── .claude-plugin/plugin.json</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── commands/ &nbsp;agents/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── skills/ &nbsp;&nbsp;&nbsp;hooks/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">└── .mcp.json</p>
+      <div style="display: flex; gap: 10pt; align-items: baseline;">
+        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">②</span>
+        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>Post-Mortem → 규칙</strong> — 계획과 구현의 분기점을 한 줄로 승화</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>standalone → plugin</strong> 전환은 파일 이동 + 매니페스트 1개 수준</p>
+      <div style="display: flex; gap: 10pt; align-items: baseline;">
+        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">③</span>
+        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>Self-Improving</strong> — 피드백마다 규칙 한 줄씩 성장</p>
+      </div>
+      <div style="display: flex; gap: 10pt; align-items: baseline;">
+        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">④</span>
+        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>취향 → 전용 에이전트</strong> — 글로 쓰기 어려운 판단을 에이전트로 encode</p>
       </div>
     </div>
+  </div>
 
-    <!-- Right: terminal screenshot mock -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Claude Code에서 플러그인 등록</p>
-      <!-- Terminal window mock -->
-      <div style="background: #1e1b18; border-radius: 6pt; overflow: hidden;">
-        <div style="background: #2d2a26; padding: 5pt 10pt; display: flex; align-items: center; gap: 4pt; border-bottom: 1pt solid #3a3530;">
-          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #ff5f57;"></span>
-          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #febc2e;"></span>
-          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #28c840;"></span>
-          <span style="font-size: 7pt; color: #6b6560; margin-left: 6pt; font-family: monospace;">claude — /plugin</span>
-        </div>
-        <div style="padding: 10pt 14pt; font-family: 'SF Mono', Consolas, monospace; line-height: 1.5;">
-          <p style="font-size: 7.5pt; color: #6b9e8a;">&gt; /plugin marketplace add anthropics/claude-plugins</p>
-          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Added marketplace: anthropics/claude-plugins</p>
-          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ 18 plugins available</p>
-          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin install commit@anthropics</p>
-          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Installing commit@anthropics ... done</p>
-          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added commands: /commit</p>
-          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added hooks: 1 (PreCommit)</p>
-          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin list</p>
-          <p style="font-size: 7.5pt; color: #faf8f5;">&nbsp;&nbsp;commit@anthropics&nbsp;&nbsp;<span style="color: #28c840;">● installed</span></p>
-        </div>
-      </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; display: flex; align-items: center;">
-        <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">개인이 쌓아올린 하네스를 <strong style="color: #c45a3b;">조직 자산</strong>으로 전환하는 마지막 한 조각</p>
-      </div>
-    </div>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 16pt;">
+    <p style="font-size: 11pt; color: #faf8f5; font-weight: 600; line-height: 1.4;">머릿속 판단이 파일로 옮겨지는 순간 <strong style="color: #c45a3b;">하네스가 된다</strong> — 한 줄씩 박제.</p>
+    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt;">경험 → 규칙 → 재사용.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -75,3 +53,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>

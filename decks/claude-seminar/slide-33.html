@@ -14,59 +14,47 @@
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 18pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">AI가 TDD를 치팅하는 3가지 방식</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">방법론 비교</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;"><em style="color: #2d2a26;">"AI는 스스로 TDD를 하지 않는다."</em> — Kent Beck. 프로세스 강제 장치 필요.</p>
+  <div style="display: flex; flex-direction: column; gap: 6pt;">
+    <!-- 헤더 -->
+    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 10pt; padding: 0 14pt;">
+      <p style="font-size: 9pt;"></p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; text-align: center;">PDD</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; text-align: center;">TDD</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; text-align: center;">SDD</p>
+    </div>
+    <!-- 인간의 역할 -->
+    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 10pt; background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt; align-items: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">인간의 역할</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">프롬프트 작성자</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">테스트 작성자</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">스펙 작성자</p>
+    </div>
+    <!-- 검증 방식 -->
+    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 10pt; background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt; align-items: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">검증 방식</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">출력 비교</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">자동 테스트</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">스펙 검증</p>
+    </div>
+    <!-- 프로덕션 적합도 -->
+    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 10pt; background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt; align-items: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">프로덕션 적합도</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">중간</p>
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
+    </div>
+  </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">관찰되는 3가지 치팅 패턴</p>
-      <div style="display: flex; flex-direction: column; gap: 5pt;">
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>1. 테스트 삭제/skip/xfail</strong></p>
-          <p style="font-size: 9pt; color: #6b6560;">구현이 막히면 테스트 자체를 비활성화</p>
-        </div>
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>2. 구현 먼저, 테스트 나중</strong></p>
-          <p style="font-size: 9pt; color: #6b6560;">자기 코드에 맞춘 약한 테스트를 작성</p>
-        </div>
-        <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
-          <p style="font-size: 10pt; color: #2d2a26;"><strong>3. assert 약화</strong></p>
-          <p style="font-size: 9pt; color: #6b6560;">값 검증을 타입 검증으로, Equal→True로 슬쩍</p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">강제력의 스펙트럼</p>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
-        <div style="display: flex; flex-direction: column; gap: 6pt;">
-          <div style="display: flex; align-items: center; gap: 8pt;">
-            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">약</p>
-            <p style="font-size: 10pt; color: #a09a94;">프롬프트</p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8pt;">
-            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">↓</p>
-            <p style="font-size: 10pt; color: #faf8f5;">문서 (CLAUDE.md)</p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8pt;">
-            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">↓</p>
-            <p style="font-size: 10pt; color: #faf8f5;">슬래시 커맨드 / 스킬</p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8pt;">
-            <p style="font-size: 9pt; color: #6b6560; width: 20pt;">↓</p>
-            <p style="font-size: 10pt; color: #faf8f5;">에이전트 격리</p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8pt;">
-            <p style="font-size: 9pt; color: #c45a3b; width: 20pt; font-weight: 700;">강</p>
-            <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">자동 차단 훅</p>
-          </div>
-        </div>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; margin-top: 8pt; line-height: 1.4;">개인 프로젝트 = 문서로 충분 · 조직 표준 = 훅 필요.</p>
-    </div>
+  <!-- 결론 -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt 24pt; margin-top: 16pt;">
+    <p style="font-size: 12pt; color: #faf8f5; text-align: center;">
+      프로토타이핑 → <span style="font-weight: 600;">PDD</span> · 프로덕션 → <span style="font-weight: 600; color: #c45a3b;">TDD + SDD</span>
+    </p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -75,5 +63,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

@@ -16,44 +16,58 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md — 프로젝트의 "헌법"</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Plugins — 하네스를 포장해서 팀 자산으로</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">모든 세션이 시작될 때 자동으로 로드되는 지속 컨텍스트. 4개 레이어 중에서도 <strong style="color: #2d2a26;">가장 먼저 손대야 하는 레이어</strong>.</p>
+  <p style="font-size: 10pt; color: #6b6560; margin-bottom: 14pt;">4개 레이어 위에 얹히는 배포 레이어</p>
 
-  <!-- 핵심 오해 correction -->
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">먼저 짚고 갈 것 — "지시가 아니라 컨텍스트다"</p>
-    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">많은 사람이 CLAUDE.md를 <strong>시스템 프롬프트</strong>로 오해. 사실은 시스템 프롬프트 <strong style="color: #c45a3b;">다음의</strong> 사용자 메시지로 주입. 즉, 강제(enforcement)가 아닌 <strong style="color: #c45a3b;">권고(context)</strong>. 모호 → Claude의 임의 해석.</p>
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
-    <!-- 좋은 예 -->
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">✓ 검증 가능 · 구체적</p>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6;">
-          - TypeScript strict mode<br>
-          - 커밋 전 <code>pnpm lint && test</code><br>
-          - <span style="color: #c45a3b;">any</span> 타입 금지<br>
-          - 세션은 Redis (TTL 30분)
-        </p>
+  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 16pt;">
+    <!-- Left: what plugins bundle -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">새 기능이 아니라 포장지</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.55;">이미 존재하는 <strong style="color: #2d2a26;">Skill · Subagent · Hook · MCP · LSP</strong>를 단일 단위로 번들링해 팀·커뮤니티에 배포하는 메커니즘</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt; font-family: monospace;">
+        <p style="font-size: 8pt; color: #6b6560;">my-plugin/</p>
+        <p style="font-size: 8pt; color: #faf8f5;">├── .claude-plugin/plugin.json</p>
+        <p style="font-size: 8pt; color: #faf8f5;">├── commands/ &nbsp;agents/</p>
+        <p style="font-size: 8pt; color: #faf8f5;">├── skills/ &nbsp;&nbsp;&nbsp;hooks/</p>
+        <p style="font-size: 8pt; color: #faf8f5;">└── .mcp.json</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>standalone → plugin</strong> 전환은 파일 이동 + 매니페스트 1개 수준</p>
       </div>
     </div>
-    <!-- 나쁜 예 -->
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">✗ 모호 · 검증 불가</p>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.8;">
-          코드를 잘 작성해주세요.<br>
-          테스트를 해주세요.<br>
-          좋은 코드를 만들어주세요.
-        </p>
+
+    <!-- Right: terminal screenshot mock -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Claude Code에서 플러그인 등록</p>
+      <!-- Terminal window mock -->
+      <div style="background: #1e1b18; border-radius: 6pt; overflow: hidden;">
+        <div style="background: #2d2a26; padding: 5pt 10pt; display: flex; align-items: center; gap: 4pt; border-bottom: 1pt solid #3a3530;">
+          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #ff5f57;"></span>
+          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #febc2e;"></span>
+          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #28c840;"></span>
+          <span style="font-size: 7pt; color: #6b6560; margin-left: 6pt; font-family: monospace;">claude — /plugin</span>
+        </div>
+        <div style="padding: 10pt 14pt; font-family: 'SF Mono', Consolas, monospace; line-height: 1.5;">
+          <p style="font-size: 7.5pt; color: #6b9e8a;">&gt; /plugin marketplace add anthropics/claude-plugins</p>
+          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Added marketplace: anthropics/claude-plugins</p>
+          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ 18 plugins available</p>
+          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin install commit@anthropics</p>
+          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Installing commit@anthropics ... done</p>
+          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added commands: /commit</p>
+          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added hooks: 1 (PreCommit)</p>
+          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin list</p>
+          <p style="font-size: 7.5pt; color: #faf8f5;">&nbsp;&nbsp;commit@anthropics&nbsp;&nbsp;<span style="color: #28c840;">● installed</span></p>
+        </div>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; display: flex; align-items: center;">
+        <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">개인이 쌓아올린 하네스를 <strong style="color: #c45a3b;">조직 자산</strong>으로 전환하는 마지막 한 조각</p>
       </div>
     </div>
   </div>
-
-  <p style="font-size: 9pt; color: #6b6560; margin-top: 10pt; line-height: 1.4;">결정적 차이: 나쁜 예는 <strong style="color: #2d2a26;">지워도 행동 불변</strong> — 한 줄 삭제 테스트 실패. (→ 다음 페이지)</p>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
@@ -61,5 +75,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

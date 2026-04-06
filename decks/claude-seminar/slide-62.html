@@ -15,30 +15,150 @@
 </head>
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
-    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">그래도 여전히 중요한 기초</h2>
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 6</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">핵심 패턴 5가지</h2>
   </div>
 
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 22pt; margin-bottom: 14pt;">
-    <p style="font-size: 13pt; color: #faf8f5; line-height: 1.4;"><em>"AI가 다 해주니까 코드 안 배워도 되겠다"</em></p>
-    <p style="font-size: 10pt; color: #c45a3b; margin-top: 4pt; font-weight: 600;">— 가장 위험한 생각</p>
-  </div>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">무엇을, 어떻게 <strong style="color: #2d2a26;">쪼개느냐</strong>에 대한 서로 다른 답.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 14pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55;">AI의 <strong>자신감 있게 틀린 코드</strong> 제시 — 기초 없으면 틀림 감지 불가</p>
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8pt;">
+    <!-- 1. Sub-Agent (highlighted) -->
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
+      <div>
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">01</p>
+        <p style="font-size: 10pt; font-weight: 700; color: #faf8f5;">Sub-Agent</p>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 120 90" style="width: 100%;">
+          <circle cx="28" cy="45" r="18" fill="#faf8f5"/>
+          <text x="28" y="49" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#2d2a26">M</text>
+          <circle cx="92" cy="45" r="18" fill="none" stroke="#c45a3b" stroke-width="1.8"/>
+          <text x="92" y="49" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#faf8f5">S</text>
+          <path d="M 48 38 L 72 38" stroke="#c45a3b" stroke-width="1.8" fill="none" marker-end="url(#a1)"/>
+          <path d="M 72 52 L 48 52" stroke="#6b6560" stroke-width="1.4" fill="none" marker-end="url(#a2)"/>
+          <text x="60" y="28" text-anchor="middle" font-family="Pretendard" font-size="7.5" fill="#c45a3b" font-weight="600">task</text>
+          <text x="60" y="72" text-anchor="middle" font-family="Pretendard" font-size="7.5" fill="#6b6560" font-weight="600">summary</text>
+          <defs>
+            <marker id="a1" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#c45a3b"/></marker>
+            <marker id="a2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#6b6560"/></marker>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size: 8.5pt; color: #faf8f5; line-height: 1.45; font-weight: 600;">단방향 심부름</p>
+        <p style="font-size: 7.5pt; color: #a09a94; line-height: 1.45; margin-top: 2pt;">탐색 · 검증 · 로그 파싱</p>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55;">추상화 수준만 올라갔을 뿐, <strong>문제 해결 · 시스템 사고 · 디버깅</strong>은 여전히 필수</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55;">진입장벽은 낮아졌으나, 고품질 역량은 <strong>오히려 더 구조화</strong></p>
-    </div>
-  </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; align-items: center; gap: 14pt;">
-    <p style="font-size: 10pt; color: #c45a3b; font-weight: 700; flex-shrink: 0;">번역기의 비유</p>
-    <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;">자동 번역기 품질 <strong>판단</strong> → 원문 언어 이해 필수. AI 코딩도 동일 — 정확성·보안·성능을 평가할 눈이 없으면 코드를 <strong>떠안는 것</strong>.</p>
+    <!-- 2. Orchestrator -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
+      <div>
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">02</p>
+        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Orchestrator</p>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 120 90" style="width: 100%;">
+          <circle cx="60" cy="18" r="14" fill="#2d2a26"/>
+          <text x="60" y="22" text-anchor="middle" font-family="Pretendard" font-size="8" font-weight="700" fill="#faf8f5">Plan</text>
+          <circle cx="22" cy="68" r="12" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="60" cy="68" r="12" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="98" cy="68" r="12" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <text x="22" y="72" text-anchor="middle" font-family="Pretendard" font-size="7" font-weight="700" fill="#2d2a26">Exec</text>
+          <text x="60" y="72" text-anchor="middle" font-family="Pretendard" font-size="7" font-weight="700" fill="#2d2a26">Exec</text>
+          <text x="98" y="72" text-anchor="middle" font-family="Pretendard" font-size="7" font-weight="700" fill="#2d2a26">Exec</text>
+          <line x1="52" y1="28" x2="28" y2="58" stroke="#c45a3b" stroke-width="1.5"/>
+          <line x1="60" y1="32" x2="60" y2="56" stroke="#c45a3b" stroke-width="1.5"/>
+          <line x1="68" y1="28" x2="92" y2="58" stroke="#c45a3b" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">1:N 위임</p>
+        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">계획자 + 실행자들</p>
+      </div>
+    </div>
+
+    <!-- 3. Parallel -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
+      <div>
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">03</p>
+        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Parallel</p>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 120 90" style="width: 100%;">
+          <rect x="36" y="40" width="48" height="12" fill="#c45a3b" rx="2"/>
+          <text x="60" y="49" text-anchor="middle" font-family="Pretendard" font-size="6.5" font-weight="700" fill="#faf8f5">shared repo</text>
+          <circle cx="18" cy="18" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="60" cy="12" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="102" cy="18" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="30" cy="78" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="90" cy="78" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <line x1="22" y1="26" x2="40" y2="40" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
+          <line x1="60" y1="22" x2="60" y2="40" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
+          <line x1="98" y1="26" x2="80" y2="40" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
+          <line x1="36" y1="70" x2="48" y2="54" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
+          <line x1="84" y1="70" x2="72" y2="54" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">평면 조직</p>
+        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">Git worktree 격리</p>
+      </div>
+    </div>
+
+    <!-- 4. GAN-Style -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
+      <div>
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">04</p>
+        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">GAN-Style</p>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 120 90" style="width: 100%;">
+          <circle cx="30" cy="45" r="18" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.8"/>
+          <text x="30" y="49" text-anchor="middle" font-family="Pretendard" font-size="9" font-weight="700" fill="#2d2a26">Gen</text>
+          <circle cx="90" cy="45" r="18" fill="#2d2a26"/>
+          <text x="90" y="49" text-anchor="middle" font-family="Pretendard" font-size="9" font-weight="700" fill="#faf8f5">Eval</text>
+          <path d="M 48 34 Q 60 12 72 34" stroke="#c45a3b" stroke-width="1.8" fill="none" marker-end="url(#g1)"/>
+          <path d="M 72 56 Q 60 78 48 56" stroke="#c45a3b" stroke-width="1.8" fill="none" marker-end="url(#g2)"/>
+          <defs>
+            <marker id="g1" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#c45a3b"/></marker>
+            <marker id="g2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#c45a3b"/></marker>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">적대적 루프</p>
+        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">루브릭으로 수렴</p>
+      </div>
+    </div>
+
+    <!-- 5. Agent Teams -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
+      <div>
+        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">05</p>
+        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Agent Teams</p>
+      </div>
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 120 90" style="width: 100%;">
+          <circle cx="22" cy="22" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="98" cy="22" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="22" cy="68" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="98" cy="68" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
+          <circle cx="60" cy="45" r="13" fill="#2d2a26"/>
+          <line x1="30" y1="28" x2="48" y2="40" stroke="#6b6560" stroke-width="1.2"/>
+          <line x1="90" y1="28" x2="72" y2="40" stroke="#6b6560" stroke-width="1.2"/>
+          <line x1="30" y1="62" x2="48" y2="50" stroke="#6b6560" stroke-width="1.2"/>
+          <line x1="90" y1="62" x2="72" y2="50" stroke="#6b6560" stroke-width="1.2"/>
+          <line x1="32" y1="22" x2="88" y2="22" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
+          <line x1="32" y1="68" x2="88" y2="68" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
+          <line x1="22" y1="32" x2="22" y2="58" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
+          <line x1="98" y1="32" x2="98" y2="58" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">양방향 대화</p>
+        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">그래프 구조</p>
+      </div>
+    </div>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

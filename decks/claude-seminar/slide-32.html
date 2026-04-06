@@ -16,39 +16,42 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Test-Driven Development)</span> — 테스트 주도 개발</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">SDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Spec-Driven Development)</span></h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">인간 → 테스트 작성 · AI → 통과 코드 구현.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;"><strong style="color: #2d2a26;">코드가 아닌 스펙이 진실의 원천.</strong> 무엇을(WHAT) 먼저 정의하고, 어떻게(HOW)는 AI에게.</p>
 
-  <!-- Red-Green 사이클 -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div style="display: flex; flex-direction: column; gap: 6pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">1. [인간]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">실패 테스트(Red) 작성</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
+    <!-- 왼쪽: 3단계 -->
+    <div>
+      <div style="display: flex; flex-direction: column; gap: 6pt; margin-bottom: 14pt;">
+        <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">1. SPECIFY — 인간이 "무엇을" 정의</p>
+          <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt;">요구사항 · 수용 기준 · 제약조건</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">2. PLAN — AI가 "어떻게" 제안</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">기술 스택 · 아키텍처 → 인간 승인</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">3. TASKS — 분해 후 병렬 실행</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">작업↔요구사항 매핑 유지</p>
+        </div>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">2. [AI]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">테스트를 통과하는 최소 코드(Green)</p>
-      </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">3. [인간]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">통과 코드 리뷰</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-        <p style="font-size: 10pt; color: #6b6560; font-weight: 600;">4. [AI]</p>
-        <p style="font-size: 11pt; color: #2d2a26;">통과 상태 유지하며 리팩토링</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">모호한 부분 → <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">[NEEDS CLARIFICATION]</code> 마커로 구현 중단</p>
       </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 12pt;">
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 8pt; font-family: 'Pretendard', sans-serif;">TDD 지시 예시</p>
-        <p style="font-size: 8.5pt; color: #87ceeb; line-height: 1.6;">"장바구니 할인 계산을 TDD로 구현해줘.<br>먼저 테스트부터 작성해:<br>- 기본 합계: 10,000원 × 2개 = 20,000원<br>- 배송비: 5만원 미만 → 3,000원,<br>&nbsp;&nbsp;이상 → 무료<br>- 쿠폰: 'SUMMER10' → 10% 할인<br>테스트가 실패하는 걸 확인하고,<br>그 다음에 통과하는 코드를 작성해."</p>
+
+    <!-- 오른쪽: TDD와의 관계 -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">TDD와 무엇이 다른가</p>
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">TDD = <strong>"어떻게 동작해야 하는지"</strong> 테스트로<br>SDD = <strong>"무엇을 만들어야 하는지"</strong> 문서로<br><br>둘은 배타적이지 않음 — 가장 강력한 조합은 <strong style="color: #c45a3b;">스펙으로 정의 + 테스트로 검증</strong></p>
       </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>핵심</strong>: 인간이 테스트, AI가 구현 · 한 번에 하나 · 테스트 수정 금지</p>
-        <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">버그 <strong style="color: #c45a3b;">40~80%</strong> 감소 — 2025 DORA</p>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">핵심 이점</p>
+        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">각 단계가 <strong style="color: #faf8f5;">파일로 저장 · 커밋 · 여러 세션 참조</strong><br>→ 컨텍스트 소실 방어</p>
       </div>
     </div>
   </div>

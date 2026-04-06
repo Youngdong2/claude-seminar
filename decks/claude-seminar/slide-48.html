@@ -16,33 +16,29 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Right Altitude — 지시문의 고도</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md는 살아있는 문서 — 현장 사례</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">CLAUDE.md나 프롬프트를 쓸 때 가장 흔한 실수는 <strong style="color: #2d2a26;">두 극단</strong>.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">한 번 쓰고 끝나는 정적 문서가 아닌, <strong style="color: #2d2a26;">피드백으로 자라는 유기체</strong>처럼 운영.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 낮음 · OVER-SPECIFIED</p>
-      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">모든 케이스를 if/else로 박기</p>
-      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 예외 상황에서 brittle</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- Boris Cherny -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 16pt 20pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">Boris Cherny</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 8pt;">Claude Code 창시자 · Anthropic</p>
+      <p style="font-size: 10pt; color: #2d2a26; line-height: 1.6;">주 수 회 업데이트.<br><strong>Claude가 실수할 때마다 한 줄 추가.</strong><br>PR에서 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">@claude</code> 태그 → GitHub Action이 자동 커밋.</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 높음 · UNDER-SPECIFIED</p>
-      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">"잘 해줘", "깔끔하게"</p>
-      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 모델이 추측, 세션마다 결과 다름</p>
+
+    <!-- 정구봉 -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 16pt 20pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">정구봉 (Team Attention)</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 8pt;">규모의 실천</p>
+      <p style="font-size: 10pt; color: #2d2a26; line-height: 1.6;"><strong>CLAUDE.md 159개</strong> + 스킬 100개+ 동시 운영.<br>"파일 하나는 짧게, 대신 파일을 많이."</p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">올바른 고도 공식</p>
-    <p style="font-size: 13pt; font-weight: 600; color: #faf8f5;">원칙 1줄 &nbsp;+&nbsp; 이유(why) 1줄 &nbsp;+&nbsp; 예시 1~2개</p>
-    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt; line-height: 1.4;">이게 붙어야 새 상황에도 일반화 가능.</p>
-  </div>
-
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>자가진단 2문항:</strong></p>
-    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">① 의도하지 않은 상황에서도 유효 → OK<br>② 아무 세션에 붙여도 행동 불변 → 너무 높음</p>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 11pt; color: #faf8f5; font-weight: 600; line-height: 1.4;"><em>"<span style="color: #c45a3b;">버그는 한 번 고치는 게 아니라, CLAUDE.md에 한 줄을 추가하면서 고치는 것</span>이다."</em></p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

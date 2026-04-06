@@ -16,39 +16,55 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Skills & Hooks — 그게 뭔가</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Ralph Loop — 가장 단순한 하네스</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">하네스를 구성하는 두 실행 단위. <strong style="color: #2d2a26;">Skill = 부르면 실행되는 워크플로우</strong> · <strong style="color: #2d2a26;">Hook = 이벤트에 자동 실행되는 스크립트</strong>.</p>
+  <div style="display: flex; align-items: center; gap: 14pt; margin-bottom: 14pt;">
+    <img src="./assets/ralph-wiggum.png" style="width: 40pt; height: auto; border-radius: 4pt;">
+    <p style="font-size: 10.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9.5pt;">PROMPT.md</code> 하나를 무한 루프로 반복 실행. The Simpsons의 Ralph Wiggum에서 이름을 딴 — <strong style="color: #2d2a26;">"바보처럼 단순한"</strong> 루프.</p>
+  </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
-    <!-- Skills -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
-      <div>
-        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">SKILL</p>
-        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">재사용 워크플로우 패키지</p>
+  <!-- Flow diagram -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 20pt 24pt; margin-bottom: 16pt;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 10pt;">
+      <div style="border: 1pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 1;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">입력</p>
+        <p style="font-size: 11pt; color: #faf8f5; font-family: monospace;">PROMPT.md</p>
       </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 반복되는 작업을 한 번에 호출하고 싶을 때</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — frontmatter(name · description) + markdown 본문</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">호출</strong> — <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/skillname</code> 또는 자연어 트리거</p>
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/deploy</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/review-pr</code></p>
+      <p style="font-size: 16pt; color: #c45a3b;">→</p>
+      <div style="border: 1pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 1;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">실행</p>
+        <p style="font-size: 11pt; color: #faf8f5;">Claude Code</p>
+      </div>
+      <p style="font-size: 16pt; color: #c45a3b;">→</p>
+      <div style="border: 1pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 1;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">결과</p>
+        <p style="font-size: 11pt; color: #faf8f5;">파일 수정 · 검증</p>
+      </div>
+      <p style="font-size: 16pt; color: #c45a3b;">↺</p>
+      <div style="background: #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 0.8;">
+        <p style="font-size: 9pt; color: #faf8f5; font-weight: 700; margin-bottom: 3pt;">무한 루프</p>
+        <p style="font-size: 10pt; color: #faf8f5;">while :; do …</p>
+      </div>
     </div>
-
-    <!-- Hooks -->
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
-      <div>
-        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">HOOK</p>
-        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">이벤트 기반 자동 스크립트</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8pt; margin-top: 12pt;">
+      <p style="font-size: 10pt; color: #a09a94;">실수 발견 →</p>
+      <div style="border-left: 2pt solid #c45a3b; padding: 4pt 12pt;">
+        <p style="font-size: 10pt; color: #faf8f5;">PROMPT.md에 규칙 한 줄 추가 → 다음 루프에서 자동 반영</p>
       </div>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 항상 적용해야 하는 규칙·검증·차단</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — 이벤트 타입(PreToolUse…) + 실행 커맨드</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">실행</strong> — LLM이 아닌 쉘 스크립트 — 반드시 실행</p>
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: 파일 편집 후 <strong>ESLint</strong> · 커밋 전 <strong>테스트</strong> · .env 편집 <strong>차단</strong></p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
-    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;">구분법 — <strong style="color: #c45a3b;">Skill = 내가 부를 때 실행</strong> · <strong style="color: #c45a3b;">Hook = 자동 실행</strong>.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; text-align: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">단순성 = 예측 가능성</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; text-align: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">새 프로젝트 전용</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; text-align: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">검증 없으면 환각 누적</p>
+    </div>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

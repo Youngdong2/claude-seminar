@@ -16,38 +16,44 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">컨텍스트의 4가지 실패 모드</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md — 프로젝트의 "헌법"</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">"컨텍스트 윈도우가 크니까 많이 넣어도 OK" 상식 — 사실 아님. Drew Breunig가 정리한 4가지 실패 모드. <span style="color: #6b6560; font-size: 9.5pt;">(※ 컨텍스트 윈도우 = 모델이 한 번에 읽을 수 있는 텍스트량. 요즘 모델은 대략 20만 토큰, 한국어 기준 약 15만 자)</span></p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">모든 세션이 시작될 때 자동으로 로드되는 지속 컨텍스트. 4개 레이어 중에서도 <strong style="color: #2d2a26;">가장 먼저 손대야 하는 레이어</strong>.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">POISONING · 중독</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">환각이 한 번 들어오면 이후 계속 참조되며 오류 누적</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 존재하지 않는 함수를 반복 호출</p>
+  <!-- 핵심 오해 correction -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
+    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">먼저 짚고 갈 것 — "지시가 아니라 컨텍스트"</p>
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.6;">시스템 프롬프트가 아님 — 사용자 메시지로 주입.<br>강제가 아닌 <strong style="color: #c45a3b;">권고</strong>. 모호하면 Claude가 임의 해석.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- 좋은 예 -->
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">✓ 검증 가능 · 구체적</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6;">
+          - 슬라이드 규격: 720pt × 405pt<br>
+          - 종결어미: 명사형·구 단위만<br>
+          - 금지: ~합니다 / ~입니다 공손체<br>
+          - 디자인 토큰: bg=#faf8f5
+        </p>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">DISTRACTION · 산만</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">히스토리에 과의존, 과거 행동을 반복</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 새 전략을 못 세우고 실패한 액션 재시도</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">CONFUSION · 혼동</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">무관한 정보까지 과잉 고려</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 툴 30개 이상이면 선택 실패 급증</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">CLASH · 충돌</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">모순된 정보 → 추론 붕괴</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 초반 오답 1개로 평균 39% 성능 저하</p>
+    <!-- 나쁜 예 -->
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">✗ 모호 · 검증 불가</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.8;">
+          깔끔하게 만들어줘.<br>
+          적절한 크기로 해줘.<br>
+          보기 좋게 디자인해줘.
+        </p>
+      </div>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 16pt;">
-    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;"><em>"컨텍스트를 잡동사니 서랍처럼 다루면, 그 잡동사니가 답변에 영향을 줍니다."</em> <span style="color: #6b6560; font-size: 9pt;">— Drew Breunig</span></p>
-    <p style="font-size: 9pt; color: #c45a3b; margin-top: 4pt;">핵심은 "뭘 넣을까"보다 "뭘 뺄까".</p>
-  </div>
+  <p style="font-size: 9pt; color: #6b6560; margin-top: 10pt; line-height: 1.4;">결정적 차이: 나쁜 예는 <strong style="color: #2d2a26;">지워도 행동 불변</strong> — 한 줄 삭제 테스트 실패. (→ 다음 페이지)</p>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
