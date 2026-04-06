@@ -16,34 +16,32 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">컨텍스트의 4가지 실패 모드</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">하네스를 구성하는 4가지 도구</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">"많이 넣어도 OK" — 사실 아님. Drew Breunig가 정리한 4가지 실패 모드.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">Claude Code가 제공하는 확장 축. 이 4가지를 조합해 하네스 구축.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">POISONING · 중독</p>
-      <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">환각 1회 → 이후 오류 누적</p>
-      <p style="font-size: 9pt; color: #a09a94; margin-top: 3pt;">초반 오답 1개로 평균 39% 성능 저하</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">CLAUDE.md</p>
+      <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">프로젝트 규칙<br>세션마다 자동 로드</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">DISTRACTION · 산만</p>
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">히스토리 과의존, 실패한 액션 재시도</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Skills</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">재사용 워크플로우<br><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">/명령</code>으로 호출</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">CONFUSION · 혼동</p>
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">무관한 정보 과잉 → 툴 30개+에서 급증</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Hooks</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">이벤트 기반 자동화<br>LLM 우회 — 강제 실행</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">CLASH · 충돌</p>
-      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">모순된 정보 → 추론 붕괴</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Plugins</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">팀 단위 배포 패키지<br>npm install로 공유</p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 16pt;">
-    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;"><em>"컨텍스트를 잡동사니 서랍처럼 다루면, 그 잡동사니가 답변에 영향을 줍니다."</em> <span style="color: #6b6560; font-size: 9pt;">— Drew Breunig</span></p>
-    <p style="font-size: 9pt; color: #c45a3b; margin-top: 4pt;">핵심은 "뭘 넣을까"보다 "뭘 뺄까".</p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt;">
+    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.4;"><strong>강제력 순서</strong>: CLAUDE.md(권고) → Skills(호출 시) → Hooks(자동 차단) → Plugins(팀 배포)</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -52,5 +50,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

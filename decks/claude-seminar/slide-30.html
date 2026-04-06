@@ -16,36 +16,46 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">PDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Prompt-Driven Development)</span> — 프롬프트 주도 개발</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">SDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Spec-Driven Development)</span></h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">프롬프트를 위시리스트가 아닌, <strong style="color: #2d2a26;">검증 가능한 명세(contract)</strong>로 취급.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;"><strong style="color: #2d2a26;">코드가 아닌 스펙이 진실의 원천.</strong> 무엇을(WHAT) 먼저 정의하고, 어떻게(HOW)는 AI에게.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div style="display: flex; flex-direction: column; gap: 12pt;">
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">장점</p>
-        <div style="display: flex; flex-direction: column; gap: 4pt;">
-          <p style="font-size: 10pt; color: #6b6560;">자연어로 접근성 높음</p>
-          <p style="font-size: 10pt; color: #6b6560;">비개발자도 참여 가능</p>
-          <p style="font-size: 10pt; color: #6b6560;">프롬프트 자체가 문서 역할</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
+    <!-- 왼쪽: 3단계 -->
+    <div>
+      <div style="display: flex; flex-direction: column; gap: 6pt; margin-bottom: 14pt;">
+        <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">1. SPECIFY — 인간이 "무엇을" 정의</p>
+          <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt;">요구사항 · 수용 기준 · 제약조건</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">2. PLAN — AI가 "어떻게" 제안</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">기술 스택 · 아키텍처 → 인간 승인</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">3. TASKS — 분해 후 병렬 실행</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt;">작업↔요구사항 매핑 유지</p>
         </div>
       </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 8pt;">한계</p>
-        <div style="display: flex; flex-direction: column; gap: 4pt;">
-          <p style="font-size: 10pt; color: #6b6560;">좋은 프롬프트 작성 능력 필요</p>
-          <p style="font-size: 10pt; color: #6b6560;">복잡한 시스템에서 충분한 명세 어려움</p>
-        </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">모호한 부분 → <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">[NEEDS CLARIFICATION]</code> 마커로 구현 중단</p>
       </div>
     </div>
-    <div>
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">좋은 PDD 프롬프트</p>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 14pt; font-family: monospace; margin-bottom: 12pt;">
-        <p style="font-size: 9pt; color: #87ceeb; line-height: 1.6;">"장바구니 할인 계산 함수를 구현해줘.<br>- 입력: items[{price, quantity}],<br>&nbsp;&nbsp;coupon_code(optional)<br>- 규칙: 5만원 이상 → 무료배송,<br>&nbsp;&nbsp;미만 → 배송비 3,000원<br>- 출력: { subtotal, discount,<br>&nbsp;&nbsp;shipping_fee, total }<br>- 검증: 'SUMMER10' → 10% 할인"</p>
+
+    <!-- 오른쪽: 언제 쓰나 + 핵심 -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">언제 쓰나</p>
+        <div style="display: flex; flex-direction: column; gap: 3pt;">
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 신규 기능 · 대규모 설계</p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 여러 세션에 걸친 작업</p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 팀 협업 (스펙 = 커뮤니케이션)</p>
+        </div>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; text-decoration: line-through;">"할인 기능 만들어줘" ← 나쁜 예</p>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">핵심</p>
+        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">각 단계가 <strong style="color: #faf8f5;">파일로 저장 · 커밋 · 참조</strong><br>→ 컨텍스트 소실 방어의 정석</p>
       </div>
     </div>
   </div>

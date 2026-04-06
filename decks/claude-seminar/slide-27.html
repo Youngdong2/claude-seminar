@@ -16,19 +16,28 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">왜 방법론이 필요한가</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">구조화 수준 스펙트럼</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 24pt;">에이전틱 코딩 등장 → 병목의 이동.</p>
+  <!-- 스펙트럼 축 -->
+  <div style="display: flex; align-items: center; gap: 0; margin-bottom: 6pt; padding: 0 4pt;">
+    <p style="font-size: 10pt; font-weight: 600; color: #6b6560;">자유</p>
+    <div style="flex: 1; height: 2pt; background: linear-gradient(to right, #ddd8d0, #c45a3b); margin: 0 12pt; border-radius: 1pt;"></div>
+    <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">엄격</p>
+  </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24pt; align-items: center;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 24pt; text-align: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #6b6560; margin-bottom: 12pt;">이전의 병목</p>
-      <p style="font-size: 18pt; font-weight: 600; color: #2d2a26;">코드를 작성하는 것</p>
+  <div style="display: flex; gap: 24pt;">
+    <div style="flex: 1; background: #f0ebe3; border-radius: 6pt; padding: 28pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <p style="font-size: 22pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">TDD</p>
+      <p style="font-size: 12pt; color: #6b6560;">테스트 주도</p>
+      <div style="width: 40pt; height: 2pt; background: #ddd8d0; margin: 16pt 0;"></div>
+      <p style="font-size: 13pt; font-weight: 600; color: #c45a3b;">검증</p>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 24pt; text-align: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 12pt;">지금의 병목</p>
-      <p style="font-size: 16pt; font-weight: 600; color: #faf8f5; line-height: 1.5;">AI에게 <strong style="color: #c45a3b;">무엇을</strong> 시킬지 정하는 것<br>+ 정말 원하는 대로 했는지 <strong style="color: #c45a3b;">확인</strong>하는 것</p>
+    <div style="flex: 1; background: #2d2a26; border-radius: 8pt; padding: 28pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <p style="font-size: 22pt; font-weight: 700; color: #faf8f5; margin-bottom: 8pt;">SDD</p>
+      <p style="font-size: 12pt; color: #a09a94;">스펙 주도</p>
+      <div style="width: 40pt; height: 2pt; background: #4a4540; margin: 16pt 0;"></div>
+      <p style="font-size: 13pt; font-weight: 600; color: #c45a3b;">계획</p>
     </div>
   </div>
 

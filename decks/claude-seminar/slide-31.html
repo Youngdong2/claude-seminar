@@ -16,39 +16,48 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD <span style="font-size: 13pt; font-weight: 500; color: #6b6560;">(Test-Driven Development)</span></h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">SDD 실전 — spec-kit 워크플로우</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;"><strong style="color: #2d2a26;">테스트를 먼저 쓰고, 통과하는 코드를 나중에 쓴다.</strong> AI 시대에는 인간이 테스트, AI가 구현.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">3개 커맨드로 스펙 → 계획 → 태스크 분해. 15분 안에 전체 구조 문서화.</p>
 
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
-    <!-- 왼쪽: 핵심 사이클 -->
-    <div>
-      <div style="display: flex; flex-direction: column; gap: 6pt; margin-bottom: 14pt;">
-        <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
-          <p style="font-size: 10pt; color: #c45a3b; font-weight: 600;">1. 인간이 실패 테스트 작성 (Red)</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-          <p style="font-size: 10pt; color: #2d2a26;">2. AI가 통과 코드 구현 (Green)</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-          <p style="font-size: 10pt; color: #2d2a26;">3. 인간이 리뷰 → AI가 리팩토링</p>
-        </div>
+    <!-- 왼쪽: 3커맨드 -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 4pt;">1. SPECIFY</p>
+        <p style="font-size: 9pt; color: #87ceeb; font-family: monospace; line-height: 1.5;">/speckit.specify<br>"실시간 채팅 + 메시지 히스토리<br>+ 온라인 상태"</p>
+        <p style="font-size: 8.5pt; color: #a09a94; margin-top: 6pt;">→ spec.md 생성 (WHAT/WHY 분리)</p>
       </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">버그 <strong style="color: #c45a3b;">40~80%</strong> 감소 — 2025 DORA</p>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 4pt;">2. PLAN</p>
+        <p style="font-size: 9pt; color: #87ceeb; font-family: monospace; line-height: 1.5;">/speckit.plan<br>"WebSocket, PostgreSQL, Redis"</p>
+        <p style="font-size: 8.5pt; color: #a09a94; margin-top: 6pt;">→ plan · data-model · contracts 생성</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 4pt;">3. TASKS</p>
+        <p style="font-size: 9pt; color: #87ceeb; font-family: monospace;">/speckit.tasks</p>
+        <p style="font-size: 8.5pt; color: #a09a94; margin-top: 6pt;">→ 병렬 가능 작업 [P] 마킹</p>
       </div>
     </div>
 
-    <!-- 오른쪽: 왜 중요한가 + 주의 -->
+    <!-- 오른쪽: 핵심 원칙 -->
     <div style="display: flex; flex-direction: column; gap: 10pt;">
       <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">왜 AI에게 특히 중요한가</p>
-        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">AI는 "동작하는 것 같은" 코드를 자신 있게 만듦.<br>테스트 없으면 <strong>맞는지 틀린지 확인 불가.</strong></p>
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">강제되는 원칙</p>
+        <div style="display: flex; flex-direction: column; gap: 4pt;">
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· WHAT/WHY와 HOW 명확히 분리</p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 모호한 부분 → <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">[NEEDS CLARIFICATION]</code></p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 테스트 가능한 수용 기준 포함 필수</p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· Constitution Check — 조직 원칙 위반 게이트</p>
+        </div>
       </div>
       <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">AI의 치팅에 주의</p>
-        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">테스트 삭제 · 구현 먼저 작성 · assert 약화<br>→ <strong style="color: #faf8f5;">테스트 수정 금지 규칙 필수</strong></p>
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">핵심</p>
+        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">모든 산출물이 <strong style="color: #faf8f5;">파일로 저장 · 커밋 · 참조</strong><br>→ 컨텍스트 소실 방어의 정석</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 14pt;">
+        <p style="font-size: 8.5pt; color: #6b6560;">출처: GitHub spec-kit</p>
       </div>
     </div>
   </div>

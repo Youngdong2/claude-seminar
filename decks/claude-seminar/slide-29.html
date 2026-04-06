@@ -16,34 +16,44 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">구조화 수준 스펙트럼</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">TDD 예시</h2>
   </div>
 
-  <!-- 스펙트럼 축 -->
-  <div style="display: flex; align-items: center; gap: 0; margin-bottom: 6pt; padding: 0 4pt;">
-    <p style="font-size: 10pt; font-weight: 600; color: #6b6560;">자유</p>
-    <div style="flex: 1; height: 2pt; background: linear-gradient(to right, #ddd8d0, #c45a3b); margin: 0 12pt; border-radius: 1pt;"></div>
-    <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">엄격</p>
-  </div>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">테스트를 먼저 쓰고, 통과하는 코드를 나중에 — AI 시대에도 원칙은 동일</p>
 
-  <div style="flex: 1; display: flex; gap: 14pt; align-items: stretch;">
-    <div style="flex: 1; background: #f0ebe3; border-radius: 6pt; padding: 24pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      <p style="font-size: 20pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">PDD</p>
-      <p style="font-size: 11pt; color: #6b6560;">프롬프트 주도</p>
-      <div style="width: 40pt; height: 2pt; background: #ddd8d0; margin: 14pt 0;"></div>
-      <p style="font-size: 12pt; font-weight: 600; color: #c45a3b;">의도</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
+    <!-- 왼쪽: 프롬프트 + 3단계 -->
+    <div>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 14pt; font-family: monospace; margin-bottom: 12pt;">
+        <p style="font-size: 9.5pt; color: #87ceeb; line-height: 1.6;">"사용자가 운동 페이지에서<br>과거 운동 클릭 시 상세 보기를<br>볼 수 있어야 한다"</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 10pt;"><span style="color: #c45a3b; font-weight: 600;">RED</span> <span style="color: #6b6560;">— 인간이 실패하는 테스트 작성</span></p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 10pt;"><span style="color: #2d8a4e; font-weight: 600;">GREEN</span> <span style="color: #6b6560;">— AI가 최소 코드로 통과</span></p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+          <p style="font-size: 10pt;"><span style="color: #3b7cc4; font-weight: 600;">REFACTOR</span> <span style="color: #6b6560;">— 인간 리뷰 후 AI가 정리</span></p>
+        </div>
+      </div>
     </div>
-    <div style="flex: 1; background: #f0ebe3; border-radius: 6pt; padding: 24pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      <p style="font-size: 20pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">TDD</p>
-      <p style="font-size: 11pt; color: #6b6560;">테스트 주도</p>
-      <div style="width: 40pt; height: 2pt; background: #ddd8d0; margin: 14pt 0;"></div>
-      <p style="font-size: 12pt; font-weight: 600; color: #c45a3b;">검증</p>
-    </div>
-    <div style="flex: 1; background: #2d2a26; border-radius: 8pt; padding: 24pt; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-      <p style="font-size: 20pt; font-weight: 700; color: #faf8f5; margin-bottom: 8pt;">SDD</p>
-      <p style="font-size: 11pt; color: #a09a94;">스펙 주도</p>
-      <div style="width: 40pt; height: 2pt; background: #4a4540; margin: 14pt 0;"></div>
-      <p style="font-size: 12pt; font-weight: 600; color: #c45a3b;">계획</p>
+
+    <!-- 오른쪽: AI 치팅 + 대응 -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">AI 치팅 3대 패턴</p>
+        <div style="display: flex; flex-direction: column; gap: 3pt;">
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 테스트 삭제/skip으로 통과</p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· assert 약화 (값 → 타입 검증)</p>
+          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 구현 먼저, 거기 맞춘 테스트</p>
+        </div>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
+        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">CLAUDE.md 필수 규칙</p>
+        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;"><strong style="color: #faf8f5;">테스트 수정 금지</strong><br>RED 실패 확인 전 GREEN 진행 금지<br>구조 변경과 기능 변경 커밋 분리</p>
+      </div>
     </div>
   </div>
 

@@ -17,54 +17,27 @@
   <!-- 헤더 -->
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Subagent vs Agent Team</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Claude Code 생태계</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 20pt;">둘 다 작업을 위임하는 방식. 규모와 독립성에 따라 선택.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">도구 자체보다 <strong style="color: #2d2a26;">주변 생태계</strong>가 더 빠르게 커지는 중.</p>
 
-  <!-- 2컬럼 비교 -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24pt;">
-    <!-- Subagent -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 24pt; display: flex; flex-direction: column;">
-      <p style="font-size: 20pt; font-weight: 700; color: #2d2a26; margin-bottom: 16pt;">Subagent</p>
-      <div style="display: flex; flex-direction: column; gap: 12pt; flex: 1;">
-        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
-          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">구조</p>
-          <p style="font-size: 10pt; color: #6b6560;">메인이 생성한 격리된 워커</p>
-        </div>
-        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
-          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">컨텍스트</p>
-          <p style="font-size: 10pt; color: #6b6560;">자체 윈도우, 요약만 반환</p>
-        </div>
-        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
-          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">통신</p>
-          <p style="font-size: 10pt; color: #6b6560;">주 에이전트에게만 보고</p>
-        </div>
-      </div>
-      <div style="margin-top: auto; padding-top: 14pt; border-top: 1px solid #ddd8d0;">
-        <p style="font-size: 10pt; font-weight: 500; color: #2d2a26;">많은 파일 읽기, 병렬 조사</p>
-      </div>
+  <!-- 3컬럼 -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16pt; align-items: center;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 20pt; display: flex; flex-direction: column; gap: 8pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">공식 확장 포인트</p>
+      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26;">스킬 · 플러그인 · MCP · 훅</p>
+      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">Anthropic이 직접 설계한 확장 축 4종. 공식 문서·마켓 제공.</p>
     </div>
-    <!-- Agent Team -->
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 24pt; display: flex; flex-direction: column;">
-      <p style="font-size: 20pt; font-weight: 700; color: #faf8f5; margin-bottom: 16pt;">Agent Team</p>
-      <div style="display: flex; flex-direction: column; gap: 12pt; flex: 1;">
-        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
-          <p style="font-size: 10pt; font-weight: 600; color: #faf8f5;">구조</p>
-          <p style="font-size: 10pt; color: #a09a94;">여러 독립 세션이 협업</p>
-        </div>
-        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
-          <p style="font-size: 10pt; font-weight: 600; color: #faf8f5;">컨텍스트</p>
-          <p style="font-size: 10pt; color: #a09a94;">완전히 독립, 각자 별도 윈도우</p>
-        </div>
-        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
-          <p style="font-size: 10pt; font-weight: 600; color: #faf8f5;">통신</p>
-          <p style="font-size: 10pt; color: #a09a94;">팀원끼리 직접 메시지</p>
-        </div>
-      </div>
-      <div style="margin-top: auto; padding-top: 14pt; border-top: 1px solid #4a4640;">
-        <p style="font-size: 10pt; font-weight: 500; color: #faf8f5;">보안/성능/테스트 동시 검토</p>
-      </div>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 18pt 20pt; display: flex; flex-direction: column; gap: 8pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">오픈소스 커뮤니티</p>
+      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26;">awesome-claude-code</p>
+      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">GitHub 기반 플러그인·스킬·워크플로우 모음. 레포·디스코드 활발.</p>
+    </div>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 20pt; display: flex; flex-direction: column; gap: 8pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">한국 커뮤니티</p>
+      <p style="font-size: 14pt; font-weight: 600; color: #faf8f5;">블로그 · 영상 · 세미나</p>
+      <p style="font-size: 10pt; color: #a09a94; line-height: 1.5;">한글 자료와 실무 사례가 빠르게 누적. 전사 도입에 필수 조건.</p>
     </div>
   </div>
 

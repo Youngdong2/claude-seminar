@@ -16,32 +16,37 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">왜 프롬프트만으로는 부족한가</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Agent = Model + Harness</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">좋은 프롬프트로도 잔존하는 문제. 에이전트가 여러 단계를 거치는 순간 — <strong style="color: #2d2a26;">숫자가 불리해짐.</strong></p>
-
-  <!-- 신뢰성의 수학 -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div style="display: flex; flex-direction: column; gap: 12pt; justify-content: center;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 20pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">재현성 문제</p>
-        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;">같은 프롬프트에도 다른 결과.<br>AI는 <strong>비결정적</strong> 시스템.</p>
-      </div>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 20pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">복리로 쌓이는 실패</p>
-        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;">한 단계 5% 실패율이<br>20단계에선 치명적.</p>
-      </div>
+  <!-- 수식 시각화 -->
+  <div style="display: flex; align-items: center; justify-content: center; gap: 14pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 24pt; text-align: center; flex: 1;">
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 2pt;">AGENT</p>
+      <p style="font-size: 18pt; font-weight: 700; color: #2d2a26;">에이전트</p>
     </div>
-
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 20pt; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-      <p style="font-size: 10pt; color: #6b6560; margin-bottom: 10pt;">숫자로 보면</p>
-      <p style="font-size: 13pt; color: #faf8f5; margin-bottom: 4pt;">각 단계 성공률 <span style="color: #c45a3b; font-weight: 700;">95%</span></p>
-      <p style="font-size: 13pt; color: #faf8f5; margin-bottom: 12pt;">20단계 체인이라면?</p>
-      <p style="font-size: 48pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">36%</p>
-      <p style="font-size: 10pt; color: #6b6560; margin-top: 2pt;">0.95²⁰ = 0.358</p>
-      <p style="font-size: 10pt; color: #faf8f5; margin-top: 12pt; line-height: 1.4;">"95% 동작" 에이전트 →<br>실제 작업의 2/3에서 실패.</p>
+    <p style="font-size: 24pt; font-weight: 300; color: #c45a3b;">=</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 24pt; text-align: center; flex: 1;">
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 2pt;">MODEL</p>
+      <p style="font-size: 18pt; font-weight: 700; color: #2d2a26;">텍스트 생성</p>
     </div>
+    <p style="font-size: 24pt; font-weight: 300; color: #c45a3b;">+</p>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 24pt; text-align: center; flex: 1;">
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 2pt;">HARNESS</p>
+      <p style="font-size: 18pt; font-weight: 700; color: #c45a3b;">나머지 전부</p>
+    </div>
+  </div>
+
+  <p style="font-size: 10pt; color: #6b6560; text-align: center; margin-bottom: 10pt;"><em>"모델이 아닌 것은 전부 하네스입니다."</em> &nbsp;— LangChain, Vivek Trivedy</p>
+
+  <!-- 마구 비유 -->
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 18pt; margin-bottom: 10pt;">
+    <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">비유 · 마구(馬具, horse tack)</p>
+    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.45;">고삐 · 안장 · 재갈처럼, 강력하지만 예측 불가능한 말(= LLM)을 <strong>올바른 방향으로 이끄는 장비 전체</strong>가 하네스.</p>
+  </div>
+
+  <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 18pt;">
+    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.5;">하네스가 결정하는 것 — <strong style="color: #c45a3b;">무엇을 보는지</strong>(컨텍스트) · <strong style="color: #c45a3b;">무엇을 할 수 있는지</strong>(도구·권한) · <strong style="color: #c45a3b;">언제 멈추는지</strong>(제약) · <strong style="color: #c45a3b;">잘못됐을 때</strong>(복구)</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

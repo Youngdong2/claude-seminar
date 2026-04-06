@@ -16,37 +16,35 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">한 걸음 더 — 단일 모델 탈피</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">두 가지 막다른 길</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">섹션 6이 <strong style="color: #2d2a26;">여러 Claude</strong>였다면, 이건 <strong style="color: #2d2a26;">여러 종류의 AI</strong>. 모델마다 상이한 훈련 분포·blind spot.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 10pt;">하네스 · 에이전트 · 컨텍스트 방어 · 암묵지 문서화 — 배울 것이 많음.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
-    <!-- /ask -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ask [provider]</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Claude 답이 불확실할 때 다른 모델에 의견 요청</p>
-      </div>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #6b6560;"># 구조 리뷰를 Codex에게</p>
-        <p style="font-size: 9pt; color: #faf8f5; line-height: 1.5;">/ask codex "이 계획에서 짠 구조<br>&nbsp;&nbsp;리뷰해줘. 빠진 부분 있는지"</p>
-        <p style="font-size: 9pt; color: #6b6560; margin-top: 6pt;"># 디자인 자문을 Gemini에게</p>
-        <p style="font-size: 9pt; color: #faf8f5; line-height: 1.5;">/ask gemini "이 카드 레이아웃<br>&nbsp;&nbsp;가독성 어떤지 피드백 줘"</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">직접 다 세팅</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 한 번 세팅해도 업데이트 안 됨</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 팀에 공유되지 않음</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 시간이 지나면 맥락 휘발</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· → <strong style="color: #c45a3b;">번아웃</strong></p>
       </div>
     </div>
 
-    <!-- /ccg -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ccg — Claude · Codex · Gemini</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세 모델 동시 송출 → <strong style="color: #2d2a26;">합의·불일치·불확실</strong> 분리 표시</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; font-weight: 600; margin-bottom: 4pt;">특히 빛나는 순간</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 아키텍처 결정 (되돌리기 어려움)<br>· 디버깅이 막혔을 때<br>· 머지 전 코드 리뷰 최종 확인</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">원리 없이 스킬만</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 이상 동작 시 원인 판단 불가</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 같은 실수를 반복</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 디버깅할 수 없음</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· → <strong style="color: #c45a3b;">블랙박스 의존</strong></p>
       </div>
     </div>
+  </div>
+
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 20pt; margin-top: 10pt;">
+    <p style="font-size: 12pt; color: #faf8f5; line-height: 1.4;"><strong style="color: #c45a3b;">원리는 이해</strong> · <strong style="color: #c45a3b;">구현은 위임</strong> — 잘 만들어진 플러그인 활용.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

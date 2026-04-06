@@ -16,44 +16,30 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md — 프로젝트의 "헌법"</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md는 살아있는 문서 — 현장 사례</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">모든 세션이 시작될 때 자동으로 로드되는 지속 컨텍스트. 4개 레이어 중에서도 <strong style="color: #2d2a26;">가장 먼저 손대야 하는 레이어</strong>.</p>
-
-  <!-- 핵심 오해 correction -->
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">먼저 짚고 갈 것 — "지시가 아니라 컨텍스트"</p>
-    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.6;">시스템 프롬프트가 아님 — 사용자 메시지로 주입.<br>강제가 아닌 <strong style="color: #c45a3b;">권고</strong>. 모호하면 Claude가 임의 해석.</p>
-  </div>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">한 번 쓰고 끝나는 정적 문서가 아닌, <strong style="color: #2d2a26;">피드백으로 자라는 유기체</strong>처럼 운영.</p>
 
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
-    <!-- 좋은 예 -->
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">✓ 검증 가능 · 구체적</p>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6;">
-          - 슬라이드 규격: 720pt × 405pt<br>
-          - 종결어미: 명사형·구 단위만<br>
-          - 금지: ~합니다 / ~입니다 공손체<br>
-          - 디자인 토큰: bg=#faf8f5
-        </p>
-      </div>
+    <!-- Boris Cherny -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 16pt 20pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">Boris Cherny</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 8pt;">Claude Code 창시자 · Anthropic</p>
+      <p style="font-size: 10pt; color: #2d2a26; line-height: 1.6;">주 수 회 업데이트.<br><strong>Claude가 실수할 때마다 한 줄 추가.</strong><br>PR에서 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">@claude</code> 태그 → GitHub Action이 자동 커밋.</p>
     </div>
-    <!-- 나쁜 예 -->
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">✗ 모호 · 검증 불가</p>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.8;">
-          깔끔하게 만들어줘.<br>
-          적절한 크기로 해줘.<br>
-          보기 좋게 디자인해줘.
-        </p>
-      </div>
+
+    <!-- 정구봉 -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 16pt 20pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">정구봉 (Team Attention)</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-bottom: 8pt;">규모의 실천</p>
+      <p style="font-size: 10pt; color: #2d2a26; line-height: 1.6;"><strong>CLAUDE.md 159개</strong> + 스킬 100개+ 동시 운영.<br>"파일 하나는 짧게, 대신 파일을 많이."</p>
     </div>
   </div>
 
-  <p style="font-size: 9pt; color: #6b6560; margin-top: 10pt; line-height: 1.4;">결정적 차이: 나쁜 예는 <strong style="color: #2d2a26;">지워도 행동 불변</strong> — 한 줄 삭제 테스트 실패. (→ 다음 페이지)</p>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 11pt; color: #faf8f5; font-weight: 600; line-height: 1.4;"><em>"<span style="color: #c45a3b;">버그는 한 번 고치는 게 아니라, CLAUDE.md에 한 줄을 추가하면서 고치는 것</span>이다."</em></p>
+  </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
