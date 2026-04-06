@@ -8,7 +8,7 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
@@ -16,31 +16,33 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Long-Horizon 3기법</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Right Altitude — 지시문의 고도</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">오래 실행되는 에이전트 — 컨텍스트 예산이 금방 고갈.<br>공통 원리는 <strong style="color: #2d2a26;">컨텍스트를 바깥으로 덜어내기</strong>. Anthropic이 정리한 3가지 처방.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">CLAUDE.md나 프롬프트를 쓸 때 가장 흔한 실수는 <strong style="color: #2d2a26;">두 극단</strong>.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">1. COMPACTION</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">요약본으로 리셋</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">아키텍처 결정·핵심 사실은 보존 · 탐색 로그는 폐기.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 낮음 · OVER-SPECIFIED</p>
+      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">모든 케이스를 if/else로 박기</p>
+      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 예외 상황에서 brittle</p>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">2. NOTE-TAKING</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">외부 파일에 기록</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">NOTES.md</code>, <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">PROGRESS.md</code>. 세션 단절에도 이어서 작업 가능.</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">3. SUB-AGENT</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">서브에이전트 격리</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;">각자 컨텍스트에서 작업 · 1~2k 토큰 요약만 반환.</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 높음 · UNDER-SPECIFIED</p>
+      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">"잘 해줘", "깔끔하게"</p>
+      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 모델이 추측, 세션마다 결과 다름</p>
     </div>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 10pt 14pt;">
-    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.5;"><strong>Claude Code 구현:</strong> <code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9pt;">/compact</code> · 프로젝트 파일 읽기/쓰기 · <code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9pt;">Task</code> 서브에이전트</p>
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
+    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">올바른 고도 공식</p>
+    <p style="font-size: 13pt; font-weight: 600; color: #faf8f5;">원칙 1줄 &nbsp;+&nbsp; 이유(why) 1줄 &nbsp;+&nbsp; 예시 1~2개</p>
+    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt; line-height: 1.4;">이게 붙어야 새 상황에도 일반화 가능.</p>
+  </div>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>자가진단 2문항:</strong></p>
+    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">① 의도하지 않은 상황에서도 유효 → OK<br>② 아무 세션에 붙여도 행동 불변 → 너무 높음</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

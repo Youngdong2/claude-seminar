@@ -8,7 +8,7 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
@@ -16,37 +16,55 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">에이전트 루프 — 하네스의 심장</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">하네스의 6대 구성 요소</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">거의 모든 코딩 에이전트가 반복하는 4단계. <strong style="color: #2d2a26;">각 단계가 하네스의 설계 지점.</strong></p>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">1. GATHER CONTEXT</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">파일 읽기, 검색, 질문</p>
-      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">무엇을 <strong style="color: #c45a3b;">안 보여줄지</strong>를 설계하는 자리. 노이즈 유입 → 4가지 실패 모드 발동.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
+        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">1</span>
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">컨텍스트 엔지니어링</p>
+      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">각 단계에서 모델이 보는 정보를 설계. 무엇을 유지·요약·버릴지 관리</p>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">2. TAKE ACTION</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">코드 작성, 명령 실행, 툴 호출</p>
-      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">가능한 한 <strong style="color: #c45a3b;">되돌릴 수 있는</strong> 액션으로. 실패 비용 낮음 → 과감함 허용.</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
+        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">2</span>
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">도구 오케스트레이션</p>
+      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">어떤 도구가 가용한지, 실행이 어떻게 처리되는지 결정</p>
     </div>
-    <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 16pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">3. VERIFY WORK</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">테스트, 린트, 타입체크, 리뷰</p>
-      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;"><strong style="color: #c45a3b;">자동 피드백 부재 → 루프가 환각 강화.</strong> 이 단계 막히면 전부 붕괴.</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
+        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">3</span>
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">상태 및 메모리</p>
+      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">수 분~수 시간 실행되는 에이전트의 내구성 있는 상태 관리</p>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">4. REPEAT</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">결과를 다음 루프 컨텍스트로</p>
-      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">이전 결과가 다음 루프에 주입되는 지점. <strong style="color: #c45a3b;">Compaction·Pruning이 필수.</strong></p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
+        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">4</span>
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">검증 루프</p>
+      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">출력 생성 후 행동 실행 전 발동. 스키마·의미적·정책 유효성</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
+        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">5</span>
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">오류 복구</p>
+      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">실패 감지 → 재시도, 다른 접근법, 인간에게 폴백</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 8pt;">
+        <span style="display: inline-block; width: 22pt; height: 22pt; background: #c45a3b; color: #fff; border-radius: 50%; font-size: 10pt; font-weight: 700; line-height: 22pt; text-align: center;">6</span>
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">인간 개입 제어</p>
+      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">핵심 의사결정에서 일시정지. DB 삭제? 결제? → 승인 요구</p>
     </div>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 14pt;">
-    <p style="font-size: 10pt; color: #2d2a26; font-weight: 600;">하네스 엔지니어링 = 이 4단계의 각 지점을 신뢰성 있게 만드는 작업.</p>
-  </div>
+  <p style="font-size: 9pt; color: #6b6560; text-align: right; margin-top: 8pt;">— Kai Renner, harness-engineering.ai</p>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
@@ -54,5 +72,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

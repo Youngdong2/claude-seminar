@@ -16,50 +16,46 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">실패 패턴 5가지</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">신뢰성의 수학 — 복리로 쌓이는 실패</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">도구를 잘 쓰는 것만큼 중요한 건, <strong style="color: #2d2a26;">잘못 쓰는 패턴</strong>을 아는 것.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">각 단계 성공률 <strong style="color: #2d2a26;">95%</strong> 가정 → 다단계 작업의 전체 성공률?</p>
 
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 10pt 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; opacity: 0.7;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #6b6560;">01</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">컨텍스트 과부하</p>
+  <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 20pt;">
+    <!-- Table -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8pt 16pt;">
+        <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">단계 수</p>
+        <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt; text-align: right;">전체 성공률</p>
+
+        <p style="font-size: 11pt; color: #2d2a26;">1 단계</p>
+        <p style="font-size: 11pt; color: #2d2a26; text-align: right; font-family: monospace;">95%</p>
+
+        <p style="font-size: 11pt; color: #2d2a26;">5 단계</p>
+        <p style="font-size: 11pt; color: #2d2a26; text-align: right; font-family: monospace;">77%</p>
+
+        <p style="font-size: 11pt; color: #2d2a26;">10 단계</p>
+        <p style="font-size: 11pt; color: #2d2a26; text-align: right; font-family: monospace;">60%</p>
+
+        <p style="font-size: 13pt; color: #c45a3b; font-weight: 700;">20 단계</p>
+        <p style="font-size: 13pt; color: #c45a3b; text-align: right; font-family: monospace; font-weight: 700;">36%</p>
+
+        <p style="font-size: 13pt; color: #c45a3b; font-weight: 700;">50 단계</p>
+        <p style="font-size: 13pt; color: #c45a3b; text-align: right; font-family: monospace; font-weight: 700;">8%</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"많이 주면 잘하겠지" — 섹션 4의 Rot · Distraction · Confusion</p>
     </div>
 
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">02</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">불명확한 요구사항</p>
+    <!-- Insights -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">계획 → 탐색 → 작성 → 테스트 → 수정 → 커밋 — 20단계만 가도 <strong>2/3이 실패</strong></p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"이거 좀 고쳐줘" → LLM은 학습 데이터 기반 <strong style="color: #2d2a26;">추측 구현</strong>. 맞아도 재현성 없음</p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">03</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">검증 없는 자동수락</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;">에이전트를 만드는 건 쉬운 부분 — 프로덕션 신뢰성이 진짜 엔지니어링</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"AI가 만들었으니 맞겠지" — 가장 위험한 생각. 자기 작업 평가 시 <strong style="color: #2d2a26;">병리적 낙관주의자</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">04</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">긴 세션 드리프트</p>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt; display: flex; align-items: center;">
+        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">검증 루프 · 재시도 · 체크포인트 — 복합 실패율을 낮추는 건 <strong style="color: #c45a3b;">하네스</strong>뿐</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">시점 편향 · 오류 중첩 · Mode Collapse — 초반 규칙을 잊고 방향 상실</p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; grid-column: 1 / -1;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">05</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">권한 과다</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"바이패스가 편하니까" — 프롬프트 인젝션 · 토큰 유출 · 프로덕션 사고의 단일 경로</p>
     </div>
   </div>
 

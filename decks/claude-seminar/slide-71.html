@@ -16,43 +16,37 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC — 원리를 명령어로</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">두 가지 막다른 길</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;"><strong style="color: #2d2a26;">Oh My Claude Code</strong> — 한국 개발자 Yeachan Heo 제작, GitHub Trending 1위. 발표 4~6 섹션 원리의 거의 전부를 한 플러그인으로 패키징.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">하네스 · 에이전트 · 컨텍스트 방어 · 암묵지 문서화 — 배울 것이 많음.</p>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; margin-bottom: 12pt;">
-    <p style="font-size: 10.5pt; color: #2d2a26; line-height: 1.4;"><em>"Don't learn Claude Code. Just use OMC."</em></p>
-  </div>
-
-  <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">원리 → OMC 구현 매핑</p>
-
-  <div style="flex: 1; background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-    <div style="display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 5pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">발표에서 다룬 원리</p>
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">OMC 구현</p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">멀티 에이전트 역할 분리</p>
-      <p style="font-size: 9pt; color: #6b6560;">29+ 사전 정의 에이전트 (architect·critic·tester …)</p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">모델 라우팅 · 비용 최적화</p>
-      <p style="font-size: 9pt; color: #6b6560;">Haiku/Sonnet/Opus 자동 선택 — 토큰 <strong style="color: #c45a3b;">30~50% 절감</strong></p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">Plan–Critic–Build</p>
-      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ralplan</code> — architect 계획, critic 별도 비평</p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">병렬 에이전트</p>
-      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultrawork</code>, <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultrapilot</code> — 최대 5 워커 동시</p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">검증 루프 · GAN 스타일</p>
-      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultraqa</code> — test → verify → fix 자동 순환</p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">모호성 제거 · 소크라테스 질문</p>
-      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/deep-interview</code> — 요구사항 인터뷰</p>
-
-      <p style="font-size: 9pt; color: #2d2a26;">Worktree 병렬 · 관찰 가능성</p>
-      <p style="font-size: 9pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/project-session-manager</code> + HUD + Slack 알림</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
+    <!-- Left: 직접 만들기 -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">직접 다 세팅</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 한 번 세팅해도 업데이트 안 됨</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 팀에 공유되지 않음</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 시간이 지나면 맥락 휘발</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· → <strong style="color: #c45a3b;">번아웃</strong></p>
+      </div>
     </div>
+
+    <!-- Right: 플러그인만 쓰기 -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 11pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">원리 없이 플러그인만</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 이상 동작 시 원인 판단 불가</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 같은 실수를 반복</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 디버깅할 수 없음</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· → <strong style="color: #c45a3b;">블랙박스 의존</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 20pt; margin-top: 14pt;">
+    <p style="font-size: 12pt; color: #faf8f5; line-height: 1.4;"><strong style="color: #c45a3b;">원리는 이해</strong> · <strong style="color: #c45a3b;">구현은 위임</strong> — 잘 만들어진 플러그인 활용.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

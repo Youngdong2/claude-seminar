@@ -15,49 +15,32 @@
 </head>
 <body>
   <!-- 헤더 -->
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 16pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">확장 레이어 구조</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">내장 도구 — 5가지 범주, 20개+</h2>
   </div>
 
-  <p style="font-size: 12pt; color: #6b6560; margin-bottom: 14pt;">처음에는 CLAUDE.md만으로 시작. 필요에 따라 하나씩 추가.</p>
-
-  <!-- 레이어 목록: 위→아래 = 기초→고급 -->
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 4pt;">
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #2d2a26; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #faf8f5;">CLAUDE.md</p>
-      <p style="font-size: 10pt; color: #a09a94;">모든 세션에서 로드되는 컨텍스트</p>
-      <p style="font-size: 9pt; color: #c45a3b; font-weight: 500;">여기서 시작</p>
+  <!-- 도구 범주 -->
+  <div style="display: flex; flex-direction: column; gap: 8pt;">
+    <div style="display: grid; grid-template-columns: 140pt 1fr; gap: 12pt; background: #f0ebe3; border-radius: 6pt; padding: 14pt 20pt; align-items: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">파일 작업</p>
+      <p style="font-size: 11pt; color: #6b6560;">파일 읽기, 코드 편집, 새 파일 생성, 이름 변경 및 재구성</p>
     </div>
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Skills</p>
-      <p style="font-size: 10pt; color: #6b6560;">재사용 가능한 워크플로우</p>
-      <p style="font-size: 9pt; color: #6b6560;">반복 작업이 생길 때</p>
+    <div style="display: grid; grid-template-columns: 140pt 1fr; gap: 12pt; background: #f0ebe3; border-radius: 6pt; padding: 14pt 20pt; align-items: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">검색</p>
+      <p style="font-size: 11pt; color: #6b6560;">패턴으로 파일 찾기, 정규식으로 콘텐츠 검색, 코드베이스 탐색</p>
     </div>
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">MCP</p>
-      <p style="font-size: 10pt; color: #6b6560;">외부 서비스 연결 (100개+)</p>
-      <p style="font-size: 9pt; color: #6b6560;">Notion, GitHub, Slack 등</p>
+    <div style="display: grid; grid-template-columns: 140pt 1fr; gap: 12pt; background: #f0ebe3; border-radius: 6pt; padding: 14pt 20pt; align-items: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">실행</p>
+      <p style="font-size: 11pt; color: #6b6560;">셸 명령 실행, 서버 시작, 테스트 실행, git 사용</p>
     </div>
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Subagents</p>
-      <p style="font-size: 10pt; color: #6b6560;">격리된 컨텍스트, 요약 반환</p>
-      <p style="font-size: 9pt; color: #6b6560;">복잡한 조사/병렬 작업</p>
+    <div style="display: grid; grid-template-columns: 140pt 1fr; gap: 12pt; background: #f0ebe3; border-radius: 6pt; padding: 14pt 20pt; align-items: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">웹</p>
+      <p style="font-size: 11pt; color: #6b6560;">웹 검색, 문서 가져오기, 오류 메시지 조회</p>
     </div>
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Agent Teams</p>
-      <p style="font-size: 10pt; color: #6b6560;">여러 독립 세션이 협업</p>
-      <p style="font-size: 9pt; color: #6b6560;">대규모 병렬 작업</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Hooks</p>
-      <p style="font-size: 10pt; color: #6b6560;">이벤트 기반 자동화 스크립트</p>
-      <p style="font-size: 9pt; color: #6b6560;">린트, 테스트 자동화</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 130pt 1fr 160pt; gap: 8pt; background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; align-items: center;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Plugins</p>
-      <p style="font-size: 10pt; color: #6b6560;">기능 패키징 및 배포</p>
-      <p style="font-size: 9pt; color: #6b6560;">팀/커뮤니티 공유</p>
+    <div style="display: grid; grid-template-columns: 140pt 1fr; gap: 12pt; background: #f0ebe3; border-radius: 6pt; padding: 14pt 20pt; align-items: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">코드 인텔리전스</p>
+      <p style="font-size: 11pt; color: #6b6560;">타입 오류/경고 확인, 정의로 이동, 참조 찾기</p>
     </div>
   </div>
 

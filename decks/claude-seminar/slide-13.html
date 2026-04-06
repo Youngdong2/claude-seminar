@@ -7,15 +7,44 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">02</p>
-  <h1 style="font-size: 44pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">왜 Claude Code인가</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <!-- 헤더 -->
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 1</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">그래도 기초는 중요하다</h2>
+  </div>
+
+  <!-- 인용문 -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 24pt 32pt; margin-bottom: 24pt;">
+    <p style="font-size: 15pt; font-weight: 500; color: #faf8f5; line-height: 1.6; text-align: center;">
+      <em>"AI가 더 많이 해줄수록,<br>기초 지식을 가진 사람의 경쟁력이 역설적으로 올라간다"</em>
+    </p>
+  </div>
+
+  <!-- 2컬럼: 변하는 것 vs 변하지 않는 것 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 20pt 24pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">변하는 것</p>
+      <p style="font-size: 18pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">직접 코드를 타이핑하는 비중</p>
+      <p style="font-size: 11pt; color: #6b6560; line-height: 1.6;">데모까지는 쉽지만, 실서비스로 만드는 건 전혀 다른 레벨</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 20pt 24pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">변하지 않는 것</p>
+      <p style="font-size: 18pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">시스템을 이해하는 능력</p>
+      <p style="font-size: 11pt; color: #6b6560; line-height: 1.6;">보안, 동시접속, DB 스키마, 캐싱 — 기본기 없이는 질문조차 불가</p>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">13</p>
+  </div>
 </body>
 </html>

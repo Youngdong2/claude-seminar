@@ -16,40 +16,43 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">원칙은 그대로, 예시만 교체</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">진짜 차이는 하나 — 안전 감각</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;"><strong style="color: #2d2a26;">코드가 아닌 업무</strong>로 치환. 원칙은 그대로, 예시만 상이.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">개발자는 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">git reset</code>이 반사적 · 비개발자에게는 이 감각이 처음 — 역량 차이가 아니라 <strong style="color: #2d2a26;">경험 차이</strong>.</p>
 
-  <div style="flex: 1; background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 8pt 16pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">발표의 원칙</p>
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; border-bottom: 1pt solid rgba(0,0,0,0.12); padding-bottom: 4pt;">업무로 번역</p>
+  <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 14pt; margin-bottom: 12pt;">
+    <!-- Left: felt harder -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">비개발자에게 더 크게 다가오는 것</p>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· "동작하는 것 같음"과 "실제 맞는 것"의 구별</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 실패의 결과가 눈에 안 보임 (덮어쓴 파일, 잘못 나간 메일)</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 권한의 의미가 직관적이지 않음</p>
+      </div>
+    </div>
 
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Spec-first</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">시작 전 원하는 것을 <strong style="color: #2d2a26;">글로 선행</strong>. 채팅창 즉흥 금지</p>
-
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">CLAUDE.md</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">내 업무의 규칙·용어·판단 기준을 <strong style="color: #2d2a26;">하나의 파일로</strong></p>
-
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Plan Mode 먼저</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">실행 전에 "무엇을 어떻게 할지" <strong style="color: #2d2a26;">계획부터</strong></p>
-
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">검증 주체 분리</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">초안 쓴 에이전트와 <strong style="color: #2d2a26;">검토하는 에이전트를 분리</strong></p>
-
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Context Rot 방어</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">주제가 바뀌면 <strong style="color: #2d2a26;">새 세션</strong>. 한 창 혼용 금지</p>
-
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">암묵지 명시화</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">머릿속 판단 기준을 <strong style="color: #2d2a26;">예시와 함께 글로</strong></p>
-
-      <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">멀티 에이전트</p>
-      <p style="font-size: 9.5pt; color: #6b6560;">큰 일을 <strong style="color: #2d2a26;">작은 역할로 분할 위임</strong></p>
+    <!-- Right: 4 safety nets -->
+    <div style="display: flex; flex-direction: column; gap: 6pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">의식적인 안전장치 4가지</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
+        <p style="font-size: 9pt; color: #2d2a26;"><strong>1.</strong> 권한은 항상 <strong>확인형</strong> — 자동 실행 금지</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
+        <p style="font-size: 9pt; color: #2d2a26;"><strong>2.</strong> 외부에 내보내기 전 <strong>사람 검수</strong></p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
+        <p style="font-size: 9pt; color: #2d2a26;"><strong>3.</strong> 중요한 작업은 <strong>Plan Mode로 계획부터</strong></p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 12pt;">
+        <p style="font-size: 9pt; color: #2d2a26;"><strong>4.</strong> 이상하면 <strong>즉시 멈춘다</strong></p>
+      </div>
     </div>
   </div>
 
-  <p style="font-size: 10pt; color: #6b6560; margin-top: 12pt; text-align: center;">변한 것은 <strong style="color: #c45a3b;">예시뿐</strong>. 원칙은 그대로. — <strong style="color: #2d2a26;">새로 배울 것 없음.</strong></p>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.4;">이 넷만 지켜도 실패 <strong style="color: #c45a3b;">80% 제거</strong> — 앞에서 이미 다룬 원칙, 더 의식적으로.</p>
+  </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>

@@ -16,50 +16,36 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">5개 명령으로 돌리는 Agent Loop</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">한 걸음 더 — 단일 모델 탈피</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">섹션 4 Agent Loop의 다섯 단계 — 각각 <strong style="color: #2d2a26;">하나의 명령어</strong>로 매핑.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">섹션 6이 <strong style="color: #2d2a26;">여러 Claude</strong>였다면, 이건 <strong style="color: #2d2a26;">여러 종류의 AI</strong>. 모델마다 상이한 훈련 분포·blind spot.</p>
 
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 8pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">1. 이해</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/deep-dive</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- /ask -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ask [provider]</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Claude 답이 불확실할 때 다른 모델에 의견 요청</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">코드베이스 Trace → 소크라테스식 인터뷰 → <strong style="color: #2d2a26;">머릿속이 파일로</strong> 떨어진다</p>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 7.5pt; color: #6b6560;"># 구조 리뷰를 Codex에게</p>
+        <p style="font-size: 7.5pt; color: #faf8f5; line-height: 1.5;">/ask codex "이 계획에서 짠 구조<br>&nbsp;&nbsp;리뷰해줘. 빠진 부분 있는지"</p>
+        <p style="font-size: 7.5pt; color: #6b6560; margin-top: 6pt;"># 디자인 자문을 Gemini에게</p>
+        <p style="font-size: 7.5pt; color: #faf8f5; line-height: 1.5;">/ask gemini "이 카드 레이아웃<br>&nbsp;&nbsp;가독성 어떤지 피드백 줘"</p>
+      </div>
     </div>
 
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">2. 계획</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/ralplan</p>
+    <!-- /ccg -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ccg — Claude · Codex · Gemini</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세 모델 동시 송출 → <strong style="color: #2d2a26;">합의·불일치·불확실</strong> 분리 표시</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">architect 계획 → critic 별도 비평 → <strong style="color: #2d2a26;">합의된 것만 실행 허가</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">3. 실행</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/team</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; font-weight: 600; margin-bottom: 4pt;">특히 빛나는 순간</p>
+        <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.5;">· 아키텍처 결정 (되돌리기 어려움)<br>· 디버깅이 막혔을 때<br>· 머지 전 코드 리뷰 최종 확인</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">워커 4~5개 병렬 · Test Writer는 구현 코드 못 봄 · <strong style="color: #2d2a26;">역할 격리 기본</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">4. 검증</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/ultraqa</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">test → 원인 분석 → 수정 → 재실행 · <strong style="color: #2d2a26;">루프가 알아서 수렴</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt; display: flex; gap: 14pt; align-items: center;">
-      <div style="width: 90pt; flex-shrink: 0;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b;">5. 학습</p>
-        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace;">/learner</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">재사용 가능한 패턴을 <strong style="color: #2d2a26;">새 스킬로 자동 저장</strong> — 쓸수록 똑똑해짐</p>
     </div>
   </div>
 

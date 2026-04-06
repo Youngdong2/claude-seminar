@@ -8,45 +8,44 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 12pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">컨텍스트의 4가지 실패 모드</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">에이전트 루프 — 하네스의 심장</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 12pt;">"컨텍스트 윈도우가 크니까 많이 넣어도 OK" 상식 — 사실 아님. Drew Breunig가 정리한 4가지 실패 모드. <span style="color: #6b6560; font-size: 9.5pt;">(※ 컨텍스트 윈도우 = 모델이 한 번에 읽을 수 있는 텍스트량. 요즘 모델은 대략 20만 토큰, 한국어 기준 약 15만 자)</span></p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">거의 모든 코딩 에이전트가 반복하는 4단계. <strong style="color: #2d2a26;">각 단계가 하네스의 설계 지점.</strong></p>
 
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">POISONING · 중독</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">환각이 한 번 들어오면 이후 계속 참조되며 오류 누적</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 존재하지 않는 함수를 반복 호출</p>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">1. GATHER CONTEXT</p>
+      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">파일 읽기, 검색, 질문</p>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">무엇을 <strong style="color: #c45a3b;">안 보여줄지</strong>를 설계하는 자리. 노이즈 유입 → 4가지 실패 모드 발동.</p>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">DISTRACTION · 산만</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">히스토리에 과의존, 과거 행동을 반복</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 새 전략을 못 세우고 실패한 액션 재시도</p>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">2. TAKE ACTION</p>
+      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">코드 작성, 명령 실행, 툴 호출</p>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">가능한 한 <strong style="color: #c45a3b;">되돌릴 수 있는</strong> 액션으로. 실패 비용 낮음 → 과감함 허용.</p>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">CONFUSION · 혼동</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">무관한 정보까지 "고려해버린다"</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 툴 30개 이상이면 선택 실패 급증</p>
+    <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">3. VERIFY WORK</p>
+      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">테스트, 린트, 타입체크, 리뷰</p>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;"><strong style="color: #c45a3b;">자동 피드백 부재 → 루프가 환각 강화.</strong> 이 단계 막히면 전부 붕괴.</p>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">CLASH · 충돌</p>
-      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4; margin-bottom: 3pt;">모순된 정보가 있으면 추론이 무너진다</p>
-      <p style="font-size: 8.5pt; color: #6b6560; font-style: italic;">→ 초반 오답 1개로 평균 39% 성능 저하</p>
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">4. REPEAT</p>
+      <p style="font-size: 10pt; font-weight: 600; color: #faf8f5; margin-bottom: 4pt;">결과를 다음 루프 컨텍스트로</p>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.4;">이전 결과가 다음 루프에 주입되는 지점. <strong style="color: #c45a3b;">Compaction·Pruning이 필수.</strong></p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 16pt;">
-    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;"><em>"컨텍스트를 잡동사니 서랍처럼 다루면, 그 잡동사니가 답변에 영향을 줍니다."</em> <span style="color: #6b6560; font-size: 9pt;">— Drew Breunig</span></p>
-    <p style="font-size: 9pt; color: #c45a3b; margin-top: 4pt;">핵심은 "뭘 넣을까"보다 "뭘 뺄까".</p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 14pt;">
+    <p style="font-size: 10pt; color: #2d2a26; font-weight: 600;">하네스 엔지니어링 = 이 4단계의 각 지점을 신뢰성 있게 만드는 작업.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

@@ -15,26 +15,44 @@
 </head>
 <body>
   <!-- 헤더 -->
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 28pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">에이전틱 코딩의 실제 성과</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">개발 패러다임 전환</h2>
   </div>
 
-  <!-- 숫자 카드 -->
-  <div style="flex: 1; display: flex; gap: 16pt;">
-    <div style="flex: 1; background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 22pt 20pt; display: flex; flex-direction: column; justify-content: center;">
-      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">2주</p>
-      <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 500; margin-top: 12pt; line-height: 1.4;">CTO 추정 <strong>4~8개월</strong> 프로젝트를<br>에이전틱 코딩으로 완료</p>
-      <p style="font-size: 9pt; color: #6b6560; margin-top: 8pt;">Augment Code + Vertex AI</p>
+  <!-- 비교 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24pt;">
+    <!-- 기존 -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 20pt; text-align: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #6b6560; margin-bottom: 10pt;">기존 개발</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt; align-items: center;">
+        <p style="font-size: 11pt; color: #2d2a26;">코드 작성</p>
+        <p style="font-size: 10pt; color: #c45a3b;">↓</p>
+        <p style="font-size: 11pt; color: #2d2a26;">테스트 실행</p>
+        <p style="font-size: 10pt; color: #c45a3b;">↓</p>
+        <p style="font-size: 11pt; color: #2d2a26;">오류 읽기</p>
+        <p style="font-size: 10pt; color: #c45a3b;">↓</p>
+        <p style="font-size: 11pt; color: #2d2a26;">수정</p>
+        <p style="font-size: 10pt; color: #c45a3b;">↓</p>
+        <p style="font-size: 11pt; color: #6b6560;">반복...</p>
+      </div>
     </div>
-    <div style="flex: 1; background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 22pt 20pt; display: flex; flex-direction: column; justify-content: center;">
-      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">1~2일</p>
-      <p style="font-size: 10.5pt; color: #2d2a26; font-weight: 500; margin-top: 12pt; line-height: 1.4;">신규 개발자 온보딩<br>기존 <strong>수주~수개월</strong>에서 단축</p>
-      <p style="font-size: 9pt; color: #6b6560; margin-top: 8pt;">첫날부터 의미 있는 기여 가능</p>
-    </div>
-    <div style="flex: 1; background: #2d2a26; border-radius: 8pt; padding: 22pt 20pt; display: flex; flex-direction: column; justify-content: center;">
-      <p style="font-size: 42pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">복합효과</p>
-      <p style="font-size: 10.5pt; color: #a09a94; font-weight: 500; margin-top: 12pt; line-height: 1.4;">불가능하던 작업 실현<br>기술 부채 해결 · 즉각 피드백</p>
+    <!-- 에이전틱 -->
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 20pt; text-align: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">에이전틱 개발</p>
+      <div style="display: flex; flex-direction: column; gap: 8pt; align-items: center;">
+        <div style="background: #3d3a36; border-radius: 6pt; padding: 9pt 20pt; width: 100%;">
+          <p style="font-size: 12pt; font-weight: 600; color: #faf8f5;">목표 정의</p>
+        </div>
+        <p style="font-size: 11pt; color: #c45a3b;">↓</p>
+        <div style="background: #3d3a36; border-radius: 6pt; padding: 9pt 20pt; width: 100%;">
+          <p style="font-size: 12pt; font-weight: 600; color: #faf8f5;">변경 검토</p>
+        </div>
+        <p style="font-size: 11pt; color: #c45a3b;">↓</p>
+        <div style="background: #c45a3b; border-radius: 6pt; padding: 9pt 20pt; width: 100%;">
+          <p style="font-size: 12pt; font-weight: 600; color: #fff;">구현 승인</p>
+        </div>
+      </div>
     </div>
   </div>
 

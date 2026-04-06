@@ -16,60 +16,44 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC의 3 레이어 — 실행 모드 · 에이전트 · 모델</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC — 원리를 명령어로</h2>
   </div>
 
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt;">
-    <!-- 실행 모드 -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">실행 모드</p>
-      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.4; margin-bottom: 8pt;">같은 작업도 모드에 따라 다르게 동작</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/autopilot</code> — 완전 자율</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ultrapilot</code> — 5워커 병렬</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ralph</code> — 지속 루프 + 검증</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/team</code> — 구조화 파이프라인</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ultraqa</code> — QA 집중</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><code style="color: #c45a3b;">/ecomode</code> — 비용 최적</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 10pt;"><strong style="color: #2d2a26;">Oh My Claude Code</strong> — 한국 개발자 Yeachan Heo 제작, GitHub Trending 1위. 앞 섹션 원리를 한 플러그인으로 패키징.</p>
+
+  <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <!-- Header -->
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding-bottom: 6pt; border-bottom: 1.5pt solid rgba(0,0,0,0.15);">
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b;">원리</p>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b;">OMC 구현</p>
+      </div>
+      <!-- Rows -->
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">역할 분리</p>
+        <p style="font-size: 9.5pt; color: #6b6560;">29+ 에이전트 — architect · critic · tester …</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">모델 라우팅</p>
+        <p style="font-size: 9.5pt; color: #6b6560;">Haiku / Sonnet / Opus 자동 선택 · 토큰 <strong style="color: #c45a3b;">30~50%↓</strong></p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Plan–Critic–Build</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ralplan</code> — 계획 → 비평 → 합의 후 실행</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">병렬 실행</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultrapilot</code> — 최대 5 워커 동시</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">검증 루프</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultraqa</code> — test → fix → 재실행 자동 순환</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0;">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Worktree 병렬</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/project-session-manager</code> + HUD + Slack</p>
       </div>
     </div>
-
-    <!-- 에이전트 카탈로그 -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">에이전트 29+</p>
-      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.4; margin-bottom: 8pt;">역할·권한·모델이 다른 전문가</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>분석</strong> · architect, analyst, tracer</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>실행</strong> · executor, designer, writer</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>탐색</strong> · explore, explore-high</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>검증</strong> · critic, code-reviewer,<br>security-reviewer, qa-tester</p>
-        <p style="font-size: 8.5pt; color: #2d2a26;"><strong>특수</strong> · debugger, scientist, vision</p>
-      </div>
-    </div>
-
-    <!-- 모델 라우팅 -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt;">
-      <p style="font-size: 11pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">모델 라우팅</p>
-      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.4; margin-bottom: 8pt;">난이도에 맞춰 자동 선택</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <div style="border-left: 2pt solid #c45a3b; padding-left: 8pt;">
-          <p style="font-size: 9pt; color: #2d2a26; font-weight: 600;">Haiku</p>
-          <p style="font-size: 8pt; color: #6b6560;">탐색 · 단순 변경</p>
-        </div>
-        <div style="border-left: 2pt solid #c45a3b; padding-left: 8pt;">
-          <p style="font-size: 9pt; color: #2d2a26; font-weight: 600;">Sonnet</p>
-          <p style="font-size: 8pt; color: #6b6560;">표준 구현 · 리팩토링</p>
-        </div>
-        <div style="border-left: 2pt solid #c45a3b; padding-left: 8pt;">
-          <p style="font-size: 9pt; color: #2d2a26; font-weight: 600;">Opus</p>
-          <p style="font-size: 8pt; color: #6b6560;">아키텍처 · 비평</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 18pt; margin-top: 12pt;">
-    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.4;">사용자는 <strong style="color: #c45a3b;">"어떤 작업인지"</strong>만 말한다 — 모드·에이전트·모델 선택은 OMC가 알아서.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

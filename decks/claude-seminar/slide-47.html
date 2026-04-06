@@ -8,7 +8,7 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
@@ -16,33 +16,31 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Right Altitude — 지시문의 고도</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Context Rot — 길수록 조용히 썩는다</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">CLAUDE.md나 프롬프트를 쓸 때 가장 흔한 실수는 <strong style="color: #2d2a26;">두 극단</strong>.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">Chroma Research가 Claude · GPT · Gemini · Qwen 등 <strong style="color: #2d2a26;">18개 최신 모델</strong>을 대상으로 측정한 결과.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 낮음 · OVER-SPECIFIED</p>
-      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">모든 케이스를 if/else로 박기</p>
-      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 예외 상황에서 brittle</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; text-align: center;">
+      <p style="font-size: 30pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">50k<span style="font-size: 14pt;"> 토큰</span></p>
+      <p style="font-size: 10pt; color: #2d2a26; font-weight: 600; margin-top: 6pt;">20만 토큰 모델이 이미 열화되는 지점</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; line-height: 1.4;">한국어 약 4만 자. 윈도우가 꽉 차기 훨씬 전부터 성능 하락.</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 14pt 18pt;">
-      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 높음 · UNDER-SPECIFIED</p>
-      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">"잘 해줘", "깔끔하게"</p>
-      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 모델이 추측, 세션마다 결과 다름</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; text-align: center;">
+      <p style="font-size: 30pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">방해문장 <span style="font-size: 20pt;">1개</span></p>
+      <p style="font-size: 10pt; color: #2d2a26; font-weight: 600; margin-top: 6pt;">하나만 섞여도 성능 저하</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; line-height: 1.4;">4개면 급감. "많이 넣으면 좋다" 직관 붕괴.</p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">올바른 고도 공식</p>
-    <p style="font-size: 13pt; font-weight: 600; color: #faf8f5;">원칙 1줄 &nbsp;+&nbsp; 이유(why) 1줄 &nbsp;+&nbsp; 예시 1~2개</p>
-    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt; line-height: 1.4;">이게 붙어야 새 상황에도 일반화 가능.</p>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt; margin-bottom: 10pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.5;"><em>"관련 정보가 컨텍스트에 있느냐가 전부는 아닙니다. 더 중요한 것은 그 정보가 <strong style="color: #c45a3b;">어떻게</strong> 제시되느냐입니다."</em></p>
+    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; text-align: right;">— Chroma Research</p>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 10pt 14pt;">
-    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>자가진단 2문항:</strong></p>
-    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">① 이 규칙이 내가 의도하지 않은 상황에서도 말이 되는가? → 되면 OK<br>② 이 규칙을 아무 세션에 붙여도 행동이 바뀌지 않는가? → 그러면 너무 높음</p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+    <p style="font-size: 10.5pt; color: #2d2a26; line-height: 1.4;">컨텍스트 = <strong>길이가 아닌 신호 대 잡음비</strong>. 쓸 수 있는 만큼 다 채울 필요 없음.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

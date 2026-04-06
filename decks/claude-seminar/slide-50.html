@@ -8,53 +8,52 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 12pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md 운영 원칙</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md — 프로젝트의 "헌법"</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 12pt;">공식 문서가 느낌표까지 붙여서 경고한 유일한 원칙 — <strong style="color: #2d2a26;">짧을수록 효과적.</strong></p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">모든 세션이 시작될 때 자동으로 로드되는 지속 컨텍스트. 4개 레이어 중에서도 <strong style="color: #2d2a26;">가장 먼저 손대야 하는 레이어</strong>.</p>
 
-  <!-- 한 줄 삭제 테스트 (강조) -->
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">한 줄 삭제 테스트</p>
-    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.4; font-style: italic;">"각 줄에 대해 물어보세요 — 이 줄을 지우면 Claude가 실수할까? 아니라면 잘라내세요."</p>
-    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; text-align: right;">— Claude Code Best Practices</p>
+  <!-- 핵심 오해 correction -->
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
+    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">먼저 짚고 갈 것 — "지시가 아니라 컨텍스트다"</p>
+    <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">많은 사람이 CLAUDE.md를 <strong>시스템 프롬프트</strong>로 오해. 사실은 시스템 프롬프트 <strong style="color: #c45a3b;">다음의</strong> 사용자 메시지로 주입. 즉, 강제(enforcement)가 아닌 <strong style="color: #c45a3b;">권고(context)</strong>. 모호 → Claude의 임의 해석.</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
-    <!-- 크기 가이드라인 -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">크기 가이드라인</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>~60줄</strong> · HumanLayer (엄격파)</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>2.5k 토큰</strong> · Boris Cherny 팀</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>200줄 이하</strong> · 공식 문서</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>500줄 이하</strong> · Marconato</p>
-      </div>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-top: 6pt; line-height: 1.4;">숫자보다 <strong>신호 대 잡음비</strong>. 같은 신호 → 짧을수록 우세.</p>
-    </div>
-
-    <!-- 비대해지면 모듈화 -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">비대해지면 — 모듈화</p>
-      <div style="display: flex; flex-direction: column; gap: 5pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">@path/to/file</code> — 다른 파일을 import (최대 5홉)</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">.claude/rules/</code> — 경로별 규칙, 읽을 때만 트리거</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">/compact</code> 후에도 CLAUDE.md는 재로드</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- 좋은 예 -->
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">✓ 검증 가능 · 구체적</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6;">
+          - TypeScript strict mode<br>
+          - 커밋 전 <code>pnpm lint && test</code><br>
+          - <span style="color: #c45a3b;">any</span> 타입 금지<br>
+          - 세션은 Redis (TTL 30분)
+        </p>
       </div>
     </div>
+    <!-- 나쁜 예 -->
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">✗ 모호 · 검증 불가</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.8;">
+          코드를 잘 작성해주세요.<br>
+          테스트를 해주세요.<br>
+          좋은 코드를 만들어주세요.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 14pt; margin-top: 10pt;">
-    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;"><strong>자가진단 5문항:</strong> ① 한 줄 삭제 테스트 ② 린터로 잡을 규칙은 린터로 ③ /compact 생존 테스트 ④ 모순 테스트 ⑤ 되묻기 테스트</p>
-  </div>
+  <p style="font-size: 9pt; color: #6b6560; margin-top: 10pt; line-height: 1.4;">결정적 차이: 나쁜 예는 <strong style="color: #2d2a26;">지워도 행동 불변</strong> — 한 줄 삭제 테스트 실패. (→ 다음 페이지)</p>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>

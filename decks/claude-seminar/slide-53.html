@@ -16,57 +16,39 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Plugins — 하네스를 포장해서 팀 자산으로</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Skills & Hooks — 그게 뭔가</h2>
   </div>
 
-  <p style="font-size: 10pt; color: #6b6560; margin-bottom: 14pt;">4개 레이어 위에 얹히는 배포 레이어 — 2025.10 공개 베타</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">하네스를 구성하는 두 실행 단위. <strong style="color: #2d2a26;">Skill = 부르면 실행되는 워크플로우</strong> · <strong style="color: #2d2a26;">Hook = 이벤트에 자동 실행되는 스크립트</strong>.</p>
 
-  <div style="flex: 1; display: grid; grid-template-columns: 1.15fr 1fr; gap: 16pt;">
-    <!-- Left: what plugins bundle -->
-    <div style="display: flex; flex-direction: column; gap: 10pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">새 기능이 아니라 포장지</p>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.55;">이미 존재하는 <strong style="color: #2d2a26;">Skill · Subagent · Hook · MCP · LSP</strong>를 단일 단위로 번들링해 팀·커뮤니티에 배포하는 메커니즘</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
+    <!-- Skills -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
+      <div>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">SKILL</p>
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">재사용 워크플로우 패키지</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt; font-family: monospace;">
-        <p style="font-size: 8pt; color: #6b6560;">my-plugin/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── .claude-plugin/plugin.json</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── commands/ &nbsp;agents/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">├── skills/ &nbsp;&nbsp;&nbsp;hooks/</p>
-        <p style="font-size: 8pt; color: #faf8f5;">└── .mcp.json</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>standalone → plugin</strong> 전환은 파일 이동 + 매니페스트 1개 수준</p>
-      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 반복되는 작업을 한 번에 호출하고 싶을 때</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — frontmatter(name · description) + markdown 본문</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">호출</strong> — <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/skillname</code> 또는 자연어 트리거</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/deploy</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/review-pr</code></p>
     </div>
 
-    <!-- Right: terminal screenshot mock -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Claude Code에서 플러그인 등록</p>
-      <!-- Terminal window mock -->
-      <div style="background: #1e1b18; border-radius: 6pt; overflow: hidden;">
-        <div style="background: #2d2a26; padding: 5pt 10pt; display: flex; align-items: center; gap: 4pt; border-bottom: 1pt solid #3a3530;">
-          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #ff5f57;"></span>
-          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #febc2e;"></span>
-          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #28c840;"></span>
-          <span style="font-size: 7pt; color: #6b6560; margin-left: 6pt; font-family: monospace;">claude — /plugin</span>
-        </div>
-        <div style="padding: 10pt 14pt; font-family: 'SF Mono', Consolas, monospace; line-height: 1.5;">
-          <p style="font-size: 7.5pt; color: #6b9e8a;">&gt; /plugin marketplace add anthropics/claude-plugins</p>
-          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Added marketplace: anthropics/claude-plugins</p>
-          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ 18 plugins available</p>
-          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin install commit@anthropics</p>
-          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Installing commit@anthropics ... done</p>
-          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added commands: /commit</p>
-          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added hooks: 1 (PreCommit)</p>
-          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin list</p>
-          <p style="font-size: 7.5pt; color: #faf8f5;">&nbsp;&nbsp;commit@anthropics&nbsp;&nbsp;<span style="color: #28c840;">● installed</span></p>
-        </div>
+    <!-- Hooks -->
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
+      <div>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">HOOK</p>
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">이벤트 기반 자동 스크립트</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; flex: 1; display: flex; align-items: center;">
-        <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">개인이 쌓아올린 하네스를 <strong style="color: #c45a3b;">조직 자산</strong>으로 전환하는 마지막 한 조각</p>
-      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 항상 적용해야 하는 규칙·검증·차단</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — 이벤트 타입(PreToolUse…) + 실행 커맨드</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">실행</strong> — LLM이 아닌 쉘 스크립트 — 반드시 실행</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: 파일 편집 후 <strong>ESLint</strong> · 커밋 전 <strong>테스트</strong> · .env 편집 <strong>차단</strong></p>
     </div>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;">구분법 — <strong style="color: #c45a3b;">Skill = 내가 부를 때 실행</strong> · <strong style="color: #c45a3b;">Hook = 자동 실행</strong>.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

@@ -14,151 +14,50 @@
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 10pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 6</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">핵심 패턴 5가지</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">단일 에이전트의 세 가지 벽</h2>
   </div>
 
-  <p style="font-size: 11pt; color: #6b6560; margin-bottom: 14pt;">무엇을, 어떻게 <strong style="color: #2d2a26;">쪼개느냐</strong>에 대한 서로 다른 답.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">하나의 에이전트가 오래 일할수록 필연적으로 맞닥뜨리는 벽 — <strong style="color: #2d2a26;">쪼개야 할 이유</strong>.</p>
 
-  <div style="flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8pt;">
-    <!-- 1. Sub-Agent -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
-      <div>
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">01</p>
-        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Sub-Agent</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 18pt; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: baseline; gap: 8pt; margin-bottom: 10pt;">
+        <span style="font-size: 28pt; font-weight: 700; color: #c45a3b; line-height: 1;">01</span>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">컨텍스트의 벽</p>
       </div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <svg viewBox="0 0 120 90" style="width: 100%;">
-          <circle cx="28" cy="45" r="18" fill="#2d2a26"/>
-          <text x="28" y="49" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#faf8f5">M</text>
-          <circle cx="92" cy="45" r="18" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.8"/>
-          <text x="92" y="49" text-anchor="middle" font-family="Pretendard" font-size="11" font-weight="700" fill="#2d2a26">S</text>
-          <path d="M 48 38 L 72 38" stroke="#c45a3b" stroke-width="1.8" fill="none" marker-end="url(#a1)"/>
-          <path d="M 72 52 L 48 52" stroke="#6b6560" stroke-width="1.4" fill="none" marker-end="url(#a2)"/>
-          <text x="60" y="28" text-anchor="middle" font-family="Pretendard" font-size="7.5" fill="#c45a3b" font-weight="600">task</text>
-          <text x="60" y="72" text-anchor="middle" font-family="Pretendard" font-size="7.5" fill="#6b6560" font-weight="600">summary</text>
-          <defs>
-            <marker id="a1" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#c45a3b"/></marker>
-            <marker id="a2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#6b6560"/></marker>
-          </defs>
-        </svg>
-      </div>
-      <div>
-        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">단방향 심부름</p>
-        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">탐색 · 검증 · 로그 파싱</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5; margin-bottom: 10pt;">파일 · 테스트 · 로그 왕복 → <strong>쓰레기로 가득한 컨텍스트</strong></p>
+      <div style="background: #faf8f5; border-radius: 4pt; padding: 8pt 10pt; margin-top: auto;">
+        <p style="font-size: 8pt; color: #6b6560; font-style: italic; line-height: 1.4;">50k 토큰부터 Context Rot · Distraction · Confusion 발동</p>
       </div>
     </div>
 
-    <!-- 2. Orchestrator -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
-      <div>
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">02</p>
-        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Orchestrator</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 18pt; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: baseline; gap: 8pt; margin-bottom: 10pt;">
+        <span style="font-size: 28pt; font-weight: 700; color: #c45a3b; line-height: 1;">02</span>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">역할의 벽</p>
       </div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <svg viewBox="0 0 120 90" style="width: 100%;">
-          <circle cx="60" cy="18" r="14" fill="#2d2a26"/>
-          <text x="60" y="22" text-anchor="middle" font-family="Pretendard" font-size="8" font-weight="700" fill="#faf8f5">Plan</text>
-          <circle cx="22" cy="68" r="12" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="60" cy="68" r="12" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="98" cy="68" r="12" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <text x="22" y="72" text-anchor="middle" font-family="Pretendard" font-size="7" font-weight="700" fill="#2d2a26">Exec</text>
-          <text x="60" y="72" text-anchor="middle" font-family="Pretendard" font-size="7" font-weight="700" fill="#2d2a26">Exec</text>
-          <text x="98" y="72" text-anchor="middle" font-family="Pretendard" font-size="7" font-weight="700" fill="#2d2a26">Exec</text>
-          <line x1="52" y1="28" x2="28" y2="58" stroke="#c45a3b" stroke-width="1.5"/>
-          <line x1="60" y1="32" x2="60" y2="56" stroke="#c45a3b" stroke-width="1.5"/>
-          <line x1="68" y1="28" x2="92" y2="58" stroke="#c45a3b" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <div>
-        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">1:N 위임</p>
-        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">계획자 + 실행자들</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5; margin-bottom: 10pt;">"쓰고, 구현하고, 리뷰하고, 리팩터하라"를 한 에이전트에게 → <strong>전부 어설프게</strong>.</p>
+      <div style="background: #faf8f5; border-radius: 4pt; padding: 8pt 10pt; margin-top: auto;">
+        <p style="font-size: 8pt; color: #6b6560; font-style: italic; line-height: 1.4;">자기 코드 자기 리뷰 = blind spot 그대로</p>
       </div>
     </div>
 
-    <!-- 3. Parallel -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
-      <div>
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">03</p>
-        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Parallel</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 18pt; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: baseline; gap: 8pt; margin-bottom: 10pt;">
+        <span style="font-size: 28pt; font-weight: 700; color: #c45a3b; line-height: 1;">03</span>
+        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">신뢰성의 벽</p>
       </div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <svg viewBox="0 0 120 90" style="width: 100%;">
-          <rect x="36" y="40" width="48" height="12" fill="#c45a3b" rx="2"/>
-          <text x="60" y="49" text-anchor="middle" font-family="Pretendard" font-size="6.5" font-weight="700" fill="#faf8f5">shared repo</text>
-          <circle cx="18" cy="18" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="60" cy="12" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="102" cy="18" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="30" cy="78" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="90" cy="78" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <line x1="22" y1="26" x2="40" y2="40" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
-          <line x1="60" y1="22" x2="60" y2="40" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
-          <line x1="98" y1="26" x2="80" y2="40" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
-          <line x1="36" y1="70" x2="48" y2="54" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
-          <line x1="84" y1="70" x2="72" y2="54" stroke="#6b6560" stroke-width="1" opacity="0.6"/>
-        </svg>
-      </div>
-      <div>
-        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">평면 조직</p>
-        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">Git worktree 격리</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5; margin-bottom: 10pt;">단계별 95% × 20단계 연쇄 = <strong style="color: #c45a3b;">전체 성공률 36%</strong>.</p>
+      <div style="background: #faf8f5; border-radius: 4pt; padding: 8pt 10pt; margin-top: auto;">
+        <p style="font-size: 8pt; color: #6b6560; font-style: italic; line-height: 1.4;">긴 체인 = 수학적 실패</p>
       </div>
     </div>
+  </div>
 
-    <!-- 4. GAN-Style -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
-      <div>
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">04</p>
-        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">GAN-Style</p>
-      </div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <svg viewBox="0 0 120 90" style="width: 100%;">
-          <circle cx="30" cy="45" r="18" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.8"/>
-          <text x="30" y="49" text-anchor="middle" font-family="Pretendard" font-size="9" font-weight="700" fill="#2d2a26">Gen</text>
-          <circle cx="90" cy="45" r="18" fill="#2d2a26"/>
-          <text x="90" y="49" text-anchor="middle" font-family="Pretendard" font-size="9" font-weight="700" fill="#faf8f5">Eval</text>
-          <path d="M 48 34 Q 60 12 72 34" stroke="#c45a3b" stroke-width="1.8" fill="none" marker-end="url(#g1)"/>
-          <path d="M 72 56 Q 60 78 48 56" stroke="#c45a3b" stroke-width="1.8" fill="none" marker-end="url(#g2)"/>
-          <defs>
-            <marker id="g1" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#c45a3b"/></marker>
-            <marker id="g2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 z" fill="#c45a3b"/></marker>
-          </defs>
-        </svg>
-      </div>
-      <div>
-        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">적대적 루프</p>
-        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">루브릭으로 수렴</p>
-      </div>
-    </div>
-
-    <!-- 5. Agent Teams -->
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 12pt 10pt; display: flex; flex-direction: column; gap: 6pt;">
-      <div>
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">05</p>
-        <p style="font-size: 10pt; font-weight: 700; color: #2d2a26;">Agent Teams</p>
-      </div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <svg viewBox="0 0 120 90" style="width: 100%;">
-          <circle cx="22" cy="22" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="98" cy="22" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="22" cy="68" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="98" cy="68" r="10" fill="#faf8f5" stroke="#c45a3b" stroke-width="1.5"/>
-          <circle cx="60" cy="45" r="13" fill="#2d2a26"/>
-          <line x1="30" y1="28" x2="48" y2="40" stroke="#6b6560" stroke-width="1.2"/>
-          <line x1="90" y1="28" x2="72" y2="40" stroke="#6b6560" stroke-width="1.2"/>
-          <line x1="30" y1="62" x2="48" y2="50" stroke="#6b6560" stroke-width="1.2"/>
-          <line x1="90" y1="62" x2="72" y2="50" stroke="#6b6560" stroke-width="1.2"/>
-          <line x1="32" y1="22" x2="88" y2="22" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
-          <line x1="32" y1="68" x2="88" y2="68" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
-          <line x1="22" y1="32" x2="22" y2="58" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
-          <line x1="98" y1="32" x2="98" y2="58" stroke="#6b6560" stroke-width="1" opacity="0.5"/>
-        </svg>
-      </div>
-      <div>
-        <p style="font-size: 8.5pt; color: #2d2a26; line-height: 1.45; font-weight: 600;">양방향 대화</p>
-        <p style="font-size: 7.5pt; color: #6b6560; line-height: 1.45; margin-top: 2pt;">그래프 구조</p>
-      </div>
-    </div>
+  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 20pt; margin-top: 14pt;">
+    <p style="font-size: 12pt; color: #faf8f5; line-height: 1.4; font-weight: 500;">하나의 에이전트 = <span style="color: #c45a3b; font-weight: 700;">하나의 일</span>.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

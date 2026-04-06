@@ -8,49 +8,64 @@
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
-      padding: 32pt 48pt 56pt;
+      padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
   <!-- 헤더 -->
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 16pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">모델 선택</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Subagent vs Agent Team</h2>
   </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 20pt;">둘 다 작업을 위임하는 방식. 규모와 독립성에 따라 선택.</p>
 
   <!-- 2컬럼 비교 -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
-    <div style="background: #f0ebe3; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column;">
-      <p style="font-size: 10.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">빠르고 효율적</p>
-      <p style="font-size: 26pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt; line-height: 1.2;">Sonnet</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">대부분의 코딩 작업에 적합</p>
-        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">빠른 응답 속도</p>
-        <p style="font-size: 10pt; color: #6b6560; line-height: 1.4;">일상적인 개발 워크플로우</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24pt;">
+    <!-- Subagent -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 24pt; display: flex; flex-direction: column;">
+      <p style="font-size: 20pt; font-weight: 700; color: #2d2a26; margin-bottom: 16pt;">Subagent</p>
+      <div style="display: flex; flex-direction: column; gap: 12pt; flex: 1;">
+        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">구조</p>
+          <p style="font-size: 10pt; color: #6b6560;">메인이 생성한 격리된 워커</p>
+        </div>
+        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">컨텍스트</p>
+          <p style="font-size: 10pt; color: #6b6560;">자체 윈도우, 요약만 반환</p>
+        </div>
+        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">통신</p>
+          <p style="font-size: 10pt; color: #6b6560;">주 에이전트에게만 보고</p>
+        </div>
       </div>
-      <div style="margin-top: 8pt;">
-        <p style="font-size: 9pt; color: #6b6560; font-style: italic;">기본 모델</p>
-      </div>
-    </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt 20pt; display: flex; flex-direction: column;">
-      <p style="font-size: 10.5pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">깊고 정교한</p>
-      <p style="font-size: 26pt; font-weight: 700; color: #faf8f5; margin-bottom: 8pt; line-height: 1.2;">Opus</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <p style="font-size: 10pt; color: #a09a94; line-height: 1.4;">복잡한 아키텍처 결정</p>
-        <p style="font-size: 10pt; color: #a09a94; line-height: 1.4;">깊은 분석이 필요한 경우</p>
-        <p style="font-size: 10pt; color: #a09a94; line-height: 1.4;">대규모 리팩토링</p>
-      </div>
-      <div style="margin-top: 8pt;">
-        <p style="font-size: 9pt; color: #6b6560; font-style: italic;">/model 로 즉시 전환</p>
+      <div style="margin-top: auto; padding-top: 14pt; border-top: 1px solid #ddd8d0;">
+        <p style="font-size: 10pt; font-weight: 500; color: #2d2a26;">많은 파일 읽기, 병렬 조사</p>
       </div>
     </div>
-  </div>
-
-  <!-- 강조 메시지 -->
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 4pt; padding: 8pt 16pt; margin-top: 10pt;">
-    <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; line-height: 1.4;">가장 좋은 모델부터. 성능이 곧 결과물의 품질.</p>
+    <!-- Agent Team -->
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 24pt; display: flex; flex-direction: column;">
+      <p style="font-size: 20pt; font-weight: 700; color: #faf8f5; margin-bottom: 16pt;">Agent Team</p>
+      <div style="display: flex; flex-direction: column; gap: 12pt; flex: 1;">
+        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #faf8f5;">구조</p>
+          <p style="font-size: 10pt; color: #a09a94;">여러 독립 세션이 협업</p>
+        </div>
+        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #faf8f5;">컨텍스트</p>
+          <p style="font-size: 10pt; color: #a09a94;">완전히 독립, 각자 별도 윈도우</p>
+        </div>
+        <div style="border-left: 3pt solid #c45a3b; padding-left: 12pt;">
+          <p style="font-size: 10pt; font-weight: 600; color: #faf8f5;">통신</p>
+          <p style="font-size: 10pt; color: #a09a94;">팀원끼리 직접 메시지</p>
+        </div>
+      </div>
+      <div style="margin-top: auto; padding-top: 14pt; border-top: 1px solid #4a4640;">
+        <p style="font-size: 10pt; font-weight: 500; color: #faf8f5;">보안/성능/테스트 동시 검토</p>
+      </div>
+    </div>
   </div>
 
   <!-- 푸터 -->

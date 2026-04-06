@@ -14,54 +14,33 @@
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 20pt;">
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">방법론 비교</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">SDD 실전 — 3단계 워크플로우</h2>
   </div>
 
-  <div style="flex: 1; display: flex; flex-direction: column; gap: 5pt;">
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; padding: 0 12pt;">
-      <p style="font-size: 9pt; font-weight: 600; color: #6b6560;"></p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">PDD</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">TDD</p>
-      <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; text-align: center;">SDD</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">도구는 달라도 성숙한 SDD 도구들이 공통으로 취하는 패턴 — 각 단계가 <strong style="color: #2d2a26;">파일로 저장 · 커밋 · 여러 세션 참조</strong>.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.05em; margin-bottom: 6pt;">1. SPECIFY</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">WHAT · WHY</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">요구사항, 사용자 스토리, 수용 기준. <strong style="color: #c45a3b;">HOW는 금지.</strong></p>
     </div>
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">인간의 역할</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">프롬프트 작성자</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">테스트 작성자</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">스펙 작성자</p>
+    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.05em; margin-bottom: 6pt;">2. PLAN</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">HOW</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">기술 스택, 아키텍처, 데이터 모델. 조직 원칙 게이트 통과.</p>
     </div>
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">검증 방식</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">출력 비교</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">자동 테스트</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">스펙 검증</p>
+    <div style="background: #2d2a26; border-radius: 6pt; padding: 14pt 16pt;">
+      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.05em; margin-bottom: 6pt;">3. TASKS</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #faf8f5; margin-bottom: 6pt;">분해 · 매핑</p>
+      <p style="font-size: 9pt; color: #a09a94; line-height: 1.5;">병렬 가능한 작업 단위로 분해. 작업↔요구사항 매핑 유지.</p>
     </div>
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">진입 장벽</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">낮음</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">중간~높음</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">프로토타이핑</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">빠름</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">느림</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">프로덕션</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 110pt 1fr 1fr 1fr; gap: 8pt; background: #f0ebe3; border-radius: 5pt; padding: 10pt 12pt; align-items: center;">
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">유지보수</p>
-      <p style="font-size: 10pt; color: #6b6560; text-align: center;">중간</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; text-align: center;">높음</p>
-    </div>
+  </div>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.5;"><strong>장치: <code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9pt;">[NEEDS CLARIFICATION]</code> 마커</strong> — AI의 모호한 부분 추측 차단. 마커 발견 → 구현 중단, 사람에게 확인.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -70,3 +49,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>
