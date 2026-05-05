@@ -16,47 +16,42 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">이 발표가 증거</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">재료 1 — 폴더 구조로 박힌 분리</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">이 장표 <strong style="color: #2d2a26;">89장 전부</strong> — Claude Code로 제작. HTML 한 줄 직접 작성하지 않음.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">수집층 · 계획층 · 실행층이 <strong style="color: #2d2a26;">폴더 경계로 분리</strong>. 규칙이 아닌 파일 구조로 강제.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">사용한 원칙 — 이 발표에서 다룬 것 그대로</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>Spec-first</strong> — sections/README.md에 내용 먼저</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md</strong> — 디자인 토큰 · 호흡 규칙 · 카피 원칙 고정</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>검증 분리</strong> — 피드백 → pending.md → 검토 후 반영</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>자동화</strong> — slides-grab으로 HTML → PDF 일괄 변환</p>
-      </div>
+  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 14pt;">
+    <!-- Folder tree -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; font-family: 'SF Mono', Consolas, monospace;">
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.7;">claude-seminar/</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.7;">├── research/ <span style="color: #c45a3b;"># 하네스·컨텍스트 리서치</span></p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.7;">├── official/ <span style="color: #c45a3b;"># Claude Code 공식 문서</span></p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.7;">├── blog/ <span style="color: #c45a3b;"># Anthropic + 한국 커뮤니티</span></p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.7;">├── linkedin/ <span style="color: #c45a3b;"># 실무자 인사이트</span></p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.7;">├── youtube/ <span style="color: #c45a3b;"># 영상 요약</span></p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.7;">│</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.7;">├── sections/ <span style="color: #c45a3b;"># 9개 섹션 마크다운 (계획)</span></p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.7;">├── decks/claude-seminar/ <span style="color: #c45a3b;"># 슬라이드 (실행)</span></p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.7;">│&nbsp;&nbsp;&nbsp;└── slide-01.html ~ slide-91.html</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.7;">│</p>
+      <p style="font-size: 9pt; color: #2d2a26; line-height: 1.7;">└── CLAUDE.md <span style="color: #c45a3b;"># 프로젝트 규칙</span></p>
     </div>
 
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">실제 워크플로우</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">1</span>
-          <p style="font-size: 9pt; color: #2d2a26;">섹션별 내용을 자연어로 정리</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">2</span>
-          <p style="font-size: 9pt; color: #2d2a26;">CLAUDE.md에 디자인 규칙 명세</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">3</span>
-          <p style="font-size: 9pt; color: #2d2a26;">Claude Code가 slide-XX.html 생성</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">4</span>
-          <p style="font-size: 9pt; color: #2d2a26;">피드백 8회 반복 → 최종 PDF</p>
-        </div>
+    <!-- Principle -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; font-weight: 600; color: #2d2a26; margin-bottom: 3pt;">수집층 = 근거의 정박지</p>
+        <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.5;"><em>"이 주장 어디서?"</em> 질문에 → 파일이 답</p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9.5pt; font-weight: 600; color: #2d2a26; margin-bottom: 3pt;">계획층 ≠ 실행층</p>
+        <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.5;">sections/에 본문 먼저, decks/는 디자인만 — 섹션 4의 Plan-Critic-Build 강제</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; display: flex; align-items: center;">
+        <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">근거 없이 작성 → <strong style="color: #c45a3b;">환각이 장표로 박제</strong></p>
       </div>
     </div>
-  </div>
-
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt;">
-    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.45;">규칙을 하네스로 고정 → 실행은 에이전트에게 → 결과를 검수. <strong style="color: #c45a3b;">이 발표의 제작 과정 자체가 증거.</strong></p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
