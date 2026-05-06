@@ -11,46 +11,60 @@
       padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
+    .table-mono {
+      font-family: 'SF Mono', 'Menlo', monospace;
+      font-size: 7pt;
+      line-height: 1.55;
+      color: #2d2a26;
+    }
   </style>
 </head>
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">같은 PDF, 두 가지 마크다운</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">차이는 한 슬라이드에서 갈림</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">발표 PDF 89장 · 같은 명령 · 다른 도구 — Upstage 스킬 검증 실험</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">Slide 2 · 발표 목차 페이지 — 실제 추출 결과 비교</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 20pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; margin-bottom: 10pt;">그냥 시켰을 때</p>
-      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26; margin-bottom: 14pt; line-height: 1.4;">"마크다운으로 만들어줘"</p>
-      <div style="background: #faf8f5; border-radius: 4pt; padding: 10pt 12pt; margin-bottom: 12pt;">
-        <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 4pt;">Claude의 자동 선택</p>
-        <p style="font-size: 10.5pt; font-weight: 600; color: #2d2a26;">macOS Vision OCR</p>
+  <div style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 14pt; margin-bottom: 12pt; align-items: start;">
+    <!-- 좌: 평탄화된 OCR -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 11pt 14pt; opacity: 0.85;">
+      <div style="display: flex; align-items: center; gap: 6pt; margin-bottom: 7pt;">
+        <span style="font-size: 11pt; color: #b8b2aa;">✗</span>
+        <p style="font-size: 8.5pt; font-weight: 700; color: #6b6560; letter-spacing: 0.04em;">macOS Vision OCR — parse-default.md</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.6;">
-        이미지 PDF<br>
-        텍스트 레이어 0
-      </p>
+      <div class="table-mono" style="background: #faf8f5; padding: 8pt 10pt; border-radius: 4pt; color: #8a857e;">
+        01<br>코딩은 어디로 가고 있는가<br>02<br>왜 Claude Code인가<br>03<br>AI 시대의 개발 방법론<br>04<br>하네스 & 컨텍스트 엔지니어링<br>05<br>이렇게 하면 망한다 - 한계와 실패 패턴<br>...
+      </div>
+      <p style="font-size: 8.5pt; color: #8a857e; margin-top: 7pt;">번호·제목 분리 · 표 구조 소실</p>
     </div>
 
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 20pt; border-left: 3pt solid #c45a3b;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 10pt;">Upstage 스킬</p>
-      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26; margin-bottom: 14pt; line-height: 1.4;">"마크다운으로 만들어줘"</p>
-      <div style="background: #faf8f5; border-radius: 4pt; padding: 10pt 12pt; margin-bottom: 12pt;">
-        <p style="font-size: 8.5pt; color: #6b6560; margin-bottom: 4pt;">스킬 명시</p>
-        <p style="font-size: 10.5pt; font-weight: 600; color: #2d2a26;">document-parse API</p>
+    <!-- 우: Upstage -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 12pt 14pt; box-shadow: 0 2pt 6pt rgba(128,92,251,0.15);">
+      <div style="display: flex; align-items: center; gap: 6pt; margin-bottom: 8pt;">
+        <span style="font-size: 11pt; color: #805CFB; font-weight: 700;">✓</span>
+        <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.04em;">UPSTAGE document-parse — parse-upstage.md</p>
       </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.6;">
-        단일 엔드포인트<br>
-        layout 인식 포함
-      </p>
+      <div class="table-mono" style="background: #FFFFFF; padding: 9pt 11pt; border-radius: 4pt; color: #1C2537; border: 1pt solid #E9E8F0;">
+        | 01 | 코딩은 어디로 가고 있는가 |<br>
+        | --- | --- |<br>
+        | 02 | 왜 Claude Code인가 |<br>
+        | 03 | AI 시대의 개발 방법론 |<br>
+        | 04 | 하네스 & 컨텍스트 엔지니어링 |<br>
+        | 05 | 이렇게 하면 망한다 |<br>
+        | ... | ... |
+      </div>
+      <p style="font-size: 8.5pt; color: #805CFB; margin-top: 8pt; font-weight: 600;">번호·제목 매핑 보존 · 마크다운 표 그대로</p>
     </div>
+  </div>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 11pt 18pt;">
+    <p style="font-size: 11pt; color: #2d2a26;">OCR 능력 = 비슷 · <strong style="color: #c45a3b;">차이 = layout 이해력</strong> · 발표 PDF 89장 전체에 같은 패턴</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">75</p>
   </div>
 </body>

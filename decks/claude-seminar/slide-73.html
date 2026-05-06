@@ -16,43 +16,59 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">실전 세팅 — 다중 세션 병렬</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Upstage = 모델 + 입력 계약화</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">cmux(AI 전용 터미널) + Git Worktree — 에이전트 3~4개를 동시에 돌리는 물리적 환경</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">단일 API가 아닌 — LLM 모델과 도메인 특화 Skills 두 축으로 한국어 컨텍스트 공략</p>
 
-  <!-- 4-window layout -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin-bottom: 8pt;">
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 1 · 메인 작업</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">현재 이슈 구현·수정<br>Opus 모델 · 핵심 컨텍스트 보호</p>
+  <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 16pt; align-items: start;">
+    <!-- 좌: SOLAR (모델) -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 16pt 18pt;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 6pt;">AXIS 1 · MODEL</p>
+      <p style="font-size: 16pt; font-weight: 700; color: #1C2537; margin-bottom: 12pt;">Solar (LLM)</p>
+      <div style="display: flex; flex-direction: column; gap: 8pt;">
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 9pt 12pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 10pt; font-weight: 700; color: #805CFB; margin-bottom: 2pt;">solar-pro3</p>
+          <p style="font-size: 8.5pt; color: #434C60; line-height: 1.45;">한국어 long-form 생성 · 추론</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 9pt 12pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 10pt; font-weight: 700; color: #805CFB; margin-bottom: 2pt;">solar-mini</p>
+          <p style="font-size: 8.5pt; color: #434C60; line-height: 1.45;">경량 · 저비용 작업</p>
+        </div>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 2 · 조사·탐색</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">코드베이스 탐색, 문서 검색<br>Explore 서브에이전트 역할</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 3 · 감시</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">테스트·빌드 로그 실시간 확인<br>에이전트 완료 알림 수신</p>
-    </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 4 · 이슈·PR</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Linear 이슈 확인, PR 생성<br>git 상태·브랜치 관리</p>
+
+    <!-- 우: SKILLS (API) -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 16pt 18pt;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 6pt;">AXIS 2 · SKILLS (입력 계약화)</p>
+      <p style="font-size: 16pt; font-weight: 700; color: #1C2537; margin-bottom: 12pt;">Document Intelligence APIs</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7pt;">
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">document-parse</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">PDF → 구조 보존 마크다운</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">information-extract</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">스키마 기반 데이터 추출</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">ocr</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">단순 텍스트 추출</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">document-classification</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">자동 분류 · 라우팅</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Worktree -->
-  <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; margin-bottom: 8pt;">
-    <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">Git Worktree — 창마다 독립 작업 디렉토리</p>
-    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">claude --worktree feature-auth</code> 한 줄로 워크트리 + 브랜치 + 세션 동시 생성. 파일 충돌 0, 컨텍스트 오염 0.</p>
-  </div>
-
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt;">
-    <p style="font-size: 10pt; color: #faf8f5;">핵심 — 메인 컨텍스트를 오염시키지 않는 것. 탐색은 서브 창에서, 결과만 메인에 전달.</p>
+  <div style="background: #1E1650; border-radius: 8pt; padding: 12pt 18pt; margin-top: 14pt;">
+    <p style="font-size: 11pt; color: #FFFFFF; line-height: 1.5;">한국어 컨텍스트 = <strong style="color: #9CA7FF;">모델(생성)</strong> + <strong style="color: #9CA7FF;">Skills(입력 계약화)</strong> — 양쪽 다 필요</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">73</p>
   </div>
 </body>

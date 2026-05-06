@@ -261,3 +261,107 @@
 - [ ] (카피) 종결어미 규칙 예외 정책 — "제목=명사형, 보조문=짧은 서술 허용" 문서화 또는 예외 슬라이드 정리
 - [x] (slide-10) flex: 1 메인 콘텐츠 영역 사용 — CLAUDE.md 디자인 규칙 위반 → 제거 완료
 - [ ] (slide-60) 첫 번째 카드 opacity: 0.7 — 의도적 디자인인지 확인
+
+### 2026-05-05 12차 피드백 — 디자인 법칙 ①~⑥ 전수 감사 (반영 완료)
+
+> CLAUDE.md "정보 유형별 디자인 매핑" ①~⑥ 기준 92장 전수 점검. 옵션 C(HIGH 4 + MEDIUM 17) 진행.
+> 재평가 결과 다수 슬라이드는 이미 적절한 위계 보유 — 실제 위반 슬라이드만 타겟 수정.
+
+#### HIGH 우선순위 — 반영 완료
+- [x] (slide-31) SDD spec-kit 3커맨드 — 다크카드 3개 → 라이트 시퀀스(STEP 1/2/3) + 우측 다크 "핵심"만 메인. 메인 1개 보장
+- [x] (slide-38) 재평가 — 이미 `36%` 다크카드가 명확한 메인. 수정 불필요(감사 오인)
+- [x] (slide-76) Vision OCR vs Upstage — `min-height: 130pt` 제거, opacity·다크/라이트 대비로 승자 명확화 (✗/✓ 표식)
+- [x] (slide-92) References — 이질적 행 레이아웃(1/3/2명) → 균일 3×2 카드 그리드 + 다크 GitHub 메인
+
+#### MEDIUM 우선순위 — 타겟 반영
+- [x] (slide-12) 컨텍스트 능력 다크카드 비중 상향(13→16pt) + 우측 비유 약화로 강약 분리
+- [x] (slide-15) 메인 콘텐츠 영역 `flex: 1` 제거 — CLAUDE.md 규칙 준수
+- [x] (slide-26) 타임라인 — 이전 3개 이벤트 컴팩트(padding·font 축소), 마지막 "2026 초" 다크카드 확대
+- [x] (slide-28) TDD 사이클 — Red 다크카드 → 라이트 + accent border-left. 우측 "치팅" 다크와 중복 제거
+- [x] (slide-32) TDD vs SDD 표 — 자명한 "프로덕션 적합도" 행 삭제, "최적 장면" 행 accent border-left + 폰트 강조
+- [x] (slide-75) Claude vs Upstage A/B — Upstage 다크카드 + box-shadow로 메인 승격, 좌측 라이트 약화
+- [x] (slide-80) 메인 콘텐츠 `flex: 1` 제거 + 우측 다크 결론 카드 `flex: 1` 제거 — 자연 높이로
+
+#### MEDIUM — 재평가 후 SKIP (이미 적절)
+- (slide-11) 4개 마크다운 도구 카드 — 진짜 병렬 카테고리 비교 (모두가 동일 패턴 사용 = 메시지 자체)
+- (slide-14) 섹션 디바이더 — 면제
+- (slide-37) 프롬프트 ⊂ 컨텍스트 ⊂ 하네스 — 다크 인용 카드가 명확한 메인
+- (slide-39) Agent = Model + Harness — 다크 HARNESS 박스가 명확한 메인
+- (slide-44) 헌법 — 상단 다크 callout이 메인
+- (slide-45) 운영 원칙 — 다크 "한 줄 삭제 테스트" 인용이 메인
+- (slide-64) 5 패턴 — SVG가 카드 정체성, 진짜 카테고리 비교
+- (slide-72) /ask vs /ccg — 두 도구 동등 비중 의도적
+- (slide-77) OCR 파이프라인 — 다크 결론 카드가 명확한 메인
+- (slide-85) AI 잘 쓰는 법 — 3단계 시퀀스 + 다크 결론 카드
+
+### 2026-05-05 13차 피드백 — Red border-left 희소성 규칙 신설 (반영 완료)
+
+> **사용자 통찰**: red border-left가 "강조"가 아니라 "기본 장식"이 됨 — AI 시그니처. CLAUDE.md에 희소성 규칙 추가 + 22장 일괄 정리.
+
+#### CLAUDE.md 규칙 추가
+- [x] "강조 체계 (3단계)" 아래에 **Red border-left 희소성 원칙** 신설:
+  - 슬라이드당 최대 1개
+  - N분할 동일 카테고리에는 절대 적용 금지
+  - 메인이 다크 카드일 때는 다른 곳에 red border 사용 금지
+  - 다크 카드 자체에 red border 추가 금지 (이중 시그널)
+  - mirror 카드 양쪽 동시 적용 금지
+
+#### 22장 정리 (border-left 인스턴스 83 → 23)
+- [x] (slide-28) Red 스텝 + DORA stat — 모두 제거 (우측 다크 "치팅" 메인)
+- [x] (slide-31) STEP 1/2/3 시퀀스 카드 — 3개 모두 제거
+- [x] (slide-33) Spec + TDD mirror — 모두 제거 (`+` 자체가 동등 파트너십)
+- [x] (slide-38) 재현성·복리 카드 — 2개 제거 (다크 36% 메인)
+- [x] (slide-41) VERIFY 다크+red, 푸터 red — 모두 제거 (4-step 균일 리스트)
+- [x] (slide-46) Boris vs 정구봉 mirror — 모두 제거 (다크 인용 메인)
+- [x] (slide-47) Skill/Hook mirror — 모두 제거 (다크 "구분법" 메인)
+- [x] (slide-52) PLAN/CRITIC red, 푸터 red — 모두 제거 (BUILD 다크 메인)
+- [x] (slide-57) 2 인사이트 red — 모두 제거 (다크 메인)
+- [x] (slide-60) 3 패턴 red — 모두 제거 (#01 dim + #05 dark 위계 유지)
+- [x] (slide-65) 카드 내부 6 dividers red — 단순 padding-left 4pt로 치환
+- [x] (slide-66) 3 benefits + dark+red — 모두 제거 (다크 메인)
+- [x] (slide-67) 2 chars + dark+red — 모두 제거 (다크 메인)
+- [x] (slide-72) /ask vs /ccg — /ask red 제거, /ccg만 유지 (확장 패턴 강조)
+- [x] (slide-73) 4창 identical red — 모두 제거 (동등 역할)
+- [x] (slide-80) 2 right + dark+red — 모두 제거 (다크 메인)
+- [x] (slide-81) 2 principles + dark — 모두 제거 (다크 메인)
+- [x] (slide-83) 3 STAGES + 푸터 red — 모두 제거 (다크 메인)
+- [x] (slide-85) 3 화살표 카드 — 모두 제거 (다크 결론 메인)
+- [x] (slide-87) Simon 다크+red, 결론 light+red — Simon 다크 red 제거, 결론 red 유지 (단일 강조)
+- [x] (slide-88) 3 증언 + dark — 모두 제거 (다크 "증폭" 메인)
+- [x] (slide-89) 3 행동 + dark — 모두 제거 (다크 박종천 인용 메인)
+
+### 2026-05-06 15차 피드백 — Upstage 섹션 강화 (반영 완료)
+
+> 2026-05-08 Upstage 발표 대비. 카드 단위 Upstage 브랜드 컬러 적용 + 섹션 5장으로 확장 + 실제 추출 데이터 사용.
+
+#### 카드 디자인 — Upstage 브랜드 적용 (slide-75/76/77 → 76/77/78)
+- [x] (slide-76, was 75) 우측 Upstage 카드: 다크 → JP 50 (`#ECF0FF`) + Ups Purple 보더 + box-shadow
+- [x] (slide-77, was 76) 우측 Upstage 카드: 동일 패턴 + 내부 마크다운 표 화이트 배경
+- [x] (slide-78, was 77) 중앙 Upstage 파이프라인: JP 50 + Ups Purple. ★ Layout 분석 step → Ups Purple, 분류 step → JP 950 (`#1E1650`)
+
+#### 섹션 확장 — 3장 → 5장
+- [x] (slide-75 NEW) **"Upstage = 모델 + 입력 계약화"** — Solar(LLM) + Skills(API) 두 축. solar-pro3/mini · document-parse/info-extract/ocr/classification 카드. 다크 결론(JP 950) "한국어 컨텍스트 = 모델 + Skills 양쪽"
+- [x] (slide-77, was 76 데이터 강화) AI 도구 비교표 generic 데이터 → **실제 발표 PDF의 slide-2 (목차) 추출 비교 데이터**. parse-default.md vs parse-upstage.md 실측. self-referential 임팩트
+- [x] (slide-79 NEW) **"Solar 위임 — Claude는 두뇌, Solar는 글쟁이"** — solar-delegation 스킬 위임 흐름 5단계. 우측 다크(JP 950)에 큰 숫자 **"1/42"** (Output 토큰 비용 vs Opus). 5천자 시나리오 $0.10 → $0.0024
+
+#### 페이지 시프트 + 데이터 검증
+- [x] 92장 → 94장 (slide-78~92 +2 시프트, slide-75~77 +1 시프트)
+- [x] 페이지 푸터 번호 일괄 갱신
+- [x] "89장" 레퍼런스(slide-3/76/77/82/84/86)는 historical 실험 데이터로 유지
+
+> Sources: Upstage Pricing (upstage.ai/pricing), Anthropic API Pricing (claude.com/pricing#api). 비교 기준 2026-05-06.
+
+### 2026-05-06 14차 피드백 — 종결어미 ~다 검수 (반영 완료)
+
+> CLAUDE.md "종결어미 규칙" 기준 92장 전수 검수. 인용문/코드블록/다크 슬로건 예외 제외, 본문 서술형 7건 발견 → 명사형 변환.
+
+- [x] (slide-09) 큰 슬로건 "매번 틀렸다" → "**매번 빗나감**" (슬로건 임팩트 유지)
+- [x] (slide-13) h2 "그래도 기초는 중요하다" → "**여전히 남는 기초**"
+- [x] (slide-28) 서브타이틀 "테스트를 먼저 쓰고, 통과하는 코드를 나중에 쓴다." → "**테스트가 먼저, 코드가 나중.**"
+- [x] (slide-52) 카드 "다른 눈으로 본다" → "**다른 눈의 시각**"
+- [x] (slide-54) 카드 "결정의 '이유'를 쓴다" → "**결정의 '이유'까지 기록**"
+- [x] (slide-59) h2 "Context Rot — 길수록 조용히 썩는다" → "**Context Rot — 길수록 조용한 부패**"
+- [x] (slide-88) 서브타이틀 "세 사람이 거의 같은 말을 한다." → "**세 사람의 거의 같은 메시지.**"
+
+> SKIP — 의도된 리듬: slide-68 "쪼갠다 × 4" (사용자 결정 — 리듬 유지).
+> SKIP — 예외 조항: 인용문 내부 (Phil Schmid·Armin·Simon·Drew·Kent·OpenAI 등), code 블록 내부 (slide-44/82 메타 콘텐츠), 다크 슬로건 (slide-54 "하네스가 된다", slide-56 "이렇게 하면 망한다", slide-90 "감사합니다").

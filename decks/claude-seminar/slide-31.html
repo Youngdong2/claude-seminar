@@ -21,49 +21,50 @@
 
   <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">3개 커맨드로 스펙 → 계획 → 태스크 분해. 15분 안에 전체 구조 문서화.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
-    <!-- 왼쪽: 3커맨드 -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 4pt;">1. SPECIFY</p>
-        <p style="font-size: 9pt; color: #87ceeb; font-family: monospace; line-height: 1.5;">/speckit.specify<br>"실시간 채팅 + 메시지 히스토리<br>+ 온라인 상태"</p>
-        <p style="font-size: 8.5pt; color: #a09a94; margin-top: 6pt;">→ spec.md 생성 (WHAT/WHY 분리)</p>
+  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 18pt;">
+    <!-- 왼쪽: 3커맨드 시퀀스 (라이트, 보조) -->
+    <div style="display: flex; flex-direction: column; gap: 7pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 9pt 14pt;">
+        <div style="display: flex; align-items: baseline; gap: 8pt; margin-bottom: 3pt;">
+          <p style="font-size: 8.5pt; color: #c45a3b; font-weight: 700; letter-spacing: 0.05em;">STEP 1 · SPECIFY</p>
+        </div>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace; line-height: 1.4;">/speckit.specify "실시간 채팅 + 히스토리"</p>
+        <p style="font-size: 8.5pt; color: #6b6560; margin-top: 3pt;">→ spec.md (WHAT/WHY 분리)</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 4pt;">2. PLAN</p>
-        <p style="font-size: 9pt; color: #87ceeb; font-family: monospace; line-height: 1.5;">/speckit.plan<br>"WebSocket, PostgreSQL, Redis"</p>
-        <p style="font-size: 8.5pt; color: #a09a94; margin-top: 6pt;">→ plan · data-model · contracts 생성</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 9pt 14pt;">
+        <p style="font-size: 8.5pt; color: #c45a3b; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 3pt;">STEP 2 · PLAN</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace; line-height: 1.4;">/speckit.plan "WebSocket, PostgreSQL, Redis"</p>
+        <p style="font-size: 8.5pt; color: #6b6560; margin-top: 3pt;">→ plan · data-model · contracts</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 14pt;">
-        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 4pt;">3. TASKS</p>
-        <p style="font-size: 9pt; color: #87ceeb; font-family: monospace;">/speckit.tasks</p>
-        <p style="font-size: 8.5pt; color: #a09a94; margin-top: 6pt;">→ 병렬 가능 작업 [P] 마킹</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 9pt 14pt;">
+        <p style="font-size: 8.5pt; color: #c45a3b; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 3pt;">STEP 3 · TASKS</p>
+        <p style="font-size: 9pt; color: #2d2a26; font-family: monospace; line-height: 1.4;">/speckit.tasks</p>
+        <p style="font-size: 8.5pt; color: #6b6560; margin-top: 3pt;">→ 병렬 가능 작업 [P] 마킹</p>
       </div>
     </div>
 
-    <!-- 오른쪽: 핵심 원칙 -->
+    <!-- 오른쪽: 강제 원칙 (보조) + 핵심 (메인) -->
     <div style="display: flex; flex-direction: column; gap: 10pt;">
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">강제되는 원칙</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 9pt; font-weight: 600; color: #6b6560; margin-bottom: 6pt; letter-spacing: 0.04em;">강제되는 원칙</p>
         <div style="display: flex; flex-direction: column; gap: 4pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· WHAT/WHY와 HOW 명확히 분리</p>
-          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 모호한 부분 → <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">[NEEDS CLARIFICATION]</code></p>
-          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· 테스트 가능한 수용 기준 포함 필수</p>
-          <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">· Constitution Check — 조직 원칙 위반 게이트</p>
+          <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;">· WHAT/WHY와 HOW 분리</p>
+          <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;">· 모호 → <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8pt;">[NEEDS CLARIFICATION]</code></p>
+          <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;">· 테스트 가능한 수용 기준</p>
+          <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;">· Constitution Check 게이트</p>
         </div>
       </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 16pt;">
-        <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">핵심</p>
-        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">모든 산출물이 <strong style="color: #faf8f5;">파일로 저장 · 커밋 · 참조</strong><br>→ 컨텍스트 소실 방어의 정석</p>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt 18pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 600; margin-bottom: 8pt; letter-spacing: 0.05em;">핵심</p>
+        <p style="font-size: 13pt; color: #faf8f5; font-weight: 600; line-height: 1.4;">모든 산출물이<br>파일로 저장 · 커밋 · 참조</p>
+        <p style="font-size: 9pt; color: #a09a94; margin-top: 8pt;">컨텍스트 소실 방어의 정석</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 14pt;">
-        <p style="font-size: 8.5pt; color: #6b6560;">출처: GitHub spec-kit</p>
-      </div>
+      <p style="font-size: 8.5pt; color: #6b6560; text-align: right;">출처: GitHub spec-kit</p>
     </div>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">31</p>
   </div>
 </body>

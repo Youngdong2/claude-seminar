@@ -16,51 +16,51 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">이 발표가 증거</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">재료 2 — CLAUDE.md가 만든 일관성</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">이 장표 <strong style="color: #2d2a26;">89장 전부</strong> — Claude Code로 제작. HTML 한 줄 직접 작성하지 않음.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">디자인 감각·카피 원칙이 <strong style="color: #2d2a26;">문서에 축적</strong> · 새 슬라이드가 자동 추종</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">사용한 원칙 — 이 발표에서 다룬 것 그대로</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>Spec-first</strong> — sections/README.md에 내용 먼저</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md</strong> — 디자인 토큰 · 호흡 규칙 · 카피 원칙 고정</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>검증 분리</strong> — 피드백 → pending.md → 검토 후 반영</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>자동화</strong> — slides-grab으로 HTML → PDF 일괄 변환</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
+    <!-- 초기 vs 현재 -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; opacity: 0.7;">
+        <p style="font-size: 9pt; color: #6b6560; font-weight: 700; margin-bottom: 4pt;">초기 CLAUDE.md (v1)</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.6; font-family: 'SF Mono', Consolas, monospace;">
+          - 슬라이드 규격: 720pt × 405pt<br>
+          - 폰트: Pretendard (CDN)<br>
+          - 디자인 토큰 6개
+        </p>
+      </div>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 4pt;">현재 CLAUDE.md (피드백 5회 반영)</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6; font-family: 'SF Mono', Consolas, monospace;">
+          + 종결어미: 명사형·구 단위만<br>
+          + 금지: 공손체·서술형·명령형<br>
+          + 카드 레이아웃 규칙 추가<br>
+          + 강조 체계 3단계 정의<br>
+          + 피드백 관리 워크플로우
+        </p>
       </div>
     </div>
 
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">실제 워크플로우</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">1</span>
-          <p style="font-size: 9pt; color: #2d2a26;">섹션별 내용을 자연어로 정리</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">2</span>
-          <p style="font-size: 9pt; color: #2d2a26;">CLAUDE.md에 디자인 규칙 명세</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">3</span>
-          <p style="font-size: 9pt; color: #2d2a26;">Claude Code가 slide-XX.html 생성</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">4</span>
-          <p style="font-size: 9pt; color: #2d2a26;">피드백 8회 반복 → 최종 PDF</p>
-        </div>
+    <!-- 결과 -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 4pt;">진화 과정</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.55;">초반: <code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">~합니다</code> 공손체 → 스캔 불가</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.55;">중반: <code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">~다</code> 서술형 → 여전히 읽어야</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.55;">결론: 명사형 통일 → <strong>CLAUDE.md에 고정</strong></p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt;">
+        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5;">89장에 걸쳐 카피 톤이 일관된 이유 —</p>
+        <p style="font-size: 10pt; color: #faf8f5; line-height: 1.5; margin-top: 4pt;">사람의 89번 검토가 아닌, <strong style="color: #c45a3b;">한 번 쓴 규칙의 결과</strong></p>
       </div>
     </div>
-  </div>
-
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt;">
-    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.45;">규칙을 하네스로 고정 → 실행은 에이전트에게 → 결과를 검수. <strong style="color: #c45a3b;">이 발표의 제작 과정 자체가 증거.</strong></p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">84</p>
   </div>
 </body>

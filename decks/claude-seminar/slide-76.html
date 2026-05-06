@@ -11,61 +11,82 @@
       padding: 40pt 48pt;
       display: flex; flex-direction: column; position: relative;
     }
-    .table-mono {
-      font-family: 'SF Mono', 'Menlo', monospace;
-      font-size: 7pt;
-      line-height: 1.55;
+    .step {
+      background: #faf8f5;
+      border: 1pt solid #e8e1d5;
+      border-radius: 4pt;
+      padding: 5pt 10pt;
+      font-size: 9pt;
       color: #2d2a26;
+      white-space: nowrap;
+    }
+    .step.dark {
+      background: #2d2a26;
+      color: #faf8f5;
+      border-color: #2d2a26;
+      font-weight: 600;
+    }
+    .step.accent {
+      background: #c45a3b;
+      color: #fff;
+      border-color: #c45a3b;
+      font-weight: 600;
+    }
+    .step.muted {
+      background: #e8e1d5;
+      color: #6b6560;
+    }
+    .arrow {
+      font-size: 12pt;
+      color: #a09a94;
     }
   </style>
 </head>
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">차이는 한 슬라이드에서 갈림</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OCR 다음의 한 단계</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">Slide 18 · AI 코딩 도구 비교표 — 같은 영역의 두 출력</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">글자 추출 → layout 분석 → 구조 재구성</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; margin-bottom: 8pt;">macOS Vision OCR</p>
-      <div class="table-mono" style="background: #faf8f5; padding: 8pt 10pt; border-radius: 4pt; min-height: 130pt;">
-        도구<br>
-        형태<br>
-        특징<br>
-        GitHub Copilot<br>
-        IDE 플러그인<br>
-        코드 자동완성 중심<br>
-        Cursor<br>
-        IDE<br>
-        AI 네이티브 에디터<br>
-        ...
-      </div>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-top: 6pt;">한 줄씩 평탄화 · 행·열 매핑 손실</p>
+  <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 16pt; margin-bottom: 10pt;">
+    <p style="font-size: 9pt; font-weight: 700; color: #6b6560; margin-bottom: 10pt;">일반 OCR 파이프라인</p>
+    <div style="display: flex; align-items: center; gap: 7pt; flex-wrap: wrap;">
+      <div class="step">PDF</div>
+      <p class="arrow">→</p>
+      <div class="step">이미지 변환</div>
+      <p class="arrow">→</p>
+      <div class="step">OCR · 글자 + 좌표</div>
+      <p class="arrow">→</p>
+      <div class="step muted">한 줄씩 나열</div>
+      <p style="font-size: 9pt; color: #6b6560; margin-left: 10pt;">글자만</p>
     </div>
+  </div>
 
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt; border-left: 3pt solid #c45a3b;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">Upstage document-parse</p>
-      <div class="table-mono" style="background: #faf8f5; padding: 8pt 10pt; border-radius: 4pt; min-height: 130pt;">
-        | 도구 | 형태 | 특징 |<br>
-        |---|---|---|<br>
-        | GitHub Copilot | IDE | 자동완성 |<br>
-        | Cursor | IDE | 네이티브 |<br>
-        | Windsurf | IDE | Cascade |<br>
-        | Codex | CLI | 에이전틱 |<br>
-        | Claude Code | CLI | 에이전틱 |
-      </div>
-      <p style="font-size: 8.5pt; color: #c45a3b; margin-top: 6pt; font-weight: 600;">표 보존 · 행·열 매핑 살아있음</p>
+  <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 6pt; padding: 14pt 16pt; margin-bottom: 12pt; box-shadow: 0 2pt 6pt rgba(128,92,251,0.12);">
+    <p style="font-size: 9pt; font-weight: 700; color: #805CFB; margin-bottom: 10pt; letter-spacing: 0.04em;">UPSTAGE 파이프라인</p>
+    <div style="display: flex; align-items: center; gap: 7pt; flex-wrap: wrap;">
+      <div class="step" style="background: #FFFFFF; border-color: #E9E8F0; color: #1C2537;">PDF</div>
+      <p class="arrow">→</p>
+      <div class="step" style="background: #FFFFFF; border-color: #E9E8F0; color: #1C2537;">OCR · 글자 + 좌표</div>
+      <p class="arrow">→</p>
+      <div class="step" style="background: #805CFB; color: #FFFFFF; border-color: #805CFB; font-weight: 600;">★ Layout 분석</div>
+      <p class="arrow">→</p>
+      <div class="step" style="background: #1E1650; color: #FFFFFF; border-color: #1E1650; font-weight: 600;">표·차트·헤딩 분류</div>
+      <p style="font-size: 9pt; color: #805CFB; margin-left: 10pt; font-weight: 600;">글자 + 구조</p>
     </div>
   </div>
 
   <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt;">
-    <p style="font-size: 11pt; color: #faf8f5;">OCR 능력 = 비슷 · <strong style="color: #c45a3b;">차이 = layout 이해력</strong></p>
+    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.55;">
+      글자만 = LLM이 추측 · <strong style="color: #c45a3b;">구조까지 = LLM이 이해</strong><br>
+      <span style="font-size: 9pt; color: #d4cfc8;">스킬 = 입력 계약화 = 컨텍스트 엔지니어링</span>
+    </p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">76</p>
   </div>
 </body>

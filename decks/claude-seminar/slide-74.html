@@ -16,52 +16,37 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">이슈 기반 워크플로우 — Linear(PIMS)에서 PR까지</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">같은 PDF, 두 가지 마크다운</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;"><strong style="color: #2d2a26;">이슈 1개 = 에이전트 세션 1개.</strong> 이슈 트래커가 곧 에이전트의 작업 지시서.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">발표 PDF 89장 · 같은 명령 · 다른 도구 — Upstage 스킬 검증 실험</p>
 
-  <!-- Pipeline -->
-  <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; margin-bottom: 10pt;">
-    <div style="display: flex; align-items: center; gap: 8pt; flex-wrap: wrap;">
-      <div style="background: #c45a3b; color: #fff; border-radius: 4pt; padding: 5pt 10pt; font-size: 9pt; font-weight: 600;">Linear(PIMS) 이슈</div>
-      <p style="font-size: 12pt; color: #a09a94;">→</p>
-      <div style="background: #2d2a26; color: #faf8f5; border-radius: 4pt; padding: 5pt 10pt; font-size: 9pt; font-weight: 600;">Worktree 생성</div>
-      <p style="font-size: 12pt; color: #a09a94;">→</p>
-      <div style="background: #2d2a26; color: #faf8f5; border-radius: 4pt; padding: 5pt 10pt; font-size: 9pt; font-weight: 600;">Claude 세션</div>
-      <p style="font-size: 12pt; color: #a09a94;">→</p>
-      <div style="background: #2d2a26; color: #faf8f5; border-radius: 4pt; padding: 5pt 10pt; font-size: 9pt; font-weight: 600;">PR 생성</div>
-      <p style="font-size: 12pt; color: #a09a94;">→</p>
-      <div style="background: #c45a3b; color: #fff; border-radius: 4pt; padding: 5pt 10pt; font-size: 9pt; font-weight: 600;">검증·완료</div>
+  <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 16pt; align-items: start;">
+    <!-- 좌: 그냥 시켰을 때 (보조, 약함) -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 18pt; opacity: 0.85;">
+      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; margin-bottom: 10pt; letter-spacing: 0.04em;">그냥 시켰을 때</p>
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26; margin-bottom: 12pt; line-height: 1.4;">"마크다운으로 만들어줘"</p>
+      <div style="background: #faf8f5; border-radius: 4pt; padding: 9pt 12pt;">
+        <p style="font-size: 8pt; color: #6b6560; margin-bottom: 3pt;">Claude의 자동 선택</p>
+        <p style="font-size: 10.5pt; font-weight: 600; color: #6b6560;">macOS Vision OCR</p>
+      </div>
+      <p style="font-size: 9pt; color: #8a857e; line-height: 1.5; margin-top: 10pt;">이미지 PDF · 텍스트 레이어 0</p>
     </div>
-  </div>
 
-  <!-- Skill chain -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 10pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">AI 1팀 스킬 체인</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.6;">
-        <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">issue-creator</code> 구조화된 이슈 생성<br>
-        <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">issue-evidence</code> AC별 증거 첨부<br>
-        <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">issue-validator</code> DoD·AC 자동 검증
-      </p>
+    <!-- 우: Upstage (메인, Upstage 브랜드 적용) -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 18pt 22pt; box-shadow: 0 2pt 6pt rgba(128,92,251,0.15);">
+      <p style="font-size: 9pt; font-weight: 700; color: #805CFB; margin-bottom: 10pt; letter-spacing: 0.04em;">UPSTAGE 스킬</p>
+      <p style="font-size: 13pt; font-weight: 600; color: #1C2537; margin-bottom: 14pt; line-height: 1.4;">"마크다운으로 만들어줘"</p>
+      <div style="background: #FFFFFF; border-radius: 4pt; padding: 10pt 12pt; border: 1pt solid #E9E8F0;">
+        <p style="font-size: 8pt; color: #979CAE; margin-bottom: 3pt;">스킬 명시</p>
+        <p style="font-size: 11pt; font-weight: 600; color: #805CFB;">document-parse API</p>
+      </div>
+      <p style="font-size: 9pt; color: #434C60; line-height: 1.5; margin-top: 10pt;">단일 엔드포인트 · layout 인식 포함</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">왜 이슈 기반인가</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.6;">
-        · 채팅 = 휘발. 이슈 = 지속적 컨텍스트<br>
-        · AC가 명확하면 에이전트가 완료 판단 가능<br>
-        · 이슈 단위 = 컨텍스트 드리프트 차단
-      </p>
-    </div>
-  </div>
-
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt;">
-    <p style="font-size: 10pt; color: #faf8f5;">Linear — 개발팀 이슈 트래커. MCP 연결로 터미널에서 <strong style="color: #c45a3b;">이슈 → 코드 → PR → 검증</strong> 전 과정 완결.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
-    <p style="font-size: 9pt; color: #6b6560;">클로드코드 잘 사용하기</p>
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">74</p>
   </div>
 </body>

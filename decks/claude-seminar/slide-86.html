@@ -7,15 +7,61 @@
     body {
       width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
-      background: #2d2a26;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 0 64pt;
+      background: #faf8f5;
+      padding: 40pt 48pt;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 12pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 16pt;">09</p>
-  <h1 style="font-size: 44pt; font-weight: 600; color: #faf8f5; letter-spacing: -0.02em; line-height: 1.2;">AI 시대,<br>우리는 어떻게 해야 하나</h1>
-  <div style="width: 40pt; height: 3pt; background: #c45a3b; margin-top: 24pt; border-radius: 2pt;"></div>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">이 발표가 증거</h2>
+  </div>
+
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">이 장표 <strong style="color: #2d2a26;">89장 전부</strong> — Claude Code로 제작. HTML 한 줄 직접 작성하지 않음.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">사용한 원칙 — 이 발표에서 다룬 것 그대로</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>Spec-first</strong> — sections/README.md에 내용 먼저</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md</strong> — 디자인 토큰 · 호흡 규칙 · 카피 원칙 고정</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>검증 분리</strong> — 피드백 → pending.md → 검토 후 반영</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>자동화</strong> — slides-grab으로 HTML → PDF 일괄 변환</p>
+      </div>
+    </div>
+
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">실제 워크플로우</p>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">1</span>
+          <p style="font-size: 9pt; color: #2d2a26;">섹션별 내용을 자연어로 정리</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">2</span>
+          <p style="font-size: 9pt; color: #2d2a26;">CLAUDE.md에 디자인 규칙 명세</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">3</span>
+          <p style="font-size: 9pt; color: #2d2a26;">Claude Code가 slide-XX.html 생성</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">4</span>
+          <p style="font-size: 9pt; color: #2d2a26;">피드백 8회 반복 → 최종 PDF</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt;">
+    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.45;">규칙을 하네스로 고정 → 실행은 에이전트에게 → 결과를 검수. <strong style="color: #c45a3b;">이 발표의 제작 과정 자체가 증거.</strong></p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
+    <p style="font-size: 9pt; color: #6b6560;">86</p>
+  </div>
 </body>
 </html>
