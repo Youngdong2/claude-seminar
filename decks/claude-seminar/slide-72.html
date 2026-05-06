@@ -16,37 +16,48 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">한 걸음 더 — 단일 모델 탈피</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">OMC — 원리를 명령어로</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">섹션 6이 <strong style="color: #2d2a26;">여러 Claude</strong>였다면, 이건 <strong style="color: #2d2a26;">여러 종류의 AI</strong>. 모델마다 상이한 훈련 분포·blind spot.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 10pt;"><strong style="color: #2d2a26;">Oh My Claude Code</strong> — Yeachan Heo(한국) 제작, GitHub Trending 1위. 핵심 — <strong style="color: #2d2a26;">원리를 사람이 외우지 않고 시스템이 강제</strong></p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
-    <!-- /ask -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ask [provider]</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Claude 답이 불확실할 때 다른 모델에 의견 요청</p>
+  <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <!-- Header -->
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding-bottom: 6pt; border-bottom: 1.5pt solid rgba(0,0,0,0.15);">
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b;">원리</p>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b;">OMC 구현</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #6b6560;"># 구조 리뷰를 Codex에게</p>
-        <p style="font-size: 9pt; color: #faf8f5; line-height: 1.5;">/ask codex "이 계획에서 짠 구조<br>&nbsp;&nbsp;리뷰해줘. 빠진 부분 있는지"</p>
-        <p style="font-size: 9pt; color: #6b6560; margin-top: 6pt;"># 디자인 자문을 Gemini에게</p>
-        <p style="font-size: 9pt; color: #faf8f5; line-height: 1.5;">/ask gemini "이 카드 레이아웃<br>&nbsp;&nbsp;가독성 어떤지 피드백 줘"</p>
+      <!-- Rows -->
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">역할 분리</p>
+        <p style="font-size: 9.5pt; color: #6b6560;">29+ 에이전트 — architect · critic · tester …</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">모델 라우팅</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/model</code> 수동 전환 · 자동 선택 · 토큰 <strong style="color: #c45a3b;">30~50%↓</strong></p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Plan–Critic–Build</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ralplan</code> — 계획 → 비평 → 합의 후 실행</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">병렬 실행</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultrapilot</code> — 최대 5 워커 동시</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0; border-bottom: 1pt solid rgba(0,0,0,0.08);">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">검증 루프</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/ultraqa</code> — test → fix → 재실행 자동 순환</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 14pt; padding: 6pt 0;">
+        <p style="font-size: 9.5pt; color: #2d2a26; font-weight: 600;">Worktree 병렬</p>
+        <p style="font-size: 9.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">/project-session-manager</code> + HUD + Slack</p>
       </div>
     </div>
+  </div>
 
-    <!-- /ccg -->
-    <div style="display: flex; flex-direction: column; gap: 8pt;">
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ccg — Claude · Codex · Gemini</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세 모델 동시 송출 → <strong style="color: #2d2a26;">합의·불일치·불확실</strong> 분리 표시</p>
-      </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-        <p style="font-size: 9pt; color: #2d2a26; font-weight: 600; margin-bottom: 4pt;">특히 빛나는 순간</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 아키텍처 결정 (되돌리기 어려움)<br>· 디버깅이 막혔을 때<br>· 머지 전 코드 리뷰 최종 확인<br>· 계획 피드백 (다른 시각의 보완)</p>
-      </div>
-    </div>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 10pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5;">핵심 — 사용자는 <strong style="color: #c45a3b;">"어떤 작업인지"</strong>만 입력. 모드 · 에이전트 · 모델은 OMC 자동 선택.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

@@ -5,65 +5,31 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      width: 720pt;
-      height: 405pt;
+      width: 720pt; height: 405pt;
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
       padding: 40pt 48pt;
-      display: grid;
-      grid-template-columns: 1fr 1.8fr;
-      gap: 40pt;
+      display: flex; align-items: center; gap: 48pt;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; flex-direction: column; justify-content: flex-end;">
-    <p style="font-size: 9pt; color: #6b6560; margin-bottom: 16pt;">UPSTAGE INVITED SEMINAR</p>
-    <h1 style="font-size: 48pt; font-weight: 500; color: #2d2a26; letter-spacing: -0.02em; line-height: 1.2;">목차</h1>
-    <div style="width: 32pt; height: 3pt; background: #c45a3b; margin-top: 16pt; border-radius: 2pt;"></div>
+  <!-- 사진 (메인 시각 앵커) -->
+  <div style="width: 240pt; height: 300pt; border-radius: 8pt; overflow: hidden; flex-shrink: 0;">
+    <img src="./assets/youngdong.jpg" style="width: 100%; height: 100%; object-fit: cover;">
   </div>
 
-  <div style="display: flex; flex-direction: column; justify-content: center; gap: 3pt;">
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">01</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">코딩은 어디로 가고 있는가</p>
+  <!-- 텍스트 -->
+  <div style="display: flex; flex-direction: column; gap: 18pt;">
+    <div>
+      <p style="font-size: 9pt; color: #c45a3b; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 10pt;">PROFILE</p>
+      <h1 style="font-size: 60pt; font-weight: 600; color: #2d2a26; line-height: 1; letter-spacing: -0.02em;">김영동</h1>
+      <p style="font-size: 14pt; color: #6b6560; margin-top: 10pt;">Nkia · AI Engineer</p>
     </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">02</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">왜 Claude Code인가</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">03</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">AI 시대의 개발 방법론</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">04</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 700; color: #c45a3b;">하네스 & 컨텍스트 엔지니어링</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">05</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">이렇게 하면 망한다 — 한계와 실패 패턴</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">06</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">멀티 에이전트 활용</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">07</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">실전 워크플로우 & 도구 세팅</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">08</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">모두의 이야기</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid rgba(0,0,0,0.08);">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">09</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">AI 시대, 우리는 어떻게 해야 하나</p>
-    </div>
-    <div style="display: flex; align-items: center; gap: 14pt; padding: 5pt 0;">
-      <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 7.5pt; font-weight: 600;">10</p>
-      <p style="flex: 1; font-size: 10.5pt; font-weight: 500; color: #2d2a26;">마무리 & Q&A</p>
-    </div>
+
+    <p style="font-size: 14pt; color: #2d2a26; line-height: 1.55;">인프라 장애 원인 분석(RCA)<br>에이전트 개발</p>
+
+    <p style="font-size: 10pt; color: #6b6560;">linkedin.com/in/youngdongkim</p>
   </div>
 </body>
 </html>

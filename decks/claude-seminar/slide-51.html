@@ -9,28 +9,46 @@
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
       padding: 40pt 48pt;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600; margin-bottom: 20pt;">SECTION 4</p>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">우리 팀의 스킬 레포</h2>
+  </div>
 
-  <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.04em; margin-bottom: 16pt;">도구를 알았으니</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">AI 1팀에서 운영 중인 14개 스킬. 반복되는 워크플로우를 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9.5pt;">/명령</code> 한 줄로.</p>
 
-  <p style="font-size: 28pt; font-weight: 600; color: #2d2a26; margin-bottom: 24pt;">조합하는 패턴</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">코드 품질</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/code-review</strong> — PR/MR 자동 리뷰<br>(OWASP · SOLID · 성능 · 테스트)</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5; margin-top: 4pt;"><strong style="color: #2d2a26;">/commit</strong> — 이슈 번호 포함 · 컨벤션 커밋 자동 생성</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">프로젝트 관리</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/linear-issue-creator</strong> — 자연어 → 이슈 자동 생성<br>(DoD · AC · 마감일 · 라벨)</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5; margin-top: 4pt;"><strong style="color: #2d2a26;">/linear-issue-validator</strong> — DoD/AC 자동 검증</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">온보딩 · 전환</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/kickoff</strong> — 프로젝트 초기 세팅<br><strong style="color: #2d2a26;">/figma-to-react</strong> — Figma → React 변환</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
+      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">워크플로우</p>
+      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/submit</strong> — 작업 제출 + PR 생성<br><strong style="color: #2d2a26;">/wrap-up</strong> — 일일 작업 정리 · 보고</p>
+    </div>
+  </div>
 
-  <div style="display: flex; gap: 14pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 20pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Plan–Critic–Build</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 20pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Ralph Loop</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 20pt;">
-      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">암묵지 추출</p>
-    </div>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 16pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">한 번 만든 스킬 → 팀 전원이 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> 한 마디로 호출. <strong style="color: #c45a3b;">반복 작업의 종결</strong>.</p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
+    <p style="font-size: 9pt; color: #6b6560;">51</p>
   </div>
 </body>
 </html>

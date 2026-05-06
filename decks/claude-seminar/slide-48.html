@@ -16,51 +16,40 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Skill은 어떻게 동작하는가</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Skills & Hooks — 그게 뭔가</h2>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18pt;">
-    <!-- 왼쪽: 파일 구조 예시 -->
-    <div>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">실제 파일 구조</p>
-      <div style="background: #2d2a26; border-radius: 6pt; padding: 14pt; font-family: 'SF Mono', Consolas, monospace; margin-bottom: 10pt;">
-        <p style="font-size: 8pt; color: #6b6560; margin-bottom: 6pt;">.claude/skills/commit.md</p>
-        <p style="font-size: 9pt; color: #a09a94;">---</p>
-        <p style="font-size: 9pt; color: #87ceeb;">name: <span style="color: #faf8f5;">commit</span></p>
-        <p style="font-size: 9pt; color: #87ceeb;">description: <span style="color: #faf8f5;">Git 커밋 시 팀 컨벤션<br>&nbsp;&nbsp;메시지 자동 생성</span></p>
-        <p style="font-size: 9pt; color: #a09a94;">---</p>
-        <p style="font-size: 9pt; color: #a09a94; margin-top: 6pt;"># 규칙</p>
-        <p style="font-size: 9pt; color: #faf8f5;">1. 브랜치명에서 이슈 번호 추출</p>
-        <p style="font-size: 9pt; color: #faf8f5;">2. 변경사항 분석 → Type 결정</p>
-        <p style="font-size: 9pt; color: #faf8f5;">3. <span style="color: #87ceeb;">#{ISSUE} {Type} : {설명}</span></p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">하네스를 구성하는 두 실행 단위. <strong style="color: #2d2a26;">Skill = 부르면 실행되는 워크플로우</strong> · <strong style="color: #2d2a26;">Hook = 이벤트에 자동 실행되는 스크립트</strong>.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;">
+    <!-- Skills -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
+      <div>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">SKILL</p>
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">재사용 워크플로우 패키지</p>
       </div>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 8pt 14pt;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.4;"><strong style="color: #2d2a26;">frontmatter</strong>의 description이 핵심 — Claude가 이걸 읽고 매칭 결정</p>
-      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 반복되는 작업을 한 번에 호출하고 싶을 때</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — frontmatter(name · description) + markdown 본문</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">호출</strong> — <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/skillname</code> 또는 자연어 트리거</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">선택</strong> — description 기반 자동 매칭, 토큰 소비 없음 (호출 시 로드)</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> · <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/review-pr</code></p>
     </div>
 
-    <!-- 오른쪽: 동작 흐름 -->
-    <div>
-      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">호출 → 실행 흐름</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><span style="color: #c45a3b; font-weight: 600;">1</span> &nbsp;사용자: <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> 또는 "커밋해줘"</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><span style="color: #c45a3b; font-weight: 600;">2</span> &nbsp;Claude가 등록된 skill의 <strong>description 스캔</strong></p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><span style="color: #c45a3b; font-weight: 600;">3</span> &nbsp;매칭된 skill <strong>본문을 컨텍스트에 로드</strong></p>
-          <p style="font-size: 8.5pt; color: #6b6560; margin-top: 2pt;">→ 이 시점에서만 토큰 소비 (평소엔 0)</p>
-        </div>
-        <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-          <p style="font-size: 9.5pt; color: #2d2a26;"><span style="color: #c45a3b; font-weight: 600;">4</span> &nbsp;본문의 지시대로 작업 수행</p>
-        </div>
+    <!-- Hooks -->
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; display: flex; flex-direction: column; gap: 8pt;">
+      <div>
+        <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.04em;">HOOK</p>
+        <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-top: 2pt;">이벤트 기반 자동 스크립트</p>
       </div>
-      <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; margin-top: 10pt;">
-        <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.4;">Skill = <strong style="color: #faf8f5;">필요할 때만 꺼내 쓰는 CLAUDE.md</strong><br>100개 등록해도 호출 전엔 토큰 0</p>
-      </div>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">언제</strong> — 항상 적용해야 하는 규칙·검증·차단</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">형식</strong> — 이벤트 타입(PreToolUse…) + 실행 커맨드</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.55;"><strong style="color: #2d2a26;">실행</strong> — LLM이 아닌 쉘 스크립트 — 반드시 실행</p>
+      <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.55; margin-top: 2pt;">예: 파일 편집 후 <strong>ESLint</strong> · 커밋 전 <strong>테스트</strong> · .env 편집 <strong>차단</strong></p>
     </div>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt; margin-top: 12pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.4;">구분법 — <strong style="color: #c45a3b;">Skill = 내가 부를 때 실행</strong> · <strong style="color: #c45a3b;">Hook = 자동 실행</strong>.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

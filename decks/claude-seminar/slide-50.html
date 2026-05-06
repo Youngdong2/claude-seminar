@@ -16,34 +16,56 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">우리 팀의 스킬 레포</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Plugins — 하네스를 포장해서 팀 자산으로</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">AI 1팀에서 운영 중인 14개 스킬. 반복되는 워크플로우를 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9.5pt;">/명령</code> 한 줄로.</p>
+  <p style="font-size: 10pt; color: #6b6560; margin-bottom: 14pt;">4개 레이어 위에 얹히는 배포 레이어</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">코드 품질</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/code-review</strong> — PR/MR 자동 리뷰<br>(OWASP · SOLID · 성능 · 테스트)</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5; margin-top: 4pt;"><strong style="color: #2d2a26;">/commit</strong> — 이슈 번호 포함 · 컨벤션 커밋 자동 생성</p>
+  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 16pt;">
+    <!-- Left: what plugins bundle -->
+    <div style="display: flex; flex-direction: column; gap: 10pt;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">새 기능이 아니라 포장지</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.55;">이미 존재하는 <strong style="color: #2d2a26;">Skill · Subagent · Hook · MCP · LSP</strong>를 단일 단위로 번들링해 팀·커뮤니티에 배포하는 메커니즘</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 14pt; font-family: monospace;">
+        <p style="font-size: 8pt; color: #6b6560;">my-plugin/</p>
+        <p style="font-size: 8pt; color: #faf8f5;">├── .claude-plugin/plugin.json</p>
+        <p style="font-size: 8pt; color: #faf8f5;">├── commands/ &nbsp;agents/</p>
+        <p style="font-size: 8pt; color: #faf8f5;">├── skills/ &nbsp;&nbsp;&nbsp;hooks/</p>
+        <p style="font-size: 8pt; color: #faf8f5;">└── .mcp.json</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>standalone → plugin</strong> 전환은 파일 이동 + 매니페스트 1개 수준</p>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">프로젝트 관리</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/linear-issue-creator</strong> — 자연어 → 이슈 자동 생성<br>(DoD · AC · 마감일 · 라벨)</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5; margin-top: 4pt;"><strong style="color: #2d2a26;">/linear-issue-validator</strong> — DoD/AC 자동 검증</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">온보딩 · 전환</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/kickoff</strong> — 프로젝트 초기 세팅<br><strong style="color: #2d2a26;">/figma-to-react</strong> — Figma → React 변환</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 6pt;">워크플로우</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><strong style="color: #2d2a26;">/submit</strong> — 작업 제출 + PR 생성<br><strong style="color: #2d2a26;">/wrap-up</strong> — 일일 작업 정리 · 보고</p>
-    </div>
-  </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 8pt 16pt;">
-    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.4;">한 번 만든 스킬 → 팀 전원이 <code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 9pt;">/commit</code> 한 마디로 호출. <strong style="color: #c45a3b;">반복 작업의 종결</strong>.</p>
+    <!-- Right: terminal screenshot mock -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">우리 팀 플러그인 설치 (실제)</p>
+      <!-- Terminal window mock -->
+      <div style="background: #1e1b18; border-radius: 6pt; overflow: hidden;">
+        <div style="background: #2d2a26; padding: 5pt 10pt; display: flex; align-items: center; gap: 4pt; border-bottom: 1pt solid #3a3530;">
+          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #ff5f57;"></span>
+          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #febc2e;"></span>
+          <span style="display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; background: #28c840;"></span>
+          <span style="font-size: 7pt; color: #6b6560; margin-left: 6pt; font-family: monospace;">claude — /plugin</span>
+        </div>
+        <div style="padding: 10pt 14pt; font-family: 'SF Mono', Consolas, monospace; line-height: 1.5;">
+          <p style="font-size: 7.5pt; color: #6b9e8a;">&gt; /plugin marketplace add nkia-ai-team/claude-code-skills</p>
+          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Added marketplace: nkia-ai-marketplace</p>
+          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ 14 skills available</p>
+          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin install nkia-ai-tools@nkia-ai-marketplace</p>
+          <p style="font-size: 7.5pt; color: #87ceeb;">&nbsp;&nbsp;✓ Installing nkia-ai-tools ... done</p>
+          <p style="font-size: 7.5pt; color: #a09a94;">&nbsp;&nbsp;→ Added skills: /commit /code-review /kickoff ...</p>
+          <p style="font-size: 7.5pt; color: #6b9e8a; margin-top: 4pt;">&gt; /plugin list</p>
+          <p style="font-size: 7.5pt; color: #faf8f5;">&nbsp;&nbsp;nkia-ai-tools&nbsp;&nbsp;<span style="color: #28c840;">● installed</span></p>
+        </div>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; display: flex; align-items: center;">
+        <p style="font-size: 9.5pt; color: #faf8f5; line-height: 1.5;">개인이 쌓아올린 하네스를 <strong style="color: #c45a3b;">조직 자산</strong>으로 전환하는 마지막 한 조각</p>
+      </div>
+    </div>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

@@ -16,35 +16,55 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">암묵지를 파일로 뽑아내라</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Ralph Loop — 가장 단순한 하네스</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">"뭘 보여줘야 하지?" — 답은 이미 <strong style="color: #2d2a26;">머릿속</strong>에.<br>리뷰할 때 말하던 것, 버그 겪고 반사적으로 체크하던 것 → 파일로 추출.</p>
+  <div style="display: flex; align-items: center; gap: 14pt; margin-bottom: 14pt;">
+    <img src="./assets/ralph-wiggum.png" style="width: 40pt; height: auto; border-radius: 4pt;">
+    <p style="font-size: 10.5pt; color: #6b6560;"><code style="background: #e8e1d5; padding: 1pt 5pt; border-radius: 3pt; font-size: 9.5pt;">PROMPT.md</code> 하나를 무한 루프로 반복 실행. The Simpsons의 Ralph Wiggum에서 이름을 딴 — <strong style="color: #2d2a26;">"바보처럼 단순한"</strong> 루프.</p>
+  </div>
 
-  <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; margin-bottom: 12pt;">
-    <div style="display: flex; flex-direction: column; gap: 10pt;">
-      <div style="display: flex; gap: 10pt; align-items: baseline;">
-        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">①</span>
-        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>결정의 "이유"까지 기록</strong> — 결과만 → 금방 낡음. 이유까지 → 일반화 가능</p>
+  <!-- Flow diagram -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 20pt 24pt; margin-bottom: 16pt;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 10pt;">
+      <div style="border: 1pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 1;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">입력</p>
+        <p style="font-size: 11pt; color: #faf8f5; font-family: monospace;">PROMPT.md</p>
       </div>
-      <div style="display: flex; gap: 10pt; align-items: baseline;">
-        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">②</span>
-        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>Post-Mortem → 규칙</strong> — 계획과 구현의 분기점을 한 줄로 승화</p>
+      <p style="font-size: 16pt; color: #c45a3b;">→</p>
+      <div style="border: 1pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 1;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">실행</p>
+        <p style="font-size: 11pt; color: #faf8f5;">Claude Code</p>
       </div>
-      <div style="display: flex; gap: 10pt; align-items: baseline;">
-        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">③</span>
-        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>Self-Improving</strong> — 피드백마다 규칙 한 줄씩 성장</p>
+      <p style="font-size: 16pt; color: #c45a3b;">→</p>
+      <div style="border: 1pt solid #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 1;">
+        <p style="font-size: 9pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">결과</p>
+        <p style="font-size: 11pt; color: #faf8f5;">파일 수정 · 검증</p>
       </div>
-      <div style="display: flex; gap: 10pt; align-items: baseline;">
-        <span style="font-size: 11pt; font-weight: 700; color: #c45a3b;">④</span>
-        <p style="font-size: 11pt; color: #2d2a26; line-height: 1.5;"><strong>취향 → 전용 에이전트</strong> — 글로 쓰기 어려운 판단을 에이전트로 encode</p>
+      <p style="font-size: 16pt; color: #c45a3b;">↺</p>
+      <div style="background: #c45a3b; border-radius: 6pt; padding: 12pt 14pt; text-align: center; flex: 0.8;">
+        <p style="font-size: 9pt; color: #faf8f5; font-weight: 700; margin-bottom: 3pt;">무한 루프</p>
+        <p style="font-size: 10pt; color: #faf8f5;">while :; do …</p>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8pt; margin-top: 12pt;">
+      <p style="font-size: 10pt; color: #a09a94;">실수 발견 →</p>
+      <div style="border-left: 2pt solid #c45a3b; padding: 4pt 12pt;">
+        <p style="font-size: 10pt; color: #faf8f5;">PROMPT.md에 규칙 한 줄 추가 → 다음 루프에서 자동 반영</p>
       </div>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 16pt;">
-    <p style="font-size: 11pt; color: #faf8f5; font-weight: 600; line-height: 1.4;">머릿속 판단이 파일로 옮겨지는 순간 <strong style="color: #c45a3b;">하네스가 된다</strong> — 한 줄씩 박제.</p>
-    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt;">경험 → 규칙 → 재사용. 모호함도 점수화(0~10) → 구조화 가능.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; text-align: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">단순성 = 예측 가능성</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; text-align: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">새 프로젝트 전용</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt; text-align: center;">
+      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26;">검증 없으면 환각 누적</p>
+    </div>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -53,5 +73,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

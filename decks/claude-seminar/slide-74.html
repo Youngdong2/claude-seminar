@@ -16,33 +16,55 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">같은 PDF, 두 가지 마크다운</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Upstage = 모델 + 입력 계약화</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">발표 PDF 89장 · 같은 명령 · 다른 도구 — Upstage 스킬 검증 실험</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">단일 API가 아닌 — LLM 모델과 도메인 특화 Skills 두 축으로 한국어 컨텍스트 공략</p>
 
-  <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 16pt; align-items: start;">
-    <!-- 좌: 그냥 시켰을 때 (보조, 약함) -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 18pt; opacity: 0.85;">
-      <p style="font-size: 9pt; font-weight: 700; color: #6b6560; margin-bottom: 10pt; letter-spacing: 0.04em;">그냥 시켰을 때</p>
-      <p style="font-size: 12pt; font-weight: 600; color: #2d2a26; margin-bottom: 12pt; line-height: 1.4;">"마크다운으로 만들어줘"</p>
-      <div style="background: #faf8f5; border-radius: 4pt; padding: 9pt 12pt;">
-        <p style="font-size: 8pt; color: #6b6560; margin-bottom: 3pt;">Claude의 자동 선택</p>
-        <p style="font-size: 10.5pt; font-weight: 600; color: #6b6560;">macOS Vision OCR</p>
+  <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 16pt; align-items: start;">
+    <!-- 좌: SOLAR (모델) -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 16pt 18pt;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 6pt;">AXIS 1 · MODEL</p>
+      <p style="font-size: 16pt; font-weight: 700; color: #1C2537; margin-bottom: 12pt;">Solar (LLM)</p>
+      <div style="display: flex; flex-direction: column; gap: 8pt;">
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 9pt 12pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 10pt; font-weight: 700; color: #805CFB; margin-bottom: 2pt;">solar-pro3</p>
+          <p style="font-size: 8.5pt; color: #434C60; line-height: 1.45;">한국어 long-form 생성 · 추론</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 9pt 12pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 10pt; font-weight: 700; color: #805CFB; margin-bottom: 2pt;">solar-mini</p>
+          <p style="font-size: 8.5pt; color: #434C60; line-height: 1.45;">경량 · 저비용 작업</p>
+        </div>
       </div>
-      <p style="font-size: 9pt; color: #8a857e; line-height: 1.5; margin-top: 10pt;">이미지 PDF · 텍스트 레이어 0</p>
     </div>
 
-    <!-- 우: Upstage (메인, Upstage 브랜드 적용) -->
-    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 18pt 22pt; box-shadow: 0 2pt 6pt rgba(128,92,251,0.15);">
-      <p style="font-size: 9pt; font-weight: 700; color: #805CFB; margin-bottom: 10pt; letter-spacing: 0.04em;">UPSTAGE 스킬</p>
-      <p style="font-size: 13pt; font-weight: 600; color: #1C2537; margin-bottom: 14pt; line-height: 1.4;">"마크다운으로 만들어줘"</p>
-      <div style="background: #FFFFFF; border-radius: 4pt; padding: 10pt 12pt; border: 1pt solid #E9E8F0;">
-        <p style="font-size: 8pt; color: #979CAE; margin-bottom: 3pt;">스킬 명시</p>
-        <p style="font-size: 11pt; font-weight: 600; color: #805CFB;">document-parse API</p>
+    <!-- 우: SKILLS (API) -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 16pt 18pt;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 6pt;">AXIS 2 · SKILLS (입력 계약화)</p>
+      <p style="font-size: 16pt; font-weight: 700; color: #1C2537; margin-bottom: 12pt;">Document Intelligence APIs</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7pt;">
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">document-parse</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">PDF → 구조 보존 마크다운</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">information-extract</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">스키마 기반 데이터 추출</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">ocr</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">단순 텍스트 추출</p>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
+          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">document-classification</p>
+          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">자동 분류 · 라우팅</p>
+        </div>
       </div>
-      <p style="font-size: 9pt; color: #434C60; line-height: 1.5; margin-top: 10pt;">단일 엔드포인트 · layout 인식 포함</p>
     </div>
+  </div>
+
+  <div style="background: #1E1650; border-radius: 8pt; padding: 12pt 18pt; margin-top: 14pt;">
+    <p style="font-size: 11pt; color: #FFFFFF; line-height: 1.5;">한국어 컨텍스트 = <strong style="color: #9CA7FF;">모델(생성)</strong> + <strong style="color: #9CA7FF;">Skills(입력 계약화)</strong> — 양쪽 다 필요</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

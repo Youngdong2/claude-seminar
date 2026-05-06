@@ -16,51 +16,31 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 5</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">실패 패턴 5가지</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Context Rot — 길수록 조용한 부패</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">도구를 잘 쓰는 것만큼 중요한 건, <strong style="color: #2d2a26;">잘못 쓰는 패턴</strong>을 아는 것.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">Chroma Research가 Claude · GPT · Gemini · Qwen 등 <strong style="color: #2d2a26;">18개 최신 모델</strong>을 대상으로 측정한 결과.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10pt 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; opacity: 0.7;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #6b6560;">01</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">컨텍스트 과부하</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"많이 주면 잘하겠지" — 섹션 4의 Rot · Distraction · Confusion</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; text-align: center;">
+      <p style="font-size: 30pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">50k<span style="font-size: 14pt;"> 토큰</span></p>
+      <p style="font-size: 10pt; color: #2d2a26; font-weight: 600; margin-top: 6pt;">20만 토큰 모델이 이미 열화되는 지점</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; line-height: 1.4;">한국어 약 4만 자. 윈도우가 꽉 차기 훨씬 전부터 성능 하락.</p>
     </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt; text-align: center;">
+      <p style="font-size: 30pt; font-weight: 700; color: #c45a3b; line-height: 1.2;">방해문장 <span style="font-size: 20pt;">1개</span></p>
+      <p style="font-size: 10pt; color: #2d2a26; font-weight: 600; margin-top: 6pt;">하나만 섞여도 성능 저하</p>
+      <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; line-height: 1.4;">4개면 급감. "많이 넣으면 좋다" 직관 붕괴.</p>
+    </div>
+  </div>
 
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">02</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">불명확한 요구사항</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"이거 좀 고쳐줘" → LLM은 학습 데이터 기반 <strong style="color: #2d2a26;">추측 구현</strong>. 맞아도 재현성 없음</p>
-    </div>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt; margin-bottom: 10pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.5;"><em>"관련 정보가 컨텍스트에 있느냐가 전부는 아닙니다. 더 중요한 것은 그 정보가 <strong style="color: #c45a3b;">어떻게</strong> 제시되느냐입니다."</em></p>
+    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; text-align: right;">— Chroma Research</p>
+  </div>
 
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">03</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">검증 없는 자동수락</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">"AI가 만들었으니 맞겠지" — 가장 위험한 생각. 자기 작업 평가 시 <strong style="color: #2d2a26;">병리적 낙관주의자</strong></p>
-    </div>
-
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">04</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #2d2a26;">긴 세션 드리프트</p>
-      </div>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.45;">시점 편향 · 오류 중첩 · Mode Collapse — 초반 규칙을 잊고 방향 상실</p>
-    </div>
-
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 14pt; grid-column: 1 / -1;">
-      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
-        <p style="font-size: 8pt; font-weight: 700; color: #c45a3b;">05</p>
-        <p style="font-size: 11pt; font-weight: 700; color: #faf8f5;">권한 과다</p>
-      </div>
-      <p style="font-size: 9pt; color: #a09a94; line-height: 1.45;">"바이패스가 편하니까" — 프롬프트 인젝션 · 토큰 유출 · 프로덕션 사고의 단일 경로</p>
-    </div>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+    <p style="font-size: 10.5pt; color: #2d2a26; line-height: 1.4;">컨텍스트 = <strong>길이가 아닌 신호 대 잡음비</strong>. 쓸 수 있는 만큼 다 채울 필요 없음.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -69,3 +49,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>

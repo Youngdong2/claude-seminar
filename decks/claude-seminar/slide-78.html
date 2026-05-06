@@ -16,39 +16,61 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">실전 세팅 — 다중 세션 병렬</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Solar 위임 — Claude는 두뇌, Solar는 글쟁이</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">cmux(AI 전용 터미널) + Git Worktree — 에이전트 3~4개를 동시에 돌리는 물리적 환경</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;"><code style="background: #ECF0FF; padding: 1pt 5pt; border-radius: 2pt; color: #805CFB; font-weight: 600;">upstage-solar-delegation</code> 스킬 — 긴 한국어 출력 자동 분배. 임계값 ≥ 200 토큰</p>
 
-  <!-- 4-window layout -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin-bottom: 8pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 1 · 메인 작업</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">현재 이슈 구현·수정<br>Opus 모델 · 핵심 컨텍스트 보호</p>
+  <div style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 14pt; margin-bottom: 12pt; align-items: stretch;">
+    <!-- 좌: 위임 흐름 -->
+    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 14pt 16pt;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 10pt;">위임 흐름</p>
+      <div style="display: flex; flex-direction: column; gap: 7pt;">
+        <div style="display: flex; align-items: baseline; gap: 8pt;">
+          <span style="font-size: 9pt; font-weight: 700; color: #805CFB; min-width: 16pt;">1.</span>
+          <p style="font-size: 9.5pt; color: #1C2537; line-height: 1.45;"><strong>Claude</strong> — 계획 · 도구 호출 · 자료 수집</p>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8pt;">
+          <span style="font-size: 9pt; font-weight: 700; color: #805CFB; min-width: 16pt;">2.</span>
+          <p style="font-size: 9.5pt; color: #1C2537; line-height: 1.45;">출력 분량 추정 → 임계값(≥ 200 토큰) 초과?</p>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8pt;">
+          <span style="font-size: 9pt; font-weight: 700; color: #805CFB; min-width: 16pt;">3.</span>
+          <p style="font-size: 9.5pt; color: #1C2537; line-height: 1.45;">자동 spawn → <strong style="color: #805CFB;">solar-pro3</strong> 세션</p>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8pt;">
+          <span style="font-size: 9pt; font-weight: 700; color: #805CFB; min-width: 16pt;">4.</span>
+          <p style="font-size: 9.5pt; color: #1C2537; line-height: 1.45;"><strong>Solar</strong> — 한국어 long-form 생성</p>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8pt;">
+          <span style="font-size: 9pt; font-weight: 700; color: #805CFB; min-width: 16pt;">5.</span>
+          <p style="font-size: 9.5pt; color: #1C2537; line-height: 1.45;">사용자에게 Solar 출력 그대로 반환</p>
+        </div>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; margin-top: 10pt; border: 1pt solid #E9E8F0;">
+        <p style="font-size: 8pt; color: #979CAE; margin-bottom: 2pt;">사용 예</p>
+        <p style="font-size: 9pt; color: #434C60; line-height: 1.4;">"한국어 가이드 5천자 작성" → Claude 계획·자료 수집 → Solar 본문 생성</p>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 2 · 조사·탐색</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">코드베이스 탐색, 문서 검색<br>Explore 서브에이전트 역할</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 3 · 감시</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">테스트·빌드 로그 실시간 확인<br>에이전트 완료 알림 수신</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
-      <p style="font-size: 9pt; font-weight: 700; color: #c45a3b; margin-bottom: 3pt;">창 4 · 이슈·PR</p>
-      <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Linear 이슈 확인, PR 생성<br>git 상태·브랜치 관리</p>
+
+    <!-- 우: 가격 임팩트 -->
+    <div style="background: #1E1650; border-radius: 8pt; padding: 14pt 18pt; display: flex; flex-direction: column; justify-content: center;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #9CA7FF; letter-spacing: 0.06em; margin-bottom: 6pt;">OUTPUT TOKEN 비용</p>
+      <p style="font-size: 11pt; color: #FFFFFF; margin-bottom: 10pt;">solar-pro3 vs Claude Opus 4.7</p>
+      <div style="display: flex; align-items: baseline; gap: 8pt; margin-bottom: 10pt;">
+        <p style="font-size: 56pt; font-weight: 700; color: #9CA7FF; line-height: 1; letter-spacing: -0.02em;">1<span style="color: #C2CBFF;">/</span>42</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.06); border-radius: 4pt; padding: 9pt 12pt;">
+        <p style="font-size: 8.5pt; color: #C2CBFF; margin-bottom: 3pt;">$ / 1M output tokens</p>
+        <p style="font-size: 9pt; color: #FFFFFF; line-height: 1.5;">Solar Pro 3 — <strong style="color: #9CA7FF;">$0.60</strong></p>
+        <p style="font-size: 9pt; color: #FFFFFF; line-height: 1.5;">Opus 4.7 — <strong>$25.00</strong></p>
+      </div>
+      <p style="font-size: 8pt; color: #979CAE; margin-top: 8pt; line-height: 1.4;">5천자 한국어 보고서: Opus $0.10 → Solar $0.0024</p>
     </div>
   </div>
 
-  <!-- Worktree -->
-  <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; margin-bottom: 8pt;">
-    <p style="font-size: 9pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">Git Worktree — 창마다 독립 작업 디렉토리</p>
-    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt;">claude --worktree feature-auth</code> 한 줄로 워크트리 + 브랜치 + 세션 동시 생성. 파일 충돌 0, 컨텍스트 오염 0.</p>
-  </div>
-
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 10pt 18pt;">
-    <p style="font-size: 10pt; color: #faf8f5;">핵심 — 메인 컨텍스트를 오염시키지 않는 것. 탐색은 서브 창에서, 결과만 메인에 전달.</p>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 11pt 18pt;">
+    <p style="font-size: 11pt; color: #2d2a26; line-height: 1.45;">multi-model의 진화형 — <strong style="color: #c45a3b;">사람이 매번 모델 고를 필요 없음</strong>. 시스템이 강점에 따라 자동 분배</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

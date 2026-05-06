@@ -14,34 +14,67 @@
   </style>
 </head>
 <body>
-  <!-- 헤더 -->
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 2</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Claude Code 생태계</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">확장 레이어 구조</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">도구 자체보다 <strong style="color: #2d2a26;">주변 생태계</strong>가 더 빠르게 커지는 중.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">CLAUDE.md만으로 시작. 필요에 따라 하나씩 추가.</p>
 
-  <!-- 3컬럼 -->
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16pt; align-items: center;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 20pt; display: flex; flex-direction: column; gap: 8pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">공식 확장 포인트</p>
-      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26;">스킬 · 플러그인 · MCP · 훅</p>
-      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">Anthropic이 직접 설계한 확장 축 4종. 공식 문서·마켓 제공.</p>
+  <div style="display: flex; flex-direction: column; gap: 6pt;">
+    <!-- 기초 -->
+    <div style="display: grid; grid-template-columns: 80pt 1fr; gap: 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; text-align: right;">기초</p>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 12pt 18pt; display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 12pt; font-weight: 600; color: #faf8f5;">CLAUDE.md</p>
+        <p style="font-size: 10pt; color: #a09a94;">모든 세션에서 로드되는 프로젝트 컨텍스트</p>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 18pt 20pt; display: flex; flex-direction: column; gap: 8pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">오픈소스 커뮤니티</p>
-      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26;">awesome-claude-code</p>
-      <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">GitHub 기반 플러그인·스킬·워크플로우 모음. 레포·디스코드 활발.</p>
+
+    <!-- 자동화 -->
+    <div style="display: grid; grid-template-columns: 80pt 1fr; gap: 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; text-align: right;">자동화</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6pt;">
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt;">
+          <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Skills</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 2pt;">재사용 가능한 워크플로우</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt;">
+          <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Hooks</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 2pt;">이벤트 기반 자동 실행</p>
+        </div>
+      </div>
     </div>
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 20pt; display: flex; flex-direction: column; gap: 8pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b;">한국 커뮤니티</p>
-      <p style="font-size: 14pt; font-weight: 600; color: #faf8f5;">블로그 · 영상 · 세미나</p>
-      <p style="font-size: 10pt; color: #a09a94; line-height: 1.5;">한글 자료와 실무 사례가 빠르게 누적. 전사 도입에 필수 조건.</p>
+
+    <!-- 연결 -->
+    <div style="display: grid; grid-template-columns: 80pt 1fr; gap: 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; text-align: right;">연결</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt; display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">MCP</p>
+        <p style="font-size: 9pt; color: #6b6560;">외부 서비스 통합 — Notion, GitHub, Slack 등 100개+</p>
+      </div>
+    </div>
+
+    <!-- 확장 -->
+    <div style="display: grid; grid-template-columns: 80pt 1fr; gap: 12pt; align-items: center;">
+      <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; text-align: right;">확장</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6pt;">
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt;">
+          <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Subagents</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 2pt;">격리된 병렬 작업</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt;">
+          <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Agent Teams</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 2pt;">독립 세션 협업</p>
+        </div>
+        <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt;">
+          <p style="font-size: 11pt; font-weight: 600; color: #2d2a26;">Plugins</p>
+          <p style="font-size: 9pt; color: #6b6560; margin-top: 2pt;">패키징 · 배포</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- 푸터 -->
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
     <p style="font-size: 9pt; color: #6b6560;">22</p>

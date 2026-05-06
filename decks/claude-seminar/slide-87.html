@@ -16,44 +16,47 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">AI를 잘 쓰는 법 — 결국 하나</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">이 발표가 증거</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">코드 · 문서 · 기획 · 디자인 — <strong style="color: #2d2a26;">도메인은 달라도 원칙은 같음</strong>.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">이 장표 <strong style="color: #2d2a26;">89장 전부</strong> — Claude Code로 제작. HTML 한 줄 직접 작성하지 않음.</p>
 
-  <div style="display: flex; align-items: center; gap: 14pt; margin-bottom: 16pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; flex: 1; text-align: center;">
-      <p style="font-size: 12pt; font-weight: 700; color: #2d2a26;">원하는 것을<br>글로 먼저</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">사용한 원칙 — 이 발표에서 다룬 것 그대로</p>
+      <div style="display: flex; flex-direction: column; gap: 4pt;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>Spec-first</strong> — sections/README.md에 내용 먼저</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md</strong> — 디자인 토큰 · 호흡 규칙 · 카피 원칙 고정</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>검증 분리</strong> — 피드백 → pending.md → 검토 후 반영</p>
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>자동화</strong> — slides-grab으로 HTML → PDF 일괄 변환</p>
+      </div>
     </div>
-    <p style="font-size: 18pt; color: #c45a3b; font-weight: 700;">→</p>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; flex: 1; text-align: center;">
-      <p style="font-size: 12pt; font-weight: 700; color: #2d2a26;">규칙을<br>문서로 고정</p>
-    </div>
-    <p style="font-size: 18pt; color: #c45a3b; font-weight: 700;">→</p>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; flex: 1; text-align: center;">
-      <p style="font-size: 12pt; font-weight: 700; color: #2d2a26;">결과를<br>사람이 검증</p>
-    </div>
-  </div>
 
-  <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 18pt; margin-bottom: 12pt;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt;">
-      <div>
-        <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; margin-bottom: 3pt;">이 발표</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">섹션 README → CLAUDE.md → 피드백 검수</p>
-      </div>
-      <div>
-        <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; margin-bottom: 3pt;">코딩</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Spec → 하네스 규칙 → 테스트 검증</p>
-      </div>
-      <div>
-        <p style="font-size: 9pt; font-weight: 600; color: #c45a3b; margin-bottom: 3pt;">업무 전반</p>
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">요구사항 정리 → 기준 문서 → 결과 확인</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">실제 워크플로우</p>
+      <div style="display: flex; flex-direction: column; gap: 6pt;">
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">1</span>
+          <p style="font-size: 9pt; color: #2d2a26;">섹션별 내용을 자연어로 정리</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">2</span>
+          <p style="font-size: 9pt; color: #2d2a26;">CLAUDE.md에 디자인 규칙 명세</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">3</span>
+          <p style="font-size: 9pt; color: #2d2a26;">Claude Code가 slide-XX.html 생성</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8pt;">
+          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">4</span>
+          <p style="font-size: 9pt; color: #2d2a26;">피드백 8회 반복 → 최종 PDF</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt;">
-    <p style="font-size: 11pt; color: #faf8f5; text-align: center;">새로 배울 것 없음 — <strong style="color: #c45a3b;">이미 알고 있는 원칙</strong>을 AI 시대에 더 의식적으로</p>
+    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.45;">규칙을 하네스로 고정 → 실행은 에이전트에게 → 결과를 검수. <strong style="color: #c45a3b;">이 발표의 제작 과정 자체가 증거.</strong></p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

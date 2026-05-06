@@ -16,47 +16,38 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 8</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">이 발표가 증거</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">재료 3 — slides-grab, Skill 경계로 박힌 분리</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">이 장표 <strong style="color: #2d2a26;">89장 전부</strong> — Claude Code로 제작. HTML 한 줄 직접 작성하지 않음.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;"><strong style="color: #2d2a26;">slides-grab</strong> — 오픈소스 Claude Code용 프레젠테이션 Skill. 아웃라인 → HTML 슬라이드 → PDF를 <strong style="color: #2d2a26;">3단으로 분리</strong>.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; margin-bottom: 12pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">사용한 원칙 — 이 발표에서 다룬 것 그대로</p>
-      <div style="display: flex; flex-direction: column; gap: 4pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>Spec-first</strong> — sections/README.md에 내용 먼저</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>CLAUDE.md</strong> — 디자인 토큰 · 호흡 규칙 · 카피 원칙 고정</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>검증 분리</strong> — 피드백 → pending.md → 검토 후 반영</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.5;"><strong>자동화</strong> — slides-grab으로 HTML → PDF 일괄 변환</p>
-      </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; margin-bottom: 12pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 1 · PLAN</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-plan</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;"><code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">slide-outline.md</code> 생성</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55; margin-top: 3pt;">사용자 승인까지 반복</p>
     </div>
-
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">실제 워크플로우</p>
-      <div style="display: flex; flex-direction: column; gap: 6pt;">
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">1</span>
-          <p style="font-size: 9pt; color: #2d2a26;">섹션별 내용을 자연어로 정리</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">2</span>
-          <p style="font-size: 9pt; color: #2d2a26;">CLAUDE.md에 디자인 규칙 명세</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">3</span>
-          <p style="font-size: 9pt; color: #2d2a26;">Claude Code가 slide-XX.html 생성</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8pt;">
-          <span style="font-size: 16pt; font-weight: 700; color: #c45a3b;">4</span>
-          <p style="font-size: 9pt; color: #2d2a26;">피드백 8회 반복 → 최종 PDF</p>
-        </div>
-      </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 2 · DESIGN</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-design</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;">승인된 아웃라인 →</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;"><code style="background: rgba(0,0,0,0.06); padding: 1pt 3pt; border-radius: 2pt;">slide-XX.html</code> 생성·수정</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt;">
+      <p style="font-size: 8pt; color: #c45a3b; font-weight: 700; margin-bottom: 3pt;">STAGE 3 · EXPORT</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">slides-grab-export</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55;">HTML → PDF 변환</p>
+      <p style="font-size: 8.5pt; color: #6b6560; line-height: 1.55; margin-top: 3pt;">산출물 검증</p>
     </div>
   </div>
 
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 12pt 18pt;">
-    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.45;">규칙을 하네스로 고정 → 실행은 에이전트에게 → 결과를 검수. <strong style="color: #c45a3b;">이 발표의 제작 과정 자체가 증거.</strong></p>
+  <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 16pt; margin-bottom: 10pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>왜 3단인가</strong> — 단계 사이에 사용자 승인을 <strong style="color: #c45a3b;">물리적으로 강제</strong>. Plan에서 방향이 틀어지면 Design·Export 비용 전부 낭비.</p>
+  </div>
+
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 11pt 18pt;">
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.5;">Plan → Design → Export 사이에 <strong style="color: #c45a3b;">사람의 승인이 물리적으로 끼어듦</strong> — 건너뛸 수 없는 관문.</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

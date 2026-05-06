@@ -16,55 +16,37 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 7</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Upstage = 모델 + 입력 계약화</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">한 걸음 더 — 단일 모델 탈피</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 18pt;">단일 API가 아닌 — LLM 모델과 도메인 특화 Skills 두 축으로 한국어 컨텍스트 공략</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">섹션 6이 <strong style="color: #2d2a26;">여러 Claude</strong>였다면, 이건 <strong style="color: #2d2a26;">여러 종류의 AI</strong>. 모델마다 상이한 훈련 분포·blind spot.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 16pt; align-items: start;">
-    <!-- 좌: SOLAR (모델) -->
-    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 16pt 18pt;">
-      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 6pt;">AXIS 1 · MODEL</p>
-      <p style="font-size: 16pt; font-weight: 700; color: #1C2537; margin-bottom: 12pt;">Solar (LLM)</p>
-      <div style="display: flex; flex-direction: column; gap: 8pt;">
-        <div style="background: #FFFFFF; border-radius: 4pt; padding: 9pt 12pt; border: 1pt solid #E9E8F0;">
-          <p style="font-size: 10pt; font-weight: 700; color: #805CFB; margin-bottom: 2pt;">solar-pro3</p>
-          <p style="font-size: 8.5pt; color: #434C60; line-height: 1.45;">한국어 long-form 생성 · 추론</p>
-        </div>
-        <div style="background: #FFFFFF; border-radius: 4pt; padding: 9pt 12pt; border: 1pt solid #E9E8F0;">
-          <p style="font-size: 10pt; font-weight: 700; color: #805CFB; margin-bottom: 2pt;">solar-mini</p>
-          <p style="font-size: 8.5pt; color: #434C60; line-height: 1.45;">경량 · 저비용 작업</p>
-        </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- /ask -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ask [provider]</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">Claude 답이 불확실할 때 다른 모델에 의견 요청</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #6b6560;"># 구조 리뷰를 Codex에게</p>
+        <p style="font-size: 9pt; color: #faf8f5; line-height: 1.5;">/ask codex "이 계획에서 짠 구조<br>&nbsp;&nbsp;리뷰해줘. 빠진 부분 있는지"</p>
+        <p style="font-size: 9pt; color: #6b6560; margin-top: 6pt;"># 디자인 자문을 Gemini에게</p>
+        <p style="font-size: 9pt; color: #faf8f5; line-height: 1.5;">/ask gemini "이 카드 레이아웃<br>&nbsp;&nbsp;가독성 어떤지 피드백 줘"</p>
       </div>
     </div>
 
-    <!-- 우: SKILLS (API) -->
-    <div style="background: #ECF0FF; border-left: 3pt solid #805CFB; border-radius: 8pt; padding: 16pt 18pt;">
-      <p style="font-size: 8.5pt; font-weight: 700; color: #805CFB; letter-spacing: 0.06em; margin-bottom: 6pt;">AXIS 2 · SKILLS (입력 계약화)</p>
-      <p style="font-size: 16pt; font-weight: 700; color: #1C2537; margin-bottom: 12pt;">Document Intelligence APIs</p>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7pt;">
-        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
-          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">document-parse</p>
-          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">PDF → 구조 보존 마크다운</p>
-        </div>
-        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
-          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">information-extract</p>
-          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">스키마 기반 데이터 추출</p>
-        </div>
-        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
-          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">ocr</p>
-          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">단순 텍스트 추출</p>
-        </div>
-        <div style="background: #FFFFFF; border-radius: 4pt; padding: 8pt 11pt; border: 1pt solid #E9E8F0;">
-          <p style="font-size: 9pt; font-weight: 700; color: #805CFB;">document-classification</p>
-          <p style="font-size: 8pt; color: #434C60; margin-top: 1pt;">자동 분류 · 라우팅</p>
-        </div>
+    <!-- /ccg -->
+    <div style="display: flex; flex-direction: column; gap: 8pt;">
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">/ccg — Claude · Codex · Gemini</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">세 모델 동시 송출 → <strong style="color: #2d2a26;">합의·불일치·불확실</strong> 분리 표시</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt;">
+        <p style="font-size: 9pt; color: #2d2a26; font-weight: 600; margin-bottom: 4pt;">특히 빛나는 순간</p>
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">· 아키텍처 결정 (되돌리기 어려움)<br>· 디버깅이 막혔을 때<br>· 머지 전 코드 리뷰 최종 확인<br>· 계획 피드백 (다른 시각의 보완)</p>
       </div>
     </div>
-  </div>
-
-  <div style="background: #1E1650; border-radius: 8pt; padding: 12pt 18pt; margin-top: 14pt;">
-    <p style="font-size: 11pt; color: #FFFFFF; line-height: 1.5;">한국어 컨텍스트 = <strong style="color: #9CA7FF;">모델(생성)</strong> + <strong style="color: #9CA7FF;">Skills(입력 계약화)</strong> — 양쪽 다 필요</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">

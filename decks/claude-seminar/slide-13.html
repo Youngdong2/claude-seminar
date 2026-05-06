@@ -17,27 +17,41 @@
   <!-- 헤더 -->
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 1</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">여전히 남는 기초</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">개발자의 새로운 역할</h2>
   </div>
 
-  <!-- 인용문 -->
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 24pt 32pt; margin-bottom: 24pt;">
-    <p style="font-size: 15pt; font-weight: 500; color: #faf8f5; line-height: 1.6; text-align: center;">
-      <em>"AI가 더 많이 해줄수록,<br>기초 지식을 가진 사람의 경쟁력이<br>역설적으로 올라간다"</em>
-    </p>
-  </div>
-
-  <!-- 2컬럼: 변하는 것 vs 변하지 않는 것 -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 20pt 24pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">변하는 것</p>
-      <p style="font-size: 18pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">직접 코드를 타이핑하는 비중</p>
-      <p style="font-size: 11pt; color: #6b6560; line-height: 1.6;">데모까지는 쉽지만, 실서비스로 만드는 건 전혀 다른 레벨</p>
+  <!-- 흐름도 + 비유 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32pt;">
+    <!-- 왼쪽: 흐름도 -->
+    <div style="display: flex; flex-direction: column; justify-content: center; gap: 0;">
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; text-align: center;">
+        <p style="font-size: 13pt; font-weight: 500; color: #2d2a26;">코드를 잘 짜는 능력</p>
+      </div>
+      <div style="text-align: center; padding: 6pt 0;">
+        <p style="font-size: 16pt; color: #c45a3b;">↓</p>
+      </div>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 16pt 20pt; text-align: center;">
+        <p style="font-size: 13pt; font-weight: 500; color: #2d2a26;">문서를 잘 쓰는 능력</p>
+      </div>
+      <div style="text-align: center; padding: 6pt 0;">
+        <p style="font-size: 16pt; color: #c45a3b;">↓</p>
+      </div>
+      <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 22pt; text-align: center;">
+        <p style="font-size: 16pt; font-weight: 600; color: #faf8f5;">컨텍스트를 설계하는 능력</p>
+      </div>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 20pt 24pt;">
-      <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; margin-bottom: 10pt;">변하지 않는 것</p>
-      <p style="font-size: 18pt; font-weight: 600; color: #2d2a26; margin-bottom: 8pt;">시스템을 이해하는 능력</p>
-      <p style="font-size: 11pt; color: #6b6560; line-height: 1.6;">보안 · 동시접속 · DB 스키마 · 캐싱<br>기본기 없이는 질문조차 불가</p>
+
+    <!-- 오른쪽: 비유 (보조) -->
+    <div style="display: flex; flex-direction: column; justify-content: center; gap: 18pt;">
+      <p style="font-size: 8.5pt; font-weight: 700; color: #c45a3b; letter-spacing: 0.06em;">비유로 보면</p>
+      <div style="border-left: 2pt solid #c45a3b; padding-left: 14pt;">
+        <p style="font-size: 12pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">건축가</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">벽돌 쌓기 대신 설계도 작성</p>
+      </div>
+      <div style="border-left: 2pt solid #c45a3b; padding-left: 14pt;">
+        <p style="font-size: 12pt; font-weight: 600; color: #2d2a26; margin-bottom: 4pt;">오케스트라 지휘자</p>
+        <p style="font-size: 10pt; color: #6b6560; line-height: 1.5;">직접 연주 대신 전체 조율<br>CLAUDE.md = 총보</p>
+      </div>
     </div>
   </div>
 

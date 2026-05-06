@@ -16,41 +16,32 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md — 프로젝트의 "헌법"</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">하네스를 구성하는 4가지 도구</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">모든 세션이 시작될 때 자동으로 로드되는 지속 컨텍스트. <strong style="color: #2d2a26;">하네스의 가장 기본적인 레이어</strong>.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">Claude Code가 제공하는 확장 축. 이 4가지를 조합해 하네스 구축.</p>
 
-  <!-- 핵심 오해 correction -->
-  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">먼저 짚고 갈 것 — "지시가 아니라 컨텍스트"</p>
-    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.6;">시스템 프롬프트가 아님 — 사용자 메시지로 주입.<br>강제가 아닌 <strong style="color: #c45a3b;">권고</strong>. 모호하면 Claude가 임의 해석.</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">CLAUDE.md</p>
+      <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">프로젝트 규칙<br>세션마다 자동 로드</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Skills</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">재사용 워크플로우<br><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">/명령</code>으로 호출</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Hooks</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">이벤트 기반 자동화<br>LLM 우회 — 강제 실행</p>
+    </div>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
+      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Plugins</p>
+      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">팀 단위 배포 패키지<br>npm install로 공유</p>
+    </div>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
-    <!-- 좋은 예 -->
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">✓ 검증 가능 · 구체적</p>
-      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6;">
-          - 슬라이드 규격: 720pt × 405pt<br>
-          - 종결어미: 명사형·구 단위만<br>
-          - 금지: ~합니다 / ~입니다 공손체<br>
-          - 디자인 토큰: bg=#faf8f5
-        </p>
-      </div>
-    </div>
-    <!-- 나쁜 예 -->
-    <div>
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">✗ 모호 · 검증 불가</p>
-      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
-        <p style="font-size: 9pt; color: #6b6560; line-height: 1.8;">
-          깔끔한 코드 작성<br>
-          적절한 에러 핸들링<br>
-          좋은 패턴 사용
-        </p>
-      </div>
-    </div>
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt;">
+    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.4;"><strong>강제력 순서</strong>: CLAUDE.md(권고) → Skills(호출 시) → Hooks(자동 차단) → Plugins(팀 배포)</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -59,5 +50,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

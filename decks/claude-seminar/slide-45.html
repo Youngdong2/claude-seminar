@@ -16,42 +16,42 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md 운영 원칙</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">CLAUDE.md — 프로젝트의 "헌법"</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 12pt;">공식 문서가 느낌표까지 붙여서 경고한 유일한 원칙 — <strong style="color: #2d2a26;">짧을수록 효과적.</strong></p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">모든 세션이 시작될 때 자동으로 로드되는 지속 컨텍스트. <strong style="color: #2d2a26;">하네스의 가장 기본적인 레이어</strong>.</p>
 
-  <!-- 한 줄 삭제 테스트 (강조) -->
-  <div style="background: #2d2a26; border-left: 3pt solid #c45a3b; border-radius: 8pt; padding: 12pt 20pt; margin-bottom: 12pt;">
-    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">한 줄 삭제 테스트</p>
-    <p style="font-size: 11pt; color: #faf8f5; line-height: 1.4; font-style: italic;">"한 줄씩 지워보세요. 지워도 Claude가 똑같이 동작하면 — 그 줄은 잡음."</p>
-    <p style="font-size: 9pt; color: #6b6560; margin-top: 4pt; text-align: right;">— Claude Code Best Practices</p>
+  <!-- 핵심 오해 correction -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
+    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 4pt;">먼저 짚고 갈 것 — "지시가 아니라 컨텍스트"</p>
+    <p style="font-size: 10.5pt; color: #faf8f5; line-height: 1.6;">시스템 프롬프트가 아님 — 사용자 메시지로 주입.<br>강제가 아닌 <strong style="color: #c45a3b;">권고</strong>. 모호하면 Claude가 임의 해석.</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;">
-    <!-- 크기 가이드라인 -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">크기 가이드라인</p>
-      <div style="display: flex; flex-direction: column; gap: 3pt;">
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>~60줄</strong> · HumanLayer (엄격파)</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>A4 약 1.5장</strong> · Boris Cherny 팀</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>200줄 이하</strong> · 공식 문서</p>
-        <p style="font-size: 9pt; color: #2d2a26;"><strong>500줄 이하</strong> · Marconato</p>
-      </div>
-      <p style="font-size: 8.5pt; color: #6b6560; margin-top: 6pt; line-height: 1.4;">숫자보다 <strong>신호 대 잡음비</strong>. 같은 신호 → 짧을수록 우세.</p>
-    </div>
-
-    <!-- 비대해지면 모듈화 -->
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 12pt 16pt;">
-      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">비대해지면 — 모듈화</p>
-      <div style="display: flex; flex-direction: column; gap: 5pt;">
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">@path/to/file</code> — 다른 파일을 import (최대 5홉)</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">.claude/rules/</code> — 경로별 규칙, 읽을 때만 트리거</p>
-        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.4;"><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">/compact</code> 후에도 CLAUDE.md는 재로드</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14pt;">
+    <!-- 좋은 예 -->
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #2d2a26; margin-bottom: 6pt;">✓ 검증 가능 · 구체적</p>
+      <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #2d2a26; line-height: 1.6;">
+          - 슬라이드 규격: 720pt × 405pt<br>
+          - 종결어미: 명사형·구 단위만<br>
+          - 금지: ~합니다 / ~입니다 공손체<br>
+          - 디자인 토큰: bg=#faf8f5
+        </p>
       </div>
     </div>
+    <!-- 나쁜 예 -->
+    <div>
+      <p style="font-size: 9.5pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">✗ 모호 · 검증 불가</p>
+      <div style="background: #f0ebe3; border-radius: 6pt; padding: 10pt 14pt; font-family: monospace;">
+        <p style="font-size: 9pt; color: #6b6560; line-height: 1.8;">
+          깔끔한 코드 작성<br>
+          적절한 에러 핸들링<br>
+          좋은 패턴 사용
+        </p>
+      </div>
+    </div>
   </div>
-
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
     <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>

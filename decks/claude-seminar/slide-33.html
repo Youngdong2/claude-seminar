@@ -9,28 +9,53 @@
       font-family: 'Pretendard', sans-serif;
       background: #faf8f5;
       padding: 40pt 48pt;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center;
+      display: flex; flex-direction: column; position: relative;
     }
   </style>
 </head>
 <body>
-  <p style="font-size: 10pt; font-weight: 600; color: #c45a3b; letter-spacing: 0.06em; margin-bottom: 24pt;">결론</p>
+  <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 18pt;">
+    <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 3</p>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">방법론 비교</h2>
+  </div>
 
-  <p style="font-size: 32pt; font-weight: 700; color: #2d2a26; margin-bottom: 28pt;">Spec + TDD</p>
-
-  <div style="display: grid; grid-template-columns: 1fr 40pt 1fr; gap: 0; align-items: center; margin-bottom: 28pt;">
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 20pt;">
-      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">Spec</p>
-      <p style="font-size: 11pt; color: #6b6560;">"무엇을" 정의<br>의도 명확화</p>
+  <div style="display: flex; flex-direction: column; gap: 6pt;">
+    <!-- 헤더 -->
+    <div style="display: grid; grid-template-columns: 130pt 1fr 1fr; gap: 10pt; padding: 0 14pt;">
+      <p style="font-size: 9pt;"></p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; text-align: center;">TDD</p>
+      <p style="font-size: 10pt; font-weight: 700; color: #2d2a26; text-align: center;">SDD</p>
     </div>
-    <p style="font-size: 20pt; color: #c45a3b; text-align: center;">+</p>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 20pt;">
-      <p style="font-size: 14pt; font-weight: 600; color: #2d2a26; margin-bottom: 6pt;">TDD</p>
-      <p style="font-size: 11pt; color: #6b6560;">"정말 그렇게 됐는지" 검증<br>결과를 자동으로 확인</p>
+    <!-- 인간의 역할 -->
+    <div style="display: grid; grid-template-columns: 130pt 1fr 1fr; gap: 10pt; background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt; align-items: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">인간의 역할</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">테스트 작성자</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">스펙 작성자</p>
+    </div>
+    <!-- 검증 방식 -->
+    <div style="display: grid; grid-template-columns: 130pt 1fr 1fr; gap: 10pt; background: #f0ebe3; border-radius: 6pt; padding: 12pt 14pt; align-items: center;">
+      <p style="font-size: 10pt; font-weight: 600; color: #2d2a26;">검증 방식</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">자동 테스트</p>
+      <p style="font-size: 10pt; color: #6b6560; text-align: center;">스펙 검증</p>
+    </div>
+    <!-- 최적 장면 (강조) -->
+    <div style="display: grid; grid-template-columns: 130pt 1fr 1fr; gap: 10pt; background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 14pt 14pt; align-items: center;">
+      <p style="font-size: 10.5pt; font-weight: 700; color: #c45a3b;">최적 장면</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; text-align: center;">기존 코드 수정 · 버그 수정</p>
+      <p style="font-size: 11pt; font-weight: 600; color: #2d2a26; text-align: center;">신규 기능 · 대규모 설계</p>
     </div>
   </div>
 
-  <p style="font-size: 13pt; color: #6b6560; line-height: 1.6;">스펙 없는 TDD — 나무는 보되 숲은 놓침<br>TDD 없는 스펙 — 검증 수단 부재</p>
+  <!-- 결론 -->
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 16pt 24pt; margin-top: 16pt;">
+    <p style="font-size: 12pt; color: #faf8f5; text-align: center;">
+      가장 강력한 조합 — <span style="font-weight: 600; color: #c45a3b;">SDD로 정의 + TDD로 검증</span>
+    </p>
+  </div>
+
+  <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 9pt; color: #6b6560;">AI에게 일 잘 시키는 기술</p>
+    <p style="font-size: 9pt; color: #6b6560;">33</p>
+  </div>
 </body>
 </html>

@@ -16,32 +16,33 @@
 <body>
   <div style="display: flex; align-items: center; gap: 12pt; margin-bottom: 14pt;">
     <p style="display: inline-block; padding: 3pt 9pt; background: #c45a3b; color: #fff; border-radius: 4pt; font-size: 8pt; font-weight: 600;">SECTION 4</p>
-    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">하네스를 구성하는 4가지 도구</h2>
+    <h2 style="font-size: 22pt; font-weight: 600; color: #2d2a26;">Right Altitude — 지시문의 고도</h2>
   </div>
 
-  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 16pt;">Claude Code가 제공하는 확장 축. 이 4가지를 조합해 하네스 구축.</p>
+  <p style="font-size: 10.5pt; color: #6b6560; margin-bottom: 14pt;">CLAUDE.md나 프롬프트를 쓸 때 가장 흔한 실수는 <strong style="color: #2d2a26;">두 극단</strong>.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
-    <div style="background: #2d2a26; border-radius: 8pt; padding: 18pt 14pt; text-align: center;">
-      <p style="font-size: 14pt; font-weight: 700; color: #c45a3b; margin-bottom: 8pt;">CLAUDE.md</p>
-      <p style="font-size: 9.5pt; color: #a09a94; line-height: 1.5;">프로젝트 규칙<br>세션마다 자동 로드</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin-bottom: 14pt;">
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 낮음 · OVER-SPECIFIED</p>
+      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">모든 케이스를 if/else로 박기</p>
+      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 예외 상황에서 brittle</p>
     </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
-      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Skills</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">재사용 워크플로우<br><code style="background: #e8e1d5; padding: 1pt 4pt; border-radius: 2pt; font-size: 8.5pt;">/명령</code>으로 호출</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
-      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Hooks</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">이벤트 기반 자동화<br>LLM 우회 — 강제 실행</p>
-    </div>
-    <div style="background: #f0ebe3; border-radius: 6pt; padding: 18pt 14pt; text-align: center;">
-      <p style="font-size: 14pt; font-weight: 700; color: #2d2a26; margin-bottom: 8pt;">Plugins</p>
-      <p style="font-size: 9.5pt; color: #6b6560; line-height: 1.5;">팀 단위 배포 패키지<br>npm install로 공유</p>
+    <div style="background: #f0ebe3; border-radius: 6pt; padding: 14pt 18pt;">
+      <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">너무 높음 · UNDER-SPECIFIED</p>
+      <p style="font-size: 10pt; color: #2d2a26; margin-bottom: 4pt;">"잘 해줘", "깔끔하게"</p>
+      <p style="font-size: 9pt; color: #6b6560; font-style: italic;">→ 모델이 추측, 세션마다 결과 다름</p>
     </div>
   </div>
 
-  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 16pt;">
-    <p style="font-size: 10pt; color: #2d2a26; line-height: 1.4;"><strong>강제력 순서</strong>: CLAUDE.md(권고) → Skills(호출 시) → Hooks(자동 차단) → Plugins(팀 배포)</p>
+  <div style="background: #2d2a26; border-radius: 8pt; padding: 14pt 20pt; margin-bottom: 12pt;">
+    <p style="font-size: 10pt; font-weight: 700; color: #c45a3b; margin-bottom: 6pt;">올바른 고도 공식</p>
+    <p style="font-size: 13pt; font-weight: 600; color: #faf8f5;">원칙 1줄 &nbsp;+&nbsp; 이유(why) 1줄 &nbsp;+&nbsp; 예시 1~2개</p>
+    <p style="font-size: 9pt; color: #a09a94; margin-top: 4pt; line-height: 1.4;">이게 붙어야 새 상황에도 일반화 가능.</p>
+  </div>
+
+  <div style="background: #f0ebe3; border-left: 3pt solid #c45a3b; border-radius: 6pt; padding: 10pt 14pt;">
+    <p style="font-size: 9.5pt; color: #2d2a26; line-height: 1.5;"><strong>자가진단 2문항:</strong></p>
+    <p style="font-size: 9pt; color: #6b6560; line-height: 1.5;">① 의도하지 않은 상황에서도 유효 → OK<br>② 아무 세션에 붙여도 행동 불변 → 너무 높음</p>
   </div>
 
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
@@ -50,3 +51,5 @@
   </div>
 </body>
 </html>
+</content>
+</invoke>
