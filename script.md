@@ -748,13 +748,15 @@ Oh My Claude Code, 줄여서 OMC라는 플러그인이 있습니다. 한국 오�
 
 ## 슬라이드 74 — Upstage = 모델 + 입력 계약화
 
-방금 OMC를 통해 Claude, Codex, Gemini 같은 일반 multi-model 패턴을 봤습니다. 그런데 여기서 자연스럽게 따라오는 질문이 있죠 — "한국어 작업이라면 어디에 의존해야 하나." 영어권 모델 셋에 한국어 컨텍스트를 통째로 맡기긴 좀 부족하거든요.
+방금 본 `/ask`나 `/ccg`는 LLM 답변을 다른 LLM에게 검증받는 패턴이었습니다. Upstage도 multi-model 맥락에서 함께 쓰면 좋은 도구인데, 좀 결이 다른 보완을 해줍니다.
 
-여기서 Upstage가 흥미로운 위치에 있습니다. 단일 API 회사가 아니라 **두 축**으로 한국어 컨텍스트를 공략합니다.
+다른 LLM이 옆에 붙는 게 아니라, **LLM이 일을 시작하기 전과 끝나는 단계**를 받쳐주는 도구입니다. 단일 API가 아니라 두 축으로 구성돼 있습니다.
 
-첫째 축은 모델 — Solar Pro 3, Solar Mini 같은 LLM. 한국어 long-form 생성에 강점이 있습니다. 둘째 축은 Skills — Document Parse, Information Extraction, OCR, Document Classification 같은 도메인 특화 API입니다.
+첫째 축은 Skills — Document Parse, Information Extraction, OCR, Document Classification 같은 입력 가공 API입니다. LLM이 문서를 읽기 전에 구조를 살려서 넘겨주는 역할이에요.
 
-한국어 컨텍스트는 모델만 좋아서도, API만 좋아서도 부족합니다. 두 축이 같이 가야 하는데, 지금부터 이 두 축이 실제로 어떻게 작동하는지 — 직접 검증한 결과로 보여드리겠습니다.
+둘째 축은 Model — Solar Pro 3, Solar Mini 같은 한국어 특화 LLM입니다. 긴 한국어 출력을 저비용으로 처리할 때 유용합니다.
+
+지금부터 이 두 축이 실제로 어떻게 작동하는지 — 직접 검증한 결과로 보여드리겠습니다.
 
 ---
 
@@ -804,7 +806,7 @@ Solar 모델 활용 패턴을 하나 보여드릴게요. `upstage-solar-delegati
 
 첫째, 비용이에요. output 토큰 비용이 Claude Opus 대비 **1/42**입니다. Solar Pro 3는 1M 토큰당 0.6달러, Opus 4.7은 25달러. 5천자 보고서로 치면 Opus는 0.10달러, Solar는 0.0024달러죠.
 
-둘째, 한국어 자연스러움입니다. 한국어 long-form은 Solar가 더 자연스럽거든요.
+둘째, 한국어 특화 모델이라는 점입니다. Solar는 한국어 데이터로 추가 튜닝된 모델이라, 보고서·문서 같은 long-form에서 톤이 안정적입니다.
 
 정리하면, multi-model의 진화형입니다. 사람이 매번 모델을 고를 필요 없이, 시스템이 강점에 따라 자동 분배. Upstage 두 축 — Skills와 Model — 이 OMC 위에서 어떻게 결합되는지 보셨습니다.
 
