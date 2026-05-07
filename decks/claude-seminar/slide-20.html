@@ -42,16 +42,11 @@
       <p style="font-size: 10pt; color: #a09a94; line-height: 1.5;">테스트 실행, 빌드 확인<br>오류 시 1로 복귀</p>
     </div>
   </div>
-  <!-- 복귀 화살표 -->
-  <svg viewBox="0 0 624 44" style="width: 624pt; height: 44pt; margin-top: 4pt;">
-    <defs>
-      <marker id="arr" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
-        <polygon points="0 0, 6 2.5, 0 5" fill="#c45a3b"/>
-      </marker>
-    </defs>
-    <path d="M 520 6 C 520 22, 104 22, 104 6" fill="none" stroke="#c45a3b" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
-    <text x="312" y="38" text-anchor="middle" font-size="9" fill="#6b6560" font-family="Pretendard, sans-serif">목표 달성까지 반복</text>
-  </svg>
+  <!-- 루프 표시 -->
+  <div style="display: flex; align-items: center; justify-content: center; gap: 8pt; margin-top: 18pt;">
+    <span style="font-size: 18pt; color: #c45a3b; line-height: 1;">↺</span>
+    <p style="font-size: 10pt; color: #6b6560;">오류 시 <strong style="color: #c45a3b;">1로 복귀</strong> · 목표 달성까지 반복</p>
+  </div>
 
   <!-- 푸터 -->
   <div style="position: absolute; left: 48pt; right: 48pt; bottom: 24pt; display: flex; justify-content: space-between; align-items: center;">
